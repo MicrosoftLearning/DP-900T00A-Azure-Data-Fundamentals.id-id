@@ -2,18 +2,12 @@
 lab:
   title: Jelajahi Azure Cosmos DB
   module: Explore non-relational data in Azure
-ms.openlocfilehash: 9e28f91e86b68d35665dc0dfb79a2dd57d75a9ea
-ms.sourcegitcommit: 1117342052bce0bbd5a703bd1f763862b9129807
-ms.translationtype: HT
-ms.contentlocale: id-ID
-ms.lasthandoff: 03/16/2022
-ms.locfileid: "140682524"
 ---
 ## <a name="explore-azure-cosmos-db"></a>Jelajahi Azure Cosmos DB
 
 Dalam latihan ini Anda akan memprovisikan database Azure Cosmos DB di langganan Azure Anda, dan menjelajahi berbagai cara Anda dapat menggunakannya untuk menyimpan data non-relasional.
 
-> **Catatan**: Latihan ini merupakan bagian dari modul di Microsoft Learn, dan mencakup opsi untuk menggunakan langganan Azure *kotak pasir*. Namun, jika Anda menyelesaikan latihan ini sebagai bagian dari kelas yang dipandu instruktur, Anda harus menggunakan langganan Azure yang disediakan sebagai bagian dari kelas, bukan kotak pasir.
+> <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: The exercise is part of a module on Microsoft Learn, and includes an option to use a <bpt id="p2">*</bpt>sandbox<ept id="p2">*</ept> Azure subscription. However, if you are completing this exercise as part of an instructor-led class, you should use the Azure subscription provided as part of the class instead of the sandbox.
 
 Gunakan tautan di bawah ini untuk membuka latihan di Microsoft Learn.
 

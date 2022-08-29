@@ -2,18 +2,13 @@
 lab:
   title: Jelajahi Azure SQL Database
   module: Explore relational data in Azure
-ms.openlocfilehash: b2c36b02f753250a58e4447624d98e5fdddcd675
-ms.sourcegitcommit: 1117342052bce0bbd5a703bd1f763862b9129807
-ms.translationtype: HT
-ms.contentlocale: id-ID
-ms.lasthandoff: 03/16/2022
-ms.locfileid: "140682534"
 ---
+
 ## <a name="explore-azure-sql-database"></a>Jelajahi Azure SQL Database
 
 Dalam latihan ini, Anda akan memprovisikan sumber daya Azure SQL Database di langganan Azure, lalu menggunakan SQL untuk membuat kueri tabel dalam database hubungan.
 
-> **Catatan**: Latihan ini merupakan bagian dari modul di Microsoft Learn, dan mencakup opsi untuk menggunakan langganan Azure *kotak pasir*. Namun, jika Anda menyelesaikan latihan ini sebagai bagian dari kelas yang dipandu instruktur, Anda harus menggunakan langganan Azure yang disediakan sebagai bagian dari kelas, bukan kotak pasir.
+> <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: The exercise is part of a module on Microsoft Learn, and includes an option to use a <bpt id="p2">*</bpt>sandbox<ept id="p2">*</ept> Azure subscription. However, if you are completing this exercise as part of an instructor-led class, you should use the Azure subscription provided as part of the class instead of the sandbox.
 
 Gunakan tautan di bawah ini untuk membuka latihan di Microsoft Learn.
 
