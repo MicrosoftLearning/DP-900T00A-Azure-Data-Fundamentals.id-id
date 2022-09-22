@@ -47,6 +47,6 @@ Dalam latihan ini, Anda akan memprovisikan sumber daya Azure Database for Postgr
 
     ![Cuplikan layar portal Microsoft Azure yang menampilkan halaman Azure Database for PostgreSQL.](images/postgresql-portal.png)
 
-1. Tinjau opsi untuk mengelola sumber daya Azure Database for PostgreSQL Anda.
+1. Tinjau opsi untuk mengelola sumber daya Azure Database for PostreSQL Anda.
 
-> **Tips**: Setelah selesai menjelajahi Azure Database for PostgreSQL, Anda dapat menghapus grup sumber daya yang dibuat dalam latihan ini.
+> **Tips**: Setelah selesai menjelajahi Azure Database for PostreSQL, Anda dapat menghapus grup sumber daya yang dibuat dalam latihan ini.

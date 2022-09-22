@@ -21,8 +21,8 @@ Langkah pertama dalam menggunakan Azure Storage adalah memprovisikan akun Azure 
 1. Jika Anda belum memprovisikannya, masuk ke [portal Microsoft Azure](https://portal.azure.com?azure-portal=true).
 1. On the Azure portal home page, select <bpt id="p1">**</bpt>&amp;#65291; Create a resource<ept id="p1">**</ept> from the upper left-hand corner and search for <bpt id="p2">*</bpt>Storage account<ept id="p2">*</ept>. Then in the resulting <bpt id="p1">**</bpt>Storage account<ept id="p1">**</ept> page, select <bpt id="p2">**</bpt>Create<ept id="p2">**</ept>.
 1. Masukkan nilai berikut pada halaman **Buat akun penyimpanan**:
-    - **Langganan**: Pilih langganan Azure Anda.
-    - **Grup sumber daya**: Buat grup sumber daya baru dengan nama pilihan Anda.
+    - <bpt id="p1">**</bpt>Subscription<ept id="p1">**</ept>: If you're using a sandbox, select <bpt id="p2">*</bpt>Concierge Subscription<ept id="p2">*</ept>. Otherwise, select your Azure subscription.
+    - **Grup sumber daya**: Jika Anda menggunakan kotak pasir, pilih grup sumber daya yang ada (yang akan diberi nama seperti *learn-xxxx...* ). Jika tidak, buat grup sumber daya baru dengan nama pilihan Anda.
     - **Nama akun penyimpanan**: Masukkan nama unik untuk akun penyimpanan Anda menggunakan huruf kecil dan angka.
     - **Wilayah**: Pilih lokasi yang tersedia.
     - **Kinerja**: *Standar*
@@ -48,7 +48,7 @@ Sekarang setelah memiliki akun Azure Storage, Anda dapat membuat kontainer untuk
 1. Di halaman browser penyimpanan, pilih **Kontainer blob** dan verifikasi bahwa kontainer **data** Anda dicantumkan.
 1. Pilih kontainer **data**, dan perhatikan bahwa kontainer tersebut kosong.
 1. Pilih **&#65291; Tambahkan Direktori** dan baca informasi tentang folder sebelum membuat direktori baru bernama **produk**.
-1. Di browser penyimpanan, verifikasi bahwa tampilan saat ini menunjukkan konten folder **produk** yang baru saja dibuat - perhatikan bahwa "breadcrumbs" di bagian atas halaman menampilkan jalur **Kontainer blob > data > produk**.
+1. Di penjelajah penyimpanan, verifikasi bahwa tampilan saat ini menunjukkan konten folder **produk** yang baru saja dibuat - perhatikan bahwa "breadcrumbs" di bagian atas halaman menampilkan jalur **Kontainer blob > data > produk**.
 1. Di breadcrumb, pilih **data** untuk beralih ke kontainer **data**, dan perhatikan bahwa kontainer tersebut <u>tidak</u> berisi folder bernama **produk**.
 
     Folders in blob storage are virtual, and only exist as part of the path of a blob. Since the <bpt id="p1">**</bpt>products<ept id="p1">**</ept> folder contained no blobs, it isn't really there!
@@ -68,11 +68,11 @@ Azure Data Lake Store Gen2 support enables you to use hierarchical folders to or
 
 1. Unduh file JSON [product2.json](https://aka.ms/product2.json?azure-portal=true) dari `https://aka.ms/product2.json` dan simpan di komputer Anda di folder yang sama tempat Anda mengunduh **product1.json** sebelumnya - Anda akan mengunggahnya ke penyimpanan blob nanti ).
 1. Di halaman portal Microsoft Azure untuk akun penyimpanan Anda, di sisi kiri, gulir ke bawah ke bagian **Pengaturan**, dan pilih **Peningkatan Azure Data Lake Gen2**.
-1. In the ****Data Lake Gen2 upgrade**** page, expand and complete each step to upgrade your storage account to enable hierarchical namespace and support Azure Data Lake Storage Gen 2. This may take some time.
+1. Di beranda portal Microsoft Azure, pilih **&#65291; Buat sumber daya** dari sudut kiri atas dan cari *Akun penyimpanan*.
 1. Setelah peningkatan selesai, pada panel sisi kiri, di bagian atas, pilih **Browser penyimpanan** dan navigasikan kembali ke akar kontainer blob **data** Anda, yang masih berisi folder **product_data**.
 1. Pilih folder **product_data**, dan pastikan folder tersebut masih berisi file **product1.json** yang Anda unggah sebelumnya.
 1. Gunakan tombol **&#10514; Unggah** untuk membuka panel **Unggah blob**.
-1. Di beranda portal Microsoft Azure, pilih **&#65291; Buat sumber daya** dari sudut kiri atas dan cari *Akun penyimpanan*.
+1. Kemudian di halaman **Akun penyimpanan** yang dihasilkan, pilih **Buat**.
 1. Tutup panel **Unggah blob** jika masih terbuka, dan verifikasi bahwa folder **product_data** sekarang berisi file **product2.json**.
 1. Di sisi kiri, di bagian **Penyimpanan data**, pilih **Kontainer**.
 1. Buka kontainer **data**, dan verifikasi bahwa folder **product_data** yang Anda buat dicantumkan.
@@ -86,7 +86,7 @@ Azure Files menyediakan cara untuk membuat berbagi berbasis cloud.
 1. Di halaman portal Azure untuk kontainer penyimpanan Anda, di sisi kiri, di bagian **Penyimpanan data**, pilih **Berbagi**.
 1. Di halaman Berbagi file, pilih **&#65291; Berbagi file** dan tambahkan berbagi file baru bernama **file** menggunakan tingkat **Transaksi yang dioptimalkan**.
 1. Di **Berbagi**, buka **berbagi** baru Anda.
-1. Kemudian di halaman **Akun penyimpanan** yang dihasilkan, pilih **Buat**.
+1. At the top of the page, select <bpt id="p1">**</bpt>Connect<ept id="p1">**</ept>. Then in the <bpt id="p1">**</bpt>Connect<ept id="p1">**</ept> pane, note that there are tabs for common operating systems (Windows, Linux, and macOS) that contain scripts you can run to connect to the shared folder from a client computer.
 1. Tutup panel **Hubungkan** lalu tutup halaman **file** guna kembali ke halaman **Berbagi** untuk akun penyimpanan Azure Anda.
 
 ## <a name="explore-azure-tables"></a>Menjelajahi Azure Table

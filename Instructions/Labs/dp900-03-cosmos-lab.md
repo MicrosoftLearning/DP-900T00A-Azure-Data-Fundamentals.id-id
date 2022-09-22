@@ -1,9 +1,9 @@
 ---
 lab:
-  title: Jelajahi Azure Cosmos DB
+  title: Menjelajahi data non-relasional di Azure dengan Azure Cosmos DB
   module: Explore fundamentals of Azure Cosmos DB
 ---
-# <a name="explore-azure-cosmos-db"></a>Jelajahi Azure Cosmos DB
+# <a name="explore-non-relational-data-in-azure-with-azure-cosmos-db"></a>Menjelajahi data non-relasional di Azure dengan Azure Cosmos DB
 
 Dalam latihan ini Anda akan memprovisikan database Azure Cosmos DB di langganan Azure Anda, dan menjelajahi berbagai cara Anda dapat menggunakannya untuk menyimpan data non-relasional.
 
