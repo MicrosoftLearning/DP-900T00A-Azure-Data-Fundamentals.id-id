@@ -1,10 +1,10 @@
 ---
 lab:
-  title: Menjelajahi Azure Storage
+  title: Menjelajahi data non-relasional di Azure dengan Azure Storage
   module: Explore Azure Storage for non-relational data
 ---
 
-# <a name="explore-azure-storage"></a>Menjelajahi Azure Storage
+# <a name="explore-non-relational-data-in-azure-with-azure-storage"></a>Menjelajahi data non-relasional di Azure dengan Azure Storage
 
 Dalam latihan ini Anda akan memprovisikan akun Azure Storage di langganan Azure, dan menjelajahi berbagai cara agar dapat menggunakannya untuk menyimpan data.
 
