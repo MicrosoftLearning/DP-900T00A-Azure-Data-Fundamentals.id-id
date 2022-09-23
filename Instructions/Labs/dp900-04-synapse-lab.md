@@ -1,0 +1,304 @@
+---
+lab:
+  title: Menjelajahi analitik data di Azure dengan Azure Synapse Analytics
+  module: Explore fundamentals of large-scale data warehousing
+---
+
+# <a name="explore-data-analytics-in-azure-with-azure-synapse-analytics"></a>Menjelajahi analitik data di Azure dengan Azure Synapse Analytics
+
+Dalam latihan ini, Anda akan memprovisikan ruang kerja Azure Synapse Analytics di langganan Azure Anda, dan menggunakannya untuk menyerap dan membuat kueri data.
+
+Membutuhkan waktu sekitar **30** menit untuk menyelesaikan lab ini.
+
+## <a name="before-you-start"></a>Sebelum Anda memulai
+
+Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses tingkat administratif.
+
+## <a name="provision-an-azure-synapse-analytics-workspace"></a>Menentukan ruang kerja Azure Synapse Analytics
+
+Untuk menggunakan Azure Synapse Analytics, Anda harus menyediakan sumber daya Ruang Kerja Azure Synapse Analytics di langganan Azure Anda.
+
+1. Buka portal Microsoft Azure di [https://portal.azure.com](https://portal.azure.com?azure-portal=true), dan masuk menggunakan info masuk yang terkait dengan langganan Azure Anda.
+
+    > <bpt id="p1">**</bpt>Tip<ept id="p1">**</ept>:  Ensure you are working in the directory containing your subscription - indicated at the top right under your user ID. If not, select the user icon and switch directory.
+
+2. Di portal Microsoft Azure, di halaman **Beranda**, gunakan **&#65291; Buat ikon sumber daya** untuk membuat sumber daya baru.
+3. Cari *Azure Synapse Analytics*, dan buat sumber daya **Azure Synapse Analytics** yang baru dengan pengaturan berikut:
+    - **Langganan**: *Langganan Azure Anda*
+        - **Grup sumber daya**: *Buat grup sumber daya baru dengan nama yang sesuai, seperti "synapse-rg"*
+        - **Kelompok sumber daya terkelola**: *Masukkan nama yang sesuai, misalnya "synapse-managed-rg"*.
+    - **Nama ruang kerja**: *Masukkan nama ruang kerja yang unik, misalnya "synapse-ws-<your_name>"* .
+    - **Wilayah**: *Pilih salah satu wilayah berikut*:
+        - Australia Timur
+        - US Tengah
+        - US Timur 2
+        - Eropa Utara
+        - US Tengah Selatan
+        - Asia Tenggara
+        - UK Selatan
+        - Eropa Barat
+        - AS Barat
+        - WestUS 2
+    - **Pilih Data Lake Storage Gen 2**: Dari langganan
+        - **Nama akun**: *Buat akun baru dengan nama unik, misalnya "datalake<your_name>"*.
+        - **Nama sistem file**: *Buat sistem file baru dengan nama yang unik, misalnya "fs<your_name>"*.
+
+    > <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: A Synapse Analytics workspace requires two resource groups in your Azure subscription; one for resources you explicitly create, and another for managed resources used by the service. It also requires a Data Lake storage account in which to store data, scripts, and other artifacts.
+
+4. Saat Anda memasukkan detail ini, pilih **Tinjau + buat**, lalu pilih **Buat** untuk membuat ruang kerja.
+5. Tunggu hingga ruang kerja selesai dibuat - mungkin memerlukan waktu lima menit atau lebih.
+6. Saat penyebaran selesai, buka grup sumber daya yang dibuat dan perhatikan bahwa grup tersebut berisi ruang kerja Synapse Analytics Anda dan akun penyimpanan Data Lake.
+7. Pilih ruang kerja Synapse Anda, dan di halaman **Gambaran umum**, di kartu **Buka Synapse Studio**, pilih **Buka** untuk membuka Synapse Studio di tab browser baru. Synapse Studio adalah antarmuka berbasis web yang dapat digunakan untuk bekerja dengan ruang kerja Synapse Analytics Anda.
+8. Di sisi kiri Synapse Studio, gunakan ikon **&rsaquo;&rsaquo;** untuk memperluas menu - menu ini mengungkapkan halaman yang berbeda dalam Synapse Studio yang akan Anda gunakan untuk mengelola sumber daya dan melakukan tugas analisis data, seperti yang ditampilkan di sini:
+
+    ![Gambar memperlihatkan menu Synapse Studio yang diperluas untuk mengelola sumber daya dan melakukan tugas analisis data](images/synapse-studio.png)
+
+## <a name="ingest-data"></a>Serap data
+
+Salah satu tugas utama yang dapat Anda lakukan dengan Azure Synapse Analytics adalah menentukan *alur* yang mentransfer (dan jika perlu, mentransformasi) data dari berbagai sumber ke ruang kerja Anda untuk dianalisis.
+
+1. Di Synapse Studio, pada halaman **Beranda**, pilih **Serap** lalu pilih **Tugas penyalinan bawaan** untuk membuka alat **Salin alat Data**.
+2. Di alat Salin Data, pada langkah **Properti**, pastikan **Tugas salin bawaan** dan **Jalankan sekali sekarang** dipilih, dan klik **Berikutnya >**.
+3. Pada langkah **Sumber**, dalam substep **Himpunan data**, pilih pengaturan berikut:
+    - **Jenis sumber**: Semua
+    - **Koneksi**: *Buat koneksi baru, dan di panel **Layanan tertaut** yang muncul, pada tab **File**, pilih **HTTP**. Kemudian lanjutkan dan buat koneksi ke file data menggunakan pengaturan berikut:*
+        - **Nama**: Produk AdventureWorks
+        - **Deskripsi**: Daftar produk melalui HTTP
+        - **Sambungkan melalui runtime integrasi**: AutoResolveIntegrationRuntime
+        - **URL dasar**: `https://raw.githubusercontent.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/master/Azure-Synapse/products.csv`
+        - **Validasi Sertifikat Server**: Aktifkan
+        - **Jenis autentikasi**: Anonim
+4. Setelah membuat koneksi, pada substep **Sumber/Himpunan data**, pastikan pengaturan berikut dipilih, lalu pilih **Berikutnya >**:
+    - **URL relatif**: *Biarkan kosong*
+    - **Metode Permintaan**: GET
+    - **Header tambahan**: *Biarkan kosong*
+    - **Salinan biner**: <u>Tidak</u> dipilih
+    - **Waktu tunggu permintaan habis**: *Biarkan kosong*
+    - **Koneksi serentak maksimal**: *Biarkan kosong*
+5. Pada langkah **Sumber**, dalam sub langkah **Konfigurasi**, pilih **Pratinjau data** untuk melihat pratinjau data produk yang akan diserap oleh alur Anda, lalu tutup pratinjau.
+6. Setelah melakukan pratinjau data, pada langkah **Sumber/Konfigurasi**, pastikan pengaturan berikut dipilih, lalu pilih **Berikutnya >**:
+    - **Format file**: DelimitedText
+    - **Pemisah kolom**: Koma (,)
+    - **Pemisah baris**: Umpan baris (\n)
+    - **Baris pertama sebagai header**: Dipilih
+    - **Jenis pemadatan**: Tidak ada
+7. Pada langkah **Target**, dalam sub langkah **Himpunan data**, pilih pengaturan berikut:
+    - **Jenis target**: Azure Data Lake Storage Gen 2
+    - **Koneksi**: *Pilih koneksi yang ada ke penyimpanan data lake Anda (ini dibuat untuk Anda saat Anda membuat ruang kerja).*
+8. Setelah memilih koneksi, pada langkah **Target/Himpunan data**, pastikan pengaturan berikut dipilih, lalu pilih **Berikutnya >** :
+    - **Jalur folder**: *Telusuri ke folder sistem file Anda*
+    - **Nama file**: products.csv
+    - **Perilaku salin**: Tidak ada
+    - **Koneksi serentak maksimal**: *Biarkan kosong*
+    - **Ukuran blok (MB)**: *Biarkan kosong*
+9. On the <bpt id="p1">**</bpt>Target<ept id="p1">**</ept> step, in the <bpt id="p2">**</bpt>Configuration<ept id="p2">**</ept> substep, ensure that the following properties are selected. Then select <bpt id="p1">**</bpt>Next &gt;<ept id="p1">**</ept>:
+    - **Format file**: DelimitedText
+    - **Pemisah kolom**: Koma (,)
+    - **Pemisah baris**: Umpan baris (\n)
+    - **Tambahkan header ke file**: Dipilih
+    - **Jenis pemadatan**: Tidak ada
+    - **Baris maks per file**: *Biarkan kosong*
+    - **Awalan nama file**: *Biarkan kosong*
+10. Pada langkah **Pengaturan**, masukkan pengaturan berikut lalu klik **Berikutnya >**:
+    - **Nama tugas**: Salin produk
+    - **Deskripsi tugas** Salin data produk
+    - **Toleransi kegagalan**: *Biarkan kosong*
+    - **Aktifkan pengelogan**: <u>Tidak</u> dipilih
+    - **Aktifkan pentahapan**: <u>Tidak</u> dipilih
+11. Pada langkah **Tinjau dan selesaikan** pada sub langkah **Tinjau**, baca ringkasan lalu klik **Berikutnya >**.
+12. Pada langkah **Penyebaran**, tunggu alur disebarkan lalu klik **Selesai**.
+13. Di Synapse Studio, pilih halaman **Pemantauan**, dan di tab **Eksekusi alur**, tunggu hingga alur **Salin produk** selesai dengan status **Berhasil** (Anda dapat menggunakan tombol **&#8635; Refresh** pada halaman Eksekusi alur untuk merefresh status).
+14. On the <bpt id="p1">**</bpt>Data<ept id="p1">**</ept> page, select the <bpt id="p2">**</bpt>Linked<ept id="p2">**</ept> tab and expand the <bpt id="p3">**</bpt>Azure Data Lake Storage Gen 2<ept id="p3">**</ept> hierarchy until you see the file storage for your Synapse workspace. Then select the file storage to verify that a file named <bpt id="p1">**</bpt>products.csv<ept id="p1">**</ept> has been copied to this location, as shown here:
+
+    ![Gambar yang menunjukkan Synapse Studio memperluas hierarki Azure Data Lake Storage Gen 2 dengan penyimpanan file untuk ruang kerja Synapse Anda](images/synapse-storage.png)
+
+## <a name="use-a-sql-pool-to-analyze-data"></a>Menggunakan kumpulan SQL untuk menganalisis data
+
+Now that you've ingested some data into your workspace, you can use Synapse Analytics to query and analyze it. One of the most common ways to query data is to use SQL, and in Synapse Analytics you can use a <bpt id="p1">*</bpt>SQL pool<ept id="p1">*</ept> to run SQL code.
+
+1. Di Synapse Studio, klik kanan file **products.csv** di penyimpanan file untuk ruang kerja Synapse Anda, arahkan ke **Skrip SQL baru**, dan pilih **Pilih baris 100 TERATAS**.
+2. Di panel **Skrip SQL 1** yang terbuka, tinjau kode SQL yang sudah dibuat, yang seharusnya mirip dengan ini:
+
+    ```SQL
+    -- This is auto-generated code
+    SELECT
+        TOP 100 *
+    FROM
+        OPENROWSET(
+            BULK 'https://datalakexx.dfs.core.windows.net/fsxx/products.csv',
+            FORMAT = 'CSV',
+            PARSER_VERSION='2.0'
+        ) AS [result]
+    ```
+
+    Kode ini membuka set baris dari file teks yang Anda impor dan mengambil 100 baris data pertama.
+
+3. Dalam daftar **sambungkan ke**, pastikan **Bawaan** dipilih - hal ini mewakili Kumpulan SQL bawaan yang dibuat dengan ruang kerja Anda.
+4. Pada toolbar, gunakan tombol **&#9655; Jalankan** untuk menjalankan kode SQL, dan tinjau hasilnya, yang seharusnya terlihat mirip dengan ini:
+
+    | C1 | c2 | c3 | c4 |
+    | -- | -- | -- | -- |
+    | ProductID | ProductName | Kategori | ListPrice |
+    | 771 | Mountain-100 Perak, 38 | Sepeda Gunung | 3399,9900 |
+    | 772 | Mountain-100 Perak, 42 | Sepeda Gunung | 3399,9900 |
+    | ... | ... | ... | ... |
+
+5. Note the results consist of four columns named C1, C2, C3, and C4; and that the first row in the results contains the names of the data fields. To fix this problem, add a HEADER_ROW = TRUE parameters to the OPENROWSET function as shown here (replacing <bpt id="p1">*</bpt>datalakexx<ept id="p1">*</ept> and <bpt id="p2">*</bpt>fsxx<ept id="p2">*</ept> with the names of your data lake storage account and file system), and then rerun the query:
+
+    ```SQL
+    SELECT
+        TOP 100 *
+    FROM
+        OPENROWSET(
+            BULK 'https://datalakexx.dfs.core.windows.net/fsxx/products.csv',
+            FORMAT = 'CSV',
+            PARSER_VERSION='2.0',
+            HEADER_ROW = TRUE
+        ) AS [result]
+    ```
+
+    Sekarang hasilnya akan terlihat seperti ini:
+
+    | ProductID | ProductName | Kategori | ListPrice |
+    | -- | -- | -- | -- |
+    | 771 | Mountain-100 Perak, 38 | Sepeda Gunung | 3399,9900 |
+    | 772 | Mountain-100 Perak, 42 | Sepeda Gunung | 3399,9900 |
+    | ... | ... | ... | ... |
+
+6. Memodifikasi kueri sebagai berikut (mengganti *datalakexx* dan *fsxx* dengan nama akun penyimpanan dan sistem file data lake Anda):
+
+    ```SQL
+    SELECT
+        Category, COUNT(*) AS ProductCount
+    FROM
+        OPENROWSET(
+            BULK 'https://datalakexx.dfs.core.windows.net/fsxx/products.csv',
+            FORMAT = 'CSV',
+            PARSER_VERSION='2.0',
+            HEADER_ROW = TRUE
+        ) AS [result]
+    GROUP BY Category;
+    ```
+
+7. Jalankan kueri yang sudah diubah, yang akan menampilkan hasil yang berisi produk angka di setiap kategori, seperti ini:
+
+    | Kategori | ProductCount |
+    | -- | -- |
+    | Bib Shorts | 3 |
+    | Rak Sepeda | 1 |
+    | ... | ... |
+
+8. In the <bpt id="p1">**</bpt>Properties<ept id="p1">**</ept> pane for <bpt id="p2">**</bpt>SQL Script 1<ept id="p2">**</ept>, change the <bpt id="p3">**</bpt>Name<ept id="p3">**</ept> to <bpt id="p4">**</bpt>Count Products by Category<ept id="p4">**</ept>. Then in the toolbar, select <bpt id="p1">**</bpt>Publish<ept id="p1">**</ept> to save the script.
+
+9. Tutup panel skrip **Hitung Produk berdasarkan Kategori**.
+
+10. Di Synapse Studio, pilih halaman **Kembangkan**, dan perhatikan bahwa skrip SQL **Hitung Produk berdasarkan Kategori** yang diterbitkan telah disimpan di sana.
+
+11. Select the <bpt id="p1">**</bpt>Count Products by Category<ept id="p1">**</ept> SQL script to reopen it. Then ensure that the script is connected to the <bpt id="p1">**</bpt>Built-in<ept id="p1">**</ept> SQL pool and run it to retrieve the product counts.
+
+12. Di panel **Hasil**, pilih tampilan **Bagan**, lalu pilih pengaturan berikut untuk bagan tersebut:
+    - **Jenis bagan**: Kolom
+    - **Kolom kategori**: Kategori
+    - **Kolom legenda (seri)**: ProductCount
+    - **Posisi legenda**: bawah - tengah
+    - **Label legenda (seri)**: *Biarkan kosong*
+    - **Nilai minimum label legenda (seri)**: *Biarkan kosong*
+    - **Label legenda (seri) maksimum**: *Biarkan kosong*
+    - **Label kategori**: *Biarkan kosong*
+
+    Bagan yang dihasilkan akan menyerupai ini:
+
+    ![Gambar yang menunjukkan tampilan bagan jumlah produk](images/column-chart.png)
+
+## <a name="use-a-spark-pool-to-analyze-data"></a>Gunakan kumpulan Spark untuk menganalisis data
+
+While SQL is a common language for querying structured datasets, many data analysts find languages like Python useful to explore and prepare data for analysis. In Azure Synapse Analytics, you can run Python (and other) code in a <bpt id="p1">*</bpt>Spark pool<ept id="p1">*</ept>; which uses a distributed data processing engine based on Apache Spark.
+
+1. Di Synapse Studio, pilih halaman **Kelola**.
+2. Pilih tab **Kumpulan Apache Spark**, lalu gunakan ikon **&#65291; Baru** untuk membuat kumpulan Spark baru dengan pengaturan berikut:
+    - **Nama kumpulan Apache Spark**: spark
+    - **Kelompok ukuran node**: Memori Dioptimalkan
+    - **Ukuran node**: Kecil (4 vCore/32 GB)
+    - **Skala otomatis**: Diaktifkan
+    - **Jumlah node** 3----3
+3. Tinjau dan buat kumpulan Spark, lalu tunggu kumpulan Spark disebarkan (yang mungkin memerlukan waktu beberapa menit).
+4. When the Spark pool has been deployed, in Synapse Studio, on the <bpt id="p1">**</bpt>Data<ept id="p1">**</ept> page, browse to the file system for your Synapse workspace. Then right-click <bpt id="p1">**</bpt>products.csv<ept id="p1">**</ept>, point to <bpt id="p2">**</bpt>New notebook<ept id="p2">**</ept>, and select <bpt id="p3">**</bpt>Load to DataFrame<ept id="p3">**</ept>.
+5. Di panel **Buku catatan 1** yang terbuka, dalam daftar **Lampirkan ke**, pilih kumpulan Spark **spark** yang akan dibuat sebelumnya dan pastikan **Bahasa** diatur ke **PySpark (Python)**.
+6. Tinjau kode di sel pertama (dan satu-satunya) di buku catatan, yang akan terlihat seperti ini:
+
+    ```Python
+    %%pyspark
+    df = spark.read.load('abfss://fsxx@datalakexx.dfs.core.windows.net/products.csv', format='csv'
+    ## If header exists uncomment line below
+    ##, header=True
+    )
+    display(df.limit(10))
+    ```
+
+7.                  **Tips**: Pastikan untuk menggunakan direktori yang berisi langganan Anda - terletak di kanan atas di bawah ID pengguna.
+
+    > **Catatan**: Jika terjadi kesalahan karena Kernel Python belum tersedia, jalankan kembali sel.
+
+8. Akhirnya, hasilnya akan muncul di bawah sel, dan hasilnya akan mirip dengan ini:
+
+    | _c0_ | _c1_ | _c2_ | _c3_ |
+    | -- | -- | -- | -- |
+    | ProductID | ProductName | Kategori | ListPrice |
+    | 771 | Mountain-100 Perak, 38 | Sepeda Gunung | 3399,9900 |
+    | 772 | Mountain-100 Perak, 42 | Sepeda Gunung | 3399,9900 |
+    | ... | ... | ... | ... |
+
+9. Hapus komentar pada baris *,header = True* (karena file products.csv memiliki header kolom di baris pertama), sehingga kode Anda terlihat seperti ini:
+
+    ```Python
+    %%pyspark
+    df = spark.read.load('abfss://fsxx@datalakexx.dfs.core.windows.net/products.csv', format='csv'
+    ## If header exists uncomment line below
+    , header=True
+    )
+    display(df.limit(10))
+    ```
+
+10. Jalankan kembali sel tersebut dan pastikan hasilnya terlihat seperti ini:
+
+    | ProductID | ProductName | Kategori | ListPrice |
+    | -- | -- | -- | -- |
+    | 771 | Mountain-100 Perak, 38 | Sepeda Gunung | 3399,9900 |
+    | 772 | Mountain-100 Perak, 42 | Sepeda Gunung | 3399,9900 |
+    | ... | ... | ... | ... |
+
+    Perhatikan bahwa menjalankan sel lagi membutuhkan waktu lebih ingkat, karena kumpulan Spark sudah dimulai.
+
+11. Di bagian hasil, gunakan ikon **Kode &#65291;** untuk menambahkan sel kode baru ke buku catatan.
+12. Di sel kode kosong yang baru, tambahkan kode berikut:
+
+    ```Python
+    df_counts = df.groupBy(df.Category).count()
+    display(df_counts)
+    ```
+
+13. Pilih **&#9655; Jalankan** ke kiri untuk menjalankan sel kode baru, dan tinjau hasilnya, yang akan terlihat seperti ini:
+
+    | Kategori | hitung |
+    | -- | -- |
+    | Headset | 3 |
+    | Roda | 14 |
+    | ... | ... |
+
+14. Jika tidak, pilih ikon pengguna dan ubah direktori.
+
+    ![Gambar menampilkan tampilan bagan jumlah kategori](images/bar-chart.png)
+
+15. Tutup panel **Buku catatan 1** dan buang perubahan Anda.
+
+## <a name="delete-azure-resources"></a>Menghapus sumber daya Azure
+
+Setelah selesai menjelajahi Azure Synapse Analytics, Anda harus menghapus sumber daya yang telah Anda buat untuk menghindari biaya Azure yang tidak perlu.
+
+1. Tutup tab browser Synapse Studio dan kembali ke portal Microsoft Azure.
+2. Di portal Microsoft Azure, pada halaman **Beranda**, pilih **Grup sumber daya**.
+3. Pilih grup sumber daya untuk ruang kerja Synapse Analytics Anda (bukan grup sumber daya terkelola), dan pastikan grup berisi ruang kerja Synapse, akun penyimpanan, dan kumpulan Spark untuk ruang kerja Anda.
+4. Di bagian atas halaman **Gambaran Umum** untuk grup sumber daya, pilih **Hapus grup sumber daya**.
+5. Masukkan nama grup sumber daya untuk mengonfirmasi bahwa Anda ingin menghapusnya, dan pilih **Hapus**.
+
+    Setelah beberapa menit, ruang kerja Azure Synapse Anda dan ruang kerja terkelola yang terkait dengannya akan dihapus.
