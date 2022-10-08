@@ -18,7 +18,7 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 
 1. Masuk ke langganan Azure di [portal Microsoft Azure](https://portal.azure.com), menggunakan kredensial langganan Azure Anda.
 
-1. Use the <bpt id="p1">**</bpt>[<ph id="ph1">\&gt;</ph>_]<ept id="p1">**</ept> button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, selecting a <bpt id="p2">***</bpt>Bash<ept id="p2">***</ept> environment and creating storage if prompted. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal, as shown here:
+1. Gunakan tombol **[\>_]** di sebelah kanan bilah pencarian di bagian atas halaman untuk membuat Cloud Shell baru di portal Azure, dengan memilih lingkungan ***Bash*** dan membuat penyimpanan jika diminta. Shell cloud menyediakan antarmuka baris perintah di panel di bagian bawah portal Azure, seperti yang ditunjukkan di sini:
 
     ![Portal Azure dengan panel cloud shell](./images/cloud-shell.png)
 
@@ -50,7 +50,7 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 
 ## <a name="explore-the-azure-resources"></a>Mempelajari sumber daya Azure
 
-1. In the <bpt id="p1">[</bpt>Azure portal<ept id="p1">](https://portal.azure.com?azure-portal=true)</ept>, on the home page, select <bpt id="p2">**</bpt>Resource groups<ept id="p2">**</ept> to see the resource groups in your subscription. This should include the <bpt id="p1">**</bpt>learn*xxxxxxxxxxxxxxxxx...<ept id="p1">**</ept>* resource group identified by the setup script.
+1. Di [portal Microsoft Azure](https://portal.azure.com?azure-portal=true), di beranda, pilih **Grup sumber daya** untuk melihat grup sumber daya dalam langganan Anda. Grup ini harus menyertakan **learn*xxxxxxxxxxxxxxxxxx...** * grup sumber daya yang diidentifikasi oleh skrip penyiapan.
 2. Pilih **learn*xxxxxxxxxxxxxxxxxx...** * grup sumber daya, dan tinjau sumber daya di dalamnya, yang harus menyertakan:
     - *IoT Hub* bernama **iothub*xxxxxxxxxxxxx***, yang digunakan untuk menerima data perangkat yang masuk.
     - *Akun penyimpanan* bernama **store*xxxxxxxxxxxx***, tempat hasil pemrosesan data akan ditulis.
@@ -61,7 +61,7 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
     > **Catatan**: Jika Anda menggunakan kotak pasir Microsoft learn, grup sumber daya juga dapat berisi *Akun penyimpanan* kedua bernama **cloudshell*xxxxxxxxx***, yang digunakan untuk menyimpan data untuk Azure Cloud Shell yang digunakan untuk menjalankan skrip penyiapan.
 
 3. Pilih pekerjaan Azure Stream Analytics **stream*xxxxxxxxxxxxx*** dan lihat informasinya di halaman **Ringkasan**, dengan memperhatikan detail berikut:
-    - The job has one <bpt id="p1">*</bpt>input<ept id="p1">*</ept> named <bpt id="p2">**</bpt>iotinput<ept id="p2">**</ept>, and one <bpt id="p3">*</bpt>output<ept id="p3">*</ept> named <bpt id="p4">**</bpt>bloboutput<ept id="p4">**</ept>. These reference the IoT Hub and Storage account created by the setup script.
+    - Pekerjaan memiliki satu *input* bernama **iotinput**, dan satu *output* bernama **bloboutput**. Ini merujuk pada IoT Hub dan akun Penyimpanan yang dibuat oleh skrip penyiapan.
     - Pekerjaan memiliki *kueri*, yang membaca data dari input **iotinput**, dan menggabungkannya dengan menghitung jumlah pesan yang diproses setiap 10 detik; menulis hasilnya ke output **bloboutput**.
 
 ## <a name="use-the-resources-to-analyze-streaming-data"></a>Gunakan sumber daya untuk menganalisis data aliran

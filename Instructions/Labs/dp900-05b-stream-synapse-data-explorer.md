@@ -20,7 +20,7 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 
 1. Buka portal Microsoft Azure di [https://portal.azure/com](https://portal.azure.com?azure-portal=true), dan masuk menggunakan info masuk yang terkait dengan langganan Azure Anda.
 
-    > <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Ensure you are working in the directory containing your subscription - indicated at the top right under your user ID. If not, select the user icon and switch directory.
+    >                 **Catatan**: Pastikan untuk menggunakan direktori yang berisi langganan Anda - terletak di kanan atas di bawah ID pengguna. Jika tidak, pilih ikon pengguna dan ubah direktori.
 
 1. Di portal Microsoft Azure, di halaman **Beranda**, gunakan **&#65291; Buat ikon sumber daya** untuk membuat sumber daya baru.
 1. Cari *Azure Synapse Analytics*, dan buat sumber daya **Azure Synapse Analytics** yang baru dengan pengaturan berikut:
@@ -33,7 +33,7 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
         - **Nama akun**: *Buat akun baru dengan nama unik, misalnya "datalake<your_name>"*.
         - **Nama sistem file**: *Buat sistem file baru dengan nama yang unik, misalnya "fs<your_name>"*.
 
-    > <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: A Synapse Analytics workspace requires two resource groups in your Azure subscription; one for resources you explicitly create, and another for managed resources used by the service. It also requires a Data Lake storage account in which to store data, scripts, and other artifacts.
+    >                 **Catatan**: Ruang kerja Synapse Analytics memerlukan dua grup sumber daya dalam langganan Azure; satu untuk sumber daya yang dibuat secara eksplisit, dan satu lagi untuk sumber daya terkelola yang digunakan oleh layanan. Hal ini juga memerlukan akun penyimpanan Data Lake untuk menyimpan data, skrip, dan artefak lainnya.
 
 1. Saat Anda memasukkan detail ini, pilih **Tinjau + buat**, lalu pilih **Buat** untuk membuat ruang kerja.
 1. Tunggu hingga ruang kerja selesai dibuat - mungkin memerlukan waktu lima menit atau lebih.
@@ -72,7 +72,7 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
     - **Format data**: CSV
     - **Abaikan catatan pertama**: dipilih
     - **Pemetaan**: devices_mapping
-1. Ensure the column data types have been correctly identified as <bpt id="p1">*</bpt>Time (datetime)<ept id="p1">*</ept>, <bpt id="p2">*</bpt>Device (string)<ept id="p2">*</ept>, and <bpt id="p3">*</bpt>Value (long)<ept id="p3">*</ept>). Then select <bpt id="p1">**</bpt>Next: Start Ingestion<ept id="p1">**</ept>.
+1. Pastikan tipe data kolom telah diidentifikasi dengan benar sebagai *Waktu (waktu (tanggalwaktu)*, *Perangkat (string)*, dan *Nilai (panjang)*). Kemudian pilih **Berikutnya: Mulai Penyerapan**.
 1. Saat penyerapan selesai, pilih **Tutup**.
 1. Di Azure Data Explorer, pada tab **Kueri**, pastikan database **iot-data** dipilih, lalu di panel kueri, masukkan kueri berikut.
 
@@ -84,19 +84,19 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 
     | Waktu | Perangkat | Nilai |
     | --- | --- | --- |
-    | 2022-01-01T00:00:00Z | Dev1 | 7 |
-    | 2022-01-01T00:00:01Z | Dev2 | 4 |
+    | 2022-01-01T00:00:00Z | Dev1 | -7 |
+    | 2022-01-01T00:00:01Z | Dev2 | 4. |
     | ... | ... | ... |
 
     Jika hasil cocok dengan ini, Anda telah berhasil membuat tabel **perangkat** dari data dalam file.
 
-    > <bpt id="p1">**</bpt>Tip<ept id="p1">**</ept>: In this example, you imported a very small amount of batch data from a file, which is fine for the purposes of this exercise. In reality, you can use Data Explorer to analyze much larger volumes of data; and since you enabled stream ingestion, you could also have configured Data Explorer to ingest data into the table from a streaming source such as Azure Event Hubs.
+    >                 **Tips**: Dalam contoh ini, Anda mengimpor sejumlah kecil data batch dari satu file, yang dapat dilakukan untuk tujuan latihan ini. Pada kenyataannya, Anda dapat menggunakan Data Explorer untuk menganalisis volume data yang jauh lebih besar; dan karena Anda mengaktifkan penyerapan streaming, Anda juga dapat mengonfigurasi Data Explorer untuk menyerap data ke dalam tabel dari sumber streaming seperti Azure Event Hubs.
 
 ## <a name="use-kusto-query-language-to-query-the-table-in-synapse-studio"></a>Gunakan bahasa kueri Kusto untuk membuat kueri tabel di Synapse Studio
 
 1. Tutup tab browser Azure Data Explorer dan kembali ke tab yang berisi Synapse Studio.
-1. On the <bpt id="p1">**</bpt>Data<ept id="p1">**</ept> page, expand the <bpt id="p2">**</bpt>iot-data<ept id="p2">**</ept> database and its <bpt id="p3">**</bpt>Tables<ept id="p3">**</ept> folder. Then in the <bpt id="p1">**</bpt>...<ept id="p1">**</ept> menu for the <bpt id="p2">**</bpt>devices<ept id="p2">**</ept> table, select <bpt id="p3">**</bpt>New KQL Script<ept id="p3">**</ept><ph id="ph1"> &gt; </ph><bpt id="p4">**</bpt>Take 1000 rows<ept id="p4">**</ept>.
-1. Review the generated query and its results. The query should contain the following code:
+1. Pada halaman **Data**, luaskan database **iot-data** dan folder **Tabel**-nya. Kemudian di menu **...** untuk tabel **perangkat**, pilih **Skrip KQL Baru** > **Ambil 1000 baris**.
+1. Tinjau kueri yang dihasilkan dan hasilnya. Kueri harus berisi kode berikut:
 
     ```kusto
     devices
@@ -112,7 +112,7 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
     | where Device == 'Dev1'
     ```
 
-1. Select <bpt id="p1">**</bpt>&amp;#9655; Run<ept id="p1">**</ept> to run the query. Then review the results, which should contain only the rows for the <bpt id="p1">*</bpt>Dev1<ept id="p1">*</ept> device.
+1. Pilih **&#9655; Jalankan** untuk menjalankan kueri. Kemudian tinjau hasilnya, yang seharusnya hanya berisi baris untuk perangkat *Dev1*.
 
 1. Ubah kueri sebagai berikut:
 
