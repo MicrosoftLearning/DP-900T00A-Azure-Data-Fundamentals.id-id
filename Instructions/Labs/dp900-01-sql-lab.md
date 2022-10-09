@@ -16,7 +16,7 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 
 ## <a name="provision-an-azure-sql-database-resource"></a>Memprovisikan sumber daya Azure SQL Database
 
-1. In the <bpt id="p1">[</bpt>Azure portal<ept id="p1">](https://portal.azure.com?azure-portal=true)</ept>, select <bpt id="p2">**</bpt>&amp;#65291; Create a resource<ept id="p2">**</ept> from the upper left-hand corner and search for <bpt id="p3">*</bpt>Azure SQL<ept id="p3">*</ept>. Then in the resulting <bpt id="p1">**</bpt>Azure SQL<ept id="p1">**</ept> page, select <bpt id="p2">**</bpt>Create<ept id="p2">**</ept>.
+1. Di [portal Microsoft Azure](https://portal.azure.com?azure-portal=true), pilih **&#65291; Buat sumber daya** dari sudut kiri atas dan cari *Azure SQL*. Lalu, di halaman **Azure SQL** yang dihasilkan, pilih **Buat**.
 
 1. Tinjau opsi Azure SQL yang tersedia, lalu di petak peta **Database SQL**, pastikan **Database tunggal** di pilih, lalu pilih **Buat**.
 
@@ -26,12 +26,12 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
     - **Langganan**: Pilih langganan Azure Anda.
     - **Grup sumber daya**: Buat grup sumber daya baru dengan nama pilihan Anda.
     - **Nama database**: *AdventureWorks*
-    - <bpt id="p1">**</bpt>Server<ept id="p1">**</ept>:  Select <bpt id="p2">**</bpt>Create new<ept id="p2">**</ept> and create a new server with a unique name in any available location. Use <bpt id="p1">**</bpt>SQL authentication<ept id="p1">**</ept> and specify your name as the server admin login and a suitably complex password (remember the password - you'll need it later!)
+    -                 **Server**: Pilih **Buat baru** dan buat server baru dengan nama unik di lokasi yang tersedia. Gunakan **Autentikasi SQL** dan tentukan nama Anda sebagai proses masuk admin server dan kata sandi yang cukup rumit (ingat kata sandi - Anda akan membutuhkannya nanti!)
     - **Ingin menggunakan kumpulan elastis SQL?**: *Tidak*
     - **Komputasi + penyimpanan**: Jangan ubah
     - **Redundansi penyimpanan cadangan**: *Penyimpanan cadangan redundan lokal*
 
-1. On the <bpt id="p1">**</bpt>Create SQL Database<ept id="p1">**</ept> page, select <bpt id="p2">**</bpt>Next :Networking &gt;<ept id="p2">**</ept>, and on the <bpt id="p3">**</bpt>Networking<ept id="p3">**</ept> page, in the <bpt id="p4">**</bpt>Network connectivity<ept id="p4">**</ept> section, select <bpt id="p5">**</bpt>Public endpoint<ept id="p5">**</ept>. Then select <bpt id="p1">**</bpt>Yes<ept id="p1">**</ept> for both options in the <bpt id="p2">**</bpt>Firewall rules<ept id="p2">**</ept> section to allow access to your database server from Azure services and your current client IP address.
+1. Pada halaman **Buat SQL Database**, pilih **Berikutnya :Jaringan >** , dan pada halaman **Jaringan**, di bagian **Konektivitas jaringan**, pilih **Titik akhir publik**. Lalu, pilih **Ya** untuk kedua opsi di bagian **Aturan firewall** untuk mengizinkan akses ke server database Anda dari layanan Azure dan alamat IP klien Anda saat ini.
 
 1. Pilih **Berikutnya: Keamanan >** dan atur opsi **Aktifkan Microsoft Defender untuk SQL** ke **Tidak sekarang**.
 
@@ -39,7 +39,7 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 
 1. Pilih **Tinjau + Buat**, lalu pilih **Buat** untuk membuat database Azure SQL Anda.
 
-1. Wait for deployment to complete. Then go to the resource that was deployed, which should look like this:
+1. Tunggu hingga penerapan selesai. Lalu, buka sumber daya yang sudah disebarkan, yang akan terlihat seperti ini:
 
     ![Cuplikan layar portal Microsoft Azure yang menunjukkan halaman SQL Database.](images//sql-database-portal.png)
 

@@ -20,7 +20,7 @@ Untuk menggunakan Azure Synapse Analytics, Anda harus menyediakan sumber daya Ru
 
 1. Buka portal Microsoft Azure di [https://portal.azure.com](https://portal.azure.com?azure-portal=true), dan masuk menggunakan info masuk yang terkait dengan langganan Azure Anda.
 
-    > <bpt id="p1">**</bpt>Tip<ept id="p1">**</ept>:  Ensure you are working in the directory containing your subscription - indicated at the top right under your user ID. If not, select the user icon and switch directory.
+    >                 **Tips**: Pastikan untuk menggunakan direktori yang berisi langganan Anda - terletak di kanan atas di bawah ID pengguna. Jika tidak, pilih ikon pengguna dan ubah direktori.
 
 2. Di portal Microsoft Azure, di halaman **Beranda**, gunakan **&#65291; Buat ikon sumber daya** untuk membuat sumber daya baru.
 3. Cari *Azure Synapse Analytics*, dan buat sumber daya **Azure Synapse Analytics** yang baru dengan pengaturan berikut:
@@ -33,7 +33,7 @@ Untuk menggunakan Azure Synapse Analytics, Anda harus menyediakan sumber daya Ru
         - US Tengah
         - US Timur 2
         - Eropa Utara
-        - US Tengah Selatan
+        - AS Tengah Bagian Selatan
         - Asia Tenggara
         - UK Selatan
         - Eropa Barat
@@ -43,7 +43,7 @@ Untuk menggunakan Azure Synapse Analytics, Anda harus menyediakan sumber daya Ru
         - **Nama akun**: *Buat akun baru dengan nama unik, misalnya "datalake<your_name>"*.
         - **Nama sistem file**: *Buat sistem file baru dengan nama yang unik, misalnya "fs<your_name>"*.
 
-    > <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: A Synapse Analytics workspace requires two resource groups in your Azure subscription; one for resources you explicitly create, and another for managed resources used by the service. It also requires a Data Lake storage account in which to store data, scripts, and other artifacts.
+    >                 **Catatan**: Ruang kerja Synapse Analytics memerlukan dua grup sumber daya dalam langganan Azure; satu untuk sumber daya yang dibuat secara eksplisit, dan satu lagi untuk sumber daya terkelola yang digunakan oleh layanan. Hal ini juga memerlukan akun penyimpanan Data Lake untuk menyimpan data, skrip, dan artefak lainnya.
 
 4. Saat Anda memasukkan detail ini, pilih **Tinjau + buat**, lalu pilih **Buat** untuk membuat ruang kerja.
 5. Tunggu hingga ruang kerja selesai dibuat - mungkin memerlukan waktu lima menit atau lebih.
@@ -57,11 +57,11 @@ Untuk menggunakan Azure Synapse Analytics, Anda harus menyediakan sumber daya Ru
 
 Salah satu tugas utama yang dapat Anda lakukan dengan Azure Synapse Analytics adalah menentukan *alur* yang mentransfer (dan jika perlu, mentransformasi) data dari berbagai sumber ke ruang kerja Anda untuk dianalisis.
 
-1. Di Synapse Studio, pada halaman **Beranda**, pilih **Serap** lalu pilih **Tugas penyalinan bawaan** untuk membuka alat **Salin alat Data**.
+1. Di Synapse Studio, pada halaman **Beranda**, pilih **Serap** untuk membuka **alat Salin Data**.
 2. Di alat Salin Data, pada langkah **Properti**, pastikan **Tugas salin bawaan** dan **Jalankan sekali sekarang** dipilih, dan klik **Berikutnya >**.
 3. Pada langkah **Sumber**, dalam substep **Himpunan data**, pilih pengaturan berikut:
     - **Jenis sumber**: Semua
-    - **Koneksi**: *Buat koneksi baru, dan di panel **Layanan tertaut** yang muncul, pada tab **File**, pilih **HTTP**. Kemudian lanjutkan dan buat koneksi ke file data menggunakan pengaturan berikut:*
+    - **Koneksi**: *Buat koneksi baru, dan di panel **Koneksi tertaut** yang muncul, pada tab **File**, pilih **HTTP**. Kemudian lanjutkan dan buat koneksi ke file data menggunakan pengaturan berikut:*
         - **Nama**: Produk AdventureWorks
         - **Deskripsi**: Daftar produk melalui HTTP
         - **Sambungkan melalui runtime integrasi**: AutoResolveIntegrationRuntime
@@ -91,7 +91,7 @@ Salah satu tugas utama yang dapat Anda lakukan dengan Azure Synapse Analytics ad
     - **Perilaku salin**: Tidak ada
     - **Koneksi serentak maksimal**: *Biarkan kosong*
     - **Ukuran blok (MB)**: *Biarkan kosong*
-9. On the <bpt id="p1">**</bpt>Target<ept id="p1">**</ept> step, in the <bpt id="p2">**</bpt>Configuration<ept id="p2">**</ept> substep, ensure that the following properties are selected. Then select <bpt id="p1">**</bpt>Next &gt;<ept id="p1">**</ept>:
+9. Pada langkah **Target**, dalam sub langkah **Konfigurasi**, pastikan properti berikut dipilih. Kemudian, pilih **Berikutnya >**:
     - **Format file**: DelimitedText
     - **Pemisah kolom**: Koma (,)
     - **Pemisah baris**: Umpan baris (\n)
@@ -108,13 +108,13 @@ Salah satu tugas utama yang dapat Anda lakukan dengan Azure Synapse Analytics ad
 11. Pada langkah **Tinjau dan selesaikan** pada sub langkah **Tinjau**, baca ringkasan lalu klik **Berikutnya >**.
 12. Pada langkah **Penyebaran**, tunggu alur disebarkan lalu klik **Selesai**.
 13. Di Synapse Studio, pilih halaman **Pemantauan**, dan di tab **Eksekusi alur**, tunggu hingga alur **Salin produk** selesai dengan status **Berhasil** (Anda dapat menggunakan tombol **&#8635; Refresh** pada halaman Eksekusi alur untuk merefresh status).
-14. On the <bpt id="p1">**</bpt>Data<ept id="p1">**</ept> page, select the <bpt id="p2">**</bpt>Linked<ept id="p2">**</ept> tab and expand the <bpt id="p3">**</bpt>Azure Data Lake Storage Gen 2<ept id="p3">**</ept> hierarchy until you see the file storage for your Synapse workspace. Then select the file storage to verify that a file named <bpt id="p1">**</bpt>products.csv<ept id="p1">**</ept> has been copied to this location, as shown here:
+14. Pada halaman **Data**, pilih tab **Ditautkan** dan perluas hierarki **Azure Data Lake Storage Gen 2** hingga Anda melihat penyimpanan file untuk ruang kerja Synapse. Kemudian, pilih penyimpanan file untuk memverifikasi bahwa file bernama **products.csv** telah disalin ke lokasi ini, seperti yang ditunjukkan di sini:
 
     ![Gambar yang menunjukkan Synapse Studio memperluas hierarki Azure Data Lake Storage Gen 2 dengan penyimpanan file untuk ruang kerja Synapse Anda](images/synapse-storage.png)
 
 ## <a name="use-a-sql-pool-to-analyze-data"></a>Menggunakan kumpulan SQL untuk menganalisis data
 
-Now that you've ingested some data into your workspace, you can use Synapse Analytics to query and analyze it. One of the most common ways to query data is to use SQL, and in Synapse Analytics you can use a <bpt id="p1">*</bpt>SQL pool<ept id="p1">*</ept> to run SQL code.
+Setelah menyerap data ke ruang kerja, Anda dapat menggunakan Synapse Analytics untuk mengkueri dan menganalisisnya. Salah satu cara paling umum untuk mengkueri data adalah dengan menggunakan SQL, dan di Synapse Analytics Anda dapat menggunakan *kumpulan SQL* untuk menjalankan kode SQL.
 
 1. Di Synapse Studio, klik kanan file **products.csv** di penyimpanan file untuk ruang kerja Synapse Anda, arahkan ke **Skrip SQL baru**, dan pilih **Pilih baris 100 TERATAS**.
 2. Di panel **Skrip SQL 1** yang terbuka, tinjau kode SQL yang sudah dibuat, yang seharusnya mirip dengan ini:
@@ -143,7 +143,7 @@ Now that you've ingested some data into your workspace, you can use Synapse Anal
     | 772 | Mountain-100 Perak, 42 | Sepeda Gunung | 3399,9900 |
     | ... | ... | ... | ... |
 
-5. Note the results consist of four columns named C1, C2, C3, and C4; and that the first row in the results contains the names of the data fields. To fix this problem, add a HEADER_ROW = TRUE parameters to the OPENROWSET function as shown here (replacing <bpt id="p1">*</bpt>datalakexx<ept id="p1">*</ept> and <bpt id="p2">*</bpt>fsxx<ept id="p2">*</ept> with the names of your data lake storage account and file system), and then rerun the query:
+5. Perhatikan hasilnya terdiri dari empat kolom bernama C1, C2, C3, dan C4; dan baris pertama dalam hasil berisi nama bidang data. Untuk memperbaiki masalah ini, tambahkan parameter HEADER_ROW = TRUE ke fungsi OPENROWSET seperti yang ditunjukkan di sini (mengganti *datalakexx* dan *fsxx* dengan nama akun penyimpanan data lake dan sistem file Anda), lalu jalankan kembali kueri:
 
     ```SQL
     SELECT
@@ -188,13 +188,13 @@ Now that you've ingested some data into your workspace, you can use Synapse Anal
     | Rak Sepeda | 1 |
     | ... | ... |
 
-8. In the <bpt id="p1">**</bpt>Properties<ept id="p1">**</ept> pane for <bpt id="p2">**</bpt>SQL Script 1<ept id="p2">**</ept>, change the <bpt id="p3">**</bpt>Name<ept id="p3">**</ept> to <bpt id="p4">**</bpt>Count Products by Category<ept id="p4">**</ept>. Then in the toolbar, select <bpt id="p1">**</bpt>Publish<ept id="p1">**</ept> to save the script.
+8. Di panel **Properti** untuk **Skrip SQL 1**, ubah **Nama** menjadi **Hitung Produk berdasarkan Kategori**. Lalu di toolbar, pilih **Terbitkan** untuk menyimpan skrip.
 
 9. Tutup panel skrip **Hitung Produk berdasarkan Kategori**.
 
 10. Di Synapse Studio, pilih halaman **Kembangkan**, dan perhatikan bahwa skrip SQL **Hitung Produk berdasarkan Kategori** yang diterbitkan telah disimpan di sana.
 
-11. Select the <bpt id="p1">**</bpt>Count Products by Category<ept id="p1">**</ept> SQL script to reopen it. Then ensure that the script is connected to the <bpt id="p1">**</bpt>Built-in<ept id="p1">**</ept> SQL pool and run it to retrieve the product counts.
+11. Pilih skrip SQL **Hitung Produk berdasarkan Kategori** untuk membukanya kembali. Kemudian, pastikan skrip terhubung ke kumpulan SQL **Bawaan** dan jalankan untuk mengambil jumlah produk.
 
 12. Di panel **Hasil**, pilih tampilan **Bagan**, lalu pilih pengaturan berikut untuk bagan tersebut:
     - **Jenis bagan**: Kolom
@@ -212,7 +212,7 @@ Now that you've ingested some data into your workspace, you can use Synapse Anal
 
 ## <a name="use-a-spark-pool-to-analyze-data"></a>Gunakan kumpulan Spark untuk menganalisis data
 
-While SQL is a common language for querying structured datasets, many data analysts find languages like Python useful to explore and prepare data for analysis. In Azure Synapse Analytics, you can run Python (and other) code in a <bpt id="p1">*</bpt>Spark pool<ept id="p1">*</ept>; which uses a distributed data processing engine based on Apache Spark.
+Sementara SQL adalah bahasa umum untuk mengkueri himpunan data terstruktur, banyak analis data menemukan bahasa seperti Python yang berguna untuk mengeksplorasi dan mempersiapkan data untuk analisis. Di Azure Synapse Analytics, Anda dapat menjalankan kode Python (dan lainnya) di *Kumpulan Spark*; yang menggunakan mesin pemrosesan data terdistribusi berdasarkan Apache Spark.
 
 1. Di Synapse Studio, pilih halaman **Kelola**.
 2. Pilih tab **Kumpulan Apache Spark**, lalu gunakan ikon **&#65291; Baru** untuk membuat kumpulan Spark baru dengan pengaturan berikut:
@@ -222,7 +222,7 @@ While SQL is a common language for querying structured datasets, many data analy
     - **Skala otomatis**: Diaktifkan
     - **Jumlah node** 3----3
 3. Tinjau dan buat kumpulan Spark, lalu tunggu kumpulan Spark disebarkan (yang mungkin memerlukan waktu beberapa menit).
-4. When the Spark pool has been deployed, in Synapse Studio, on the <bpt id="p1">**</bpt>Data<ept id="p1">**</ept> page, browse to the file system for your Synapse workspace. Then right-click <bpt id="p1">**</bpt>products.csv<ept id="p1">**</ept>, point to <bpt id="p2">**</bpt>New notebook<ept id="p2">**</ept>, and select <bpt id="p3">**</bpt>Load to DataFrame<ept id="p3">**</ept>.
+4. Ketika kumpulan Spark telah disebarkan, di Synapse Studio, pada halaman **Data**, telusuri ke sistem file untuk ruang kerja Synapse Anda. Kemudian klik kanan **products.csv**, arahkan ke **Buku catatan baru**, dan pilih **Muat ke DataFrame**.
 5. Di panel **Buku catatan 1** yang terbuka, dalam daftar **Lampirkan ke**, pilih kumpulan Spark **spark** yang akan dibuat sebelumnya dan pastikan **Bahasa** diatur ke **PySpark (Python)**.
 6. Tinjau kode di sel pertama (dan satu-satunya) di buku catatan, yang akan terlihat seperti ini:
 
@@ -235,7 +235,7 @@ While SQL is a common language for querying structured datasets, many data analy
     display(df.limit(10))
     ```
 
-7.                  **Tips**: Pastikan untuk menggunakan direktori yang berisi langganan Anda - terletak di kanan atas di bawah ID pengguna.
+7.  Pilih **&#9655; Jalankan** di sebelah kiri sel kode untuk menjalankannya, dan tunggu hasilnya. Pertama kali Anda menjalankan sel di buku catatan, kumpulan Spark dimulai - jadi mungkin perlu waktu satu menit atau lebih untuk menampilkan hasil.
 
     > **Catatan**: Jika terjadi kesalahan karena Kernel Python belum tersedia, jalankan kembali sel.
 
@@ -285,7 +285,7 @@ While SQL is a common language for querying structured datasets, many data analy
     | Roda | 14 |
     | ... | ... |
 
-14. Jika tidak, pilih ikon pengguna dan ubah direktori.
+14. Dalam output hasil untuk sel, pilih tampilan **Bagan**. Bagan yang dihasilkan akan menyerupai ini:
 
     ![Gambar menampilkan tampilan bagan jumlah kategori](images/bar-chart.png)
 

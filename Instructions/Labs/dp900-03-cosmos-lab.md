@@ -1,9 +1,9 @@
 ---
 lab:
-  title: Menjelajahi data non-relasional di Azure dengan Azure Cosmos DB
+  title: Jelajahi Azure Cosmos DB
   module: Explore fundamentals of Azure Cosmos DB
 ---
-# <a name="explore-non-relational-data-in-azure-with-azure-cosmos-db"></a>Menjelajahi data non-relasional di Azure dengan Azure Cosmos DB
+# <a name="explore-azure-cosmos-db"></a>Jelajahi Azure Cosmos DB
 
 Dalam latihan ini Anda akan memprovisikan database Azure Cosmos DB di langganan Azure Anda, dan menjelajahi berbagai cara Anda dapat menggunakannya untuk menyimpan data non-relasional.
 
@@ -15,12 +15,12 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 
 ## <a name="create-a-cosmos-db-account"></a>Membuat akun Cosmos DB
 
-To use Cosmos DB, you must provision a Cosmos DB account in your Azure subscription. In this exercise, you'll provision a Cosmos DB account that uses the core (SQL) API.
+Untuk menggunakan Cosmos DB, Anda harus menyediakan akun Cosmos DB di langganan Azure Anda. Dalam latihan ini, Anda akan menyediakan akun Cosmos DB yang menggunakan API inti (SQL).
 
-1. In the Azure portal, select <bpt id="p1">**</bpt>+ Create a resource<ept id="p1">**</ept> at the top left, and search for <bpt id="p2">*</bpt>Azure Cosmos DB<ept id="p2">*</ept>.  In the results, select <bpt id="p1">**</bpt>Azure Cosmos DB<ept id="p1">**</ept> and select  <bpt id="p2">**</bpt>Create<ept id="p2">**</ept>.
+1. Di portal Microsoft Azure, pilih **+ Buat sumber daya** di kiri atas, dan cari *Azure Cosmos DB*.  Di hasil, pilih **Azure Cosmos DB** dan pilih **Buat**.
 1. Di petak **Core (SQL) - Disarankan**, pilih **Buat**.
 1. Masukkan detail berikut, lalu pilih **Tinjau + Buat**:
-    - <bpt id="p1">**</bpt>Subscription<ept id="p1">**</ept>: If you're using a sandbox, select <bpt id="p2">*</bpt>Concierge Subscription<ept id="p2">*</ept>. Otherwise, select your Azure subscription.
+    - **Langganan**: Jika Anda menggunakan kotak pasir, pilih *Langganan Concierge*. Atau, pilih langganan Azure.
     - **Grup sumber daya**: Jika Anda menggunakan kotak pasir, pilih grup sumber daya yang ada (yang akan diberi nama seperti *learn-xxxx...* ). Jika tidak, buat grup sumber daya baru dengan nama pilihan Anda.
     - **Nama Akun**: Masukkan nama unik
     - **Lokasi**: Pilih lokasi yang disarankan
@@ -28,7 +28,7 @@ To use Cosmos DB, you must provision a Cosmos DB account in your Azure subscript
     - **Terapkan Diskon Tingkat Gratis**: Pilih Terapkan jika tersedia
     - **Batasi total throughput akun**: Tidak dipilih
 1. Ketika konfigurasi telah divalidasi, pilih **Buat**.
-1. Wait for deployment to complete. Then go to the deployed resource.
+1. Tunggu hingga penerapan selesai. Lalu pergi ke sumber daya yang disebarkan.
 
 ## <a name="create-a-sample-database"></a>Membuat database sampel
 
@@ -41,7 +41,7 @@ To use Cosmos DB, you must provision a Cosmos DB account in your Azure subscript
 
 ## <a name="view-and-create-items"></a>Melihat dan membuat item
 
-1. In the Data Explorer page, expand the <bpt id="p1">**</bpt>SampleDB<ept id="p1">**</ept> database and the <bpt id="p2">**</bpt>SampleContainer<ept id="p2">**</ept> container, and select <bpt id="p3">**</bpt>Items<ept id="p3">**</ept> to see a list of items in the container. The items represent addresses, each with a unique id and other properties.
+1. Di halaman Data Explorer, luaskan database **SampleDB** dan kontainer **SampleContainer**, lalu pilih **Item** untuk melihat daftar item dalam kontainer. Item mewakili alamat, masing-masing dengan id unik dan properti lainnya.
 1. Pilih salah satu item dalam daftar untuk melihat representasi JSON dari data item.
 1. Di bagian atas halaman, pilih **Item Baru** untuk membuat item kosong baru.
 1. Ubah JSON untuk item baru sebagai berikut, lalu pilih **Simpan**.
@@ -71,6 +71,6 @@ To use Cosmos DB, you must provision a Cosmos DB account in your Azure subscript
 1. Gunakan tombol **Jalankan Kueri** untuk menjalankan kueri yang direvisi dan tinjau hasilnya, yang mencakup entitas JSON untuk item apa pun dengan bidang **alamat** yang berisi teks "Any St.".
 1. Tutup editor Kueri SQL, buang perubahan Anda.
 
-    You've seen how to create and query JSON entities in a Cosmos DB database by using the data explorer interface in the Azure portal. In a real scenario, an application developer would use one of the many programming language specific software development kits (SDKs) to call the core (SQL) API and work with data in the database.
+    Anda telah melihat cara membuat dan mengkueri entitas JSON dalam database Cosmos DB menggunakan antarmuka penjelajah data di portal Microsoft Azure. Di kehidupan nyata, pengembang aplikasi akan menggunakan salah satu dari banyak kit pengembangan perangkat lunak (SDK) khusus bahasa pemrograman untuk memanggil API core (SQL) dan bekerja dengan data dalam database.
 
 > **Tips**: Setelah selesai menjelajahi Azure Cosmos DB, Anda dapat menghapus grup sumber daya yang dibuat dalam latihan ini.
