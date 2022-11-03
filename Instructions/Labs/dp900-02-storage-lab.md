@@ -44,7 +44,7 @@ Sekarang setelah memiliki akun Azure Storage, Anda dapat membuat kontainer untuk
 1. Di halaman portal Azure untuk kontainer penyimpanan Anda, di sisi kiri, pada bagian **Penyimpanan data**, pilih **Kontainer**.
 1. Di halaman **Kontainer**, pilih **&#65291; Kontainer** dan tambahkan kontainer baru bernama **data** dengan tingkat akses publik **Privat (tanpa akses anonim)** .
 1. Setelah kontainer **data** dibuat, verifikasi bahwa kontainer tersebut tercantum di halaman **Kontainer**.
-1. Di panel sebelah kiri, di bagian atas, pilih **Browser penyimpanan**. Halaman ini menyediakan antarmuka berbasis browser yang dapat Anda gunakan untuk bekerja dengan data di akun penyimpanan.
+1. Di panel sebelah kiri, di bagian atas, pilih **Browser penyimpana**. Halaman ini menyediakan antarmuka berbasis browser yang dapat Anda gunakan untuk bekerja dengan data di akun penyimpanan.
 1. Di halaman browser penyimpanan, pilih **Kontainer blob** dan verifikasi bahwa kontainer **data** Anda dicantumkan.
 1. Pilih kontainer **data**, dan perhatikan bahwa kontainer tersebut kosong.
 1. Pilih **&#65291; Tambahkan Direktori** dan baca informasi tentang folder sebelum membuat direktori baru bernama **produk**.
@@ -68,7 +68,7 @@ Dukungan Azure Data Lake Store Gen2 memungkinkan Anda menggunakan folder hierark
 
 1. Unduh file JSON [product2.json](https://aka.ms/product2.json?azure-portal=true) dari `https://aka.ms/product2.json` dan simpan di komputer Anda di folder yang sama tempat Anda mengunduh **product1.json** sebelumnya - Anda akan mengunggahnya ke penyimpanan blob nanti ).
 1. Di halaman portal Microsoft Azure untuk akun penyimpanan Anda, di sisi kiri, gulir ke bawah ke bagian **Pengaturan**, dan pilih **Peningkatan Azure Data Lake Gen2**.
-1. Di halaman ****Peningkatan Azure Data Lake Gen2****, perluas dan selesaikan setiap langkah untuk meningkatkan akun penyimpanan Anda guna mengaktifkan namespace hierarkis dan mendukung Azure Data Lake Storage Gen 2. Ini mungkin memakan waktu.
+1. Di halaman **upgrade Data Lake Gen2**, perluas dan selesaikan setiap langkah untuk meningkatkan akun penyimpanan Anda guna mengaktifkan namespace hierarkis dan mendukung Azure Data Lake Storage Gen 2. Ini mungkin memakan waktu.
 1. Setelah peningkatan selesai, pada panel sisi kiri, di bagian atas, pilih **Browser penyimpanan** dan navigasikan kembali ke akar kontainer blob **data** Anda, yang masih berisi folder **product_data**.
 1. Pilih folder **product_data**, dan pastikan folder tersebut masih berisi file **product1.json** yang Anda unggah sebelumnya.
 1. Gunakan tombol **&#10514; Unggah** untuk membuka panel **Unggah blob**.
@@ -121,7 +121,7 @@ Azure Table menyediakan penyimpanan kunci/nilai untuk aplikasi yang perlu menyim
     |Nama properti | Jenis | Nilai |
     | ------------ | ---- | ----- |
     | PartitionKey | Untai (karakter) | 1 |
-    | RowKey | Untai | 2. |
+    | RowKey | Untai | 2 |
     | Nama | String | Kniknak |
     | Harga | Ganda | 1,99 |
     | Dihentikan | Boolean | TRUE |

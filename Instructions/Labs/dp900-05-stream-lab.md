@@ -85,7 +85,7 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 7. Buka kontainer **data**.
 8. Dalam kontainer **data**, navigasikan melalui hierarki folder, yang mencakup folder untuk tahun ini, dengan subfolder untuk bulan, hari, dan jam.
 9. Dalam folder jam, pilih file yang telah dibuat, yang memiliki nama mirip dengan **0_xxxxxxxxxxxxxxxx.json**.
-10. Pada halaman file, pilih **Edit**, dan tinjau konten file; yang harus terdiri dari catatan JSON untuk setiap periode 10 detik, menunjukkan jumlah pesan yang diterima dari perangkat IoT, seperti ini:
+10. Pada menu **...** file (di sebelah kanan detail file), pilih **Lihat/edit**, kemudian tinjau konten file; yang harus berisi catatan JSON setiap periode 10 detik, yang menunjukkan jumlah pesan yang diterima dari perangkat IoT, seperti ini:
 
     ```
     {"starttime":"2021-10-23T01:02:13.2221657Z","endtime":"2021-10-23T01:02:23.2221657Z","device":"iotdevice","messages":2}
