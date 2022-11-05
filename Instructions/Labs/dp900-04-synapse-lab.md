@@ -82,16 +82,16 @@ Salah satu tugas utama yang dapat Anda lakukan dengan Azure Synapse Analytics ad
     - **Pemisah baris**: Umpan baris (\n)
     - **Baris pertama sebagai header**: Dipilih
     - **Jenis pemadatan**: Tidak ada
-7. Pada langkah **Target**, dalam sub langkah **Himpunan data**, pilih pengaturan berikut:
+7. Pada langkah **Target**, dalam sub langkah **Himpunan data**, harap pilih pengaturan berikut:
     - **Jenis target**: Azure Data Lake Storage Gen 2
     - **Koneksi**: *Pilih koneksi yang ada ke penyimpanan data lake Anda (ini dibuat untuk Anda saat Anda membuat ruang kerja).*
-8. Setelah memilih koneksi, pada langkah **Target/Himpunan data**, pastikan pengaturan berikut dipilih, lalu pilih **Berikutnya >** :
+8. Setelah memilih koneksi, pada langkah **Target/Himpunan data**, pastikan pengaturan berikut dipilih, kemudian pilih **Berikutnya >** :
     - **Jalur folder**: *Telusuri ke folder sistem file Anda*
     - **Nama file**: products.csv
     - **Perilaku salin**: Tidak ada
     - **Koneksi serentak maksimal**: *Biarkan kosong*
     - **Ukuran blok (MB)**: *Biarkan kosong*
-9. Pada langkah **Target**, dalam sub langkah **Konfigurasi**, pastikan properti berikut dipilih. Kemudian, pilih **Berikutnya >**:
+9. Pada langkah **Target**, dalam sub langkah **Konfigurasi**, pastikan properti berikut telah dipilih. Kemudian, pilih **Berikutnya >**:
     - **Format file**: DelimitedText
     - **Pemisah kolom**: Koma (,)
     - **Pemisah baris**: Umpan baris (\n)
@@ -106,7 +106,7 @@ Salah satu tugas utama yang dapat Anda lakukan dengan Azure Synapse Analytics ad
     - **Aktifkan pengelogan**: <u>Tidak</u> dipilih
     - **Aktifkan pentahapan**: <u>Tidak</u> dipilih
 11. Pada langkah **Tinjau dan selesaikan** pada sub langkah **Tinjau**, baca ringkasan lalu klik **Berikutnya >**.
-12. Pada langkah **Penyebaran**, tunggu alur disebarkan lalu klik **Selesai**.
+12. Pada langkah **Penyebaran**, harap tunggu alur disebarkan lalu klik **Selesai**.
 13. Di Synapse Studio, pilih halaman **Pemantauan**, dan di tab **Eksekusi alur**, tunggu hingga alur **Salin produk** selesai dengan status **Berhasil** (Anda dapat menggunakan tombol **&#8635; Refresh** pada halaman Eksekusi alur untuk merefresh status).
 14. Pada halaman **Data**, pilih tab **Ditautkan** dan perluas hierarki **Azure Data Lake Storage Gen 2** hingga Anda melihat penyimpanan file untuk ruang kerja Synapse. Kemudian, pilih penyimpanan file untuk memverifikasi bahwa file bernama **products.csv** telah disalin ke lokasi ini, seperti yang ditunjukkan di sini:
 

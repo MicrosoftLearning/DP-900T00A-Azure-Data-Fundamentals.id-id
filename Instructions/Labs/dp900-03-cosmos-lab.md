@@ -15,10 +15,10 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 
 ## <a name="create-a-cosmos-db-account"></a>Membuat akun Cosmos DB
 
-Untuk menggunakan Cosmos DB, Anda harus menyediakan akun Cosmos DB di langganan Azure Anda. Dalam latihan ini, Anda akan menyediakan akun Cosmos DB yang menggunakan API inti (SQL).
+Untuk menggunakan Cosmos DB, Anda harus menyediakan akun Cosmos DB di langganan Azure Anda. Dalam latihan ini, Anda akan menyediakan akun Cosmos DB yang menggunakan Azure Cosmos DB untuk NoSQL.
 
 1. Di portal Microsoft Azure, pilih **+ Buat sumber daya** di kiri atas, dan cari *Azure Cosmos DB*.  Di hasil, pilih **Azure Cosmos DB** dan pilih **Buat**.
-1. Di petak **Core (SQL) - Disarankan**, pilih **Buat**.
+1. Di petak **Azure Cosmos DB untuk NoSQL**, pilih **Buat**.
 1. Masukkan detail berikut, lalu pilih **Tinjau + Buat**:
     - **Langganan**: Jika Anda menggunakan kotak pasir, pilih *Langganan Concierge*. Atau, pilih langganan Azure.
     - **Grup sumber daya**: Jika Anda menggunakan kotak pasir, pilih grup sumber daya yang ada (yang akan diberi nama seperti *learn-xxxx...* ). Jika tidak, buat grup sumber daya baru dengan nama pilihan Anda.
@@ -71,6 +71,6 @@ Untuk menggunakan Cosmos DB, Anda harus menyediakan akun Cosmos DB di langganan 
 1. Gunakan tombol **Jalankan Kueri** untuk menjalankan kueri yang direvisi dan tinjau hasilnya, yang mencakup entitas JSON untuk item apa pun dengan bidang **alamat** yang berisi teks "Any St.".
 1. Tutup editor Kueri SQL, buang perubahan Anda.
 
-    Anda telah melihat cara membuat dan mengkueri entitas JSON dalam database Cosmos DB menggunakan antarmuka penjelajah data di portal Microsoft Azure. Di kehidupan nyata, pengembang aplikasi akan menggunakan salah satu dari banyak kit pengembangan perangkat lunak (SDK) khusus bahasa pemrograman untuk memanggil API core (SQL) dan bekerja dengan data dalam database.
+    Anda telah melihat cara membuat dan mengkueri entitas JSON dalam database Cosmos DB menggunakan antarmuka penjelajah data di portal Microsoft Azure. Di kehidupan nyata, pengembang aplikasi akan menggunakan salah satu dari banyak kit pengembangan perangkat lunak (SDK) khusus bahasa pemrograman untuk memanggil NoSQL API dan bekerja dengan data dalam database.
 
 > **Tips**: Setelah selesai menjelajahi Azure Cosmos DB, Anda dapat menghapus grup sumber daya yang dibuat dalam latihan ini.
