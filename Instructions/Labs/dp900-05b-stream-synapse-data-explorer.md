@@ -84,8 +84,8 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 
     | Waktu | Perangkat | Nilai |
     | --- | --- | --- |
-    | 2022-01-01T00:00:00Z | Dev1 | -7 |
-    | 2022-01-01T00:00:01Z | Dev2 | 4. |
+    | 2022-01-01T00:00:00Z | Dev1 | 7 |
+    | 2022-01-01T00:00:01Z | Dev2 | 4 |
     | ... | ... | ... |
 
     Jika hasil cocok dengan ini, Anda telah berhasil membuat tabel **perangkat** dari data dalam file.
