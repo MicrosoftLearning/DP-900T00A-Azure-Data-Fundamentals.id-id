@@ -58,9 +58,7 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 
     Jika ketiga sumber ini tidak tercantum, klik tombol **&#8635; Refresh** hingga sumber muncul.
 
-    > **Catatan**: Jika Anda menggunakan kotak pasir Microsoft learn, grup sumber daya juga dapat berisi *Akun penyimpanan* kedua bernama **cloudshell*xxxxxxxxx***, yang digunakan untuk menyimpan data untuk Azure Cloud Shell yang digunakan untuk menjalankan skrip penyiapan.
-
-3. Pilih pekerjaan Azure Stream Analytics **stream*xxxxxxxxxxxxx*** dan lihat informasinya di halaman **Ringkasan**, dengan memperhatikan detail berikut:
+ 3. Pilih pekerjaan Azure Stream Analytics **stream*xxxxxxxxxxxxx*** dan lihat informasinya di halaman **Ringkasan**, dengan memperhatikan detail berikut:
     - Pekerjaan memiliki satu *input* bernama **iotinput**, dan satu *output* bernama **bloboutput**. Ini merujuk pada IoT Hub dan akun Penyimpanan yang dibuat oleh skrip penyiapan.
     - Pekerjaan memiliki *kueri*, yang membaca data dari input **iotinput**, dan menggabungkannya dengan menghitung jumlah pesan yang diproses setiap 10 detik; menulis hasilnya ke output **bloboutput**.
 
