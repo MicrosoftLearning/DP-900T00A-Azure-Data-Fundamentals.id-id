@@ -1,10 +1,10 @@
-# <a name="dp-900-trainer-lab-mapping"></a>Pemetaan lab trainer DP-900
+# Pemetaan lab trainer DP-900
 
 Kursus ini, DP-900: Dasar-Dasar Data Azure, memiliki satu set laboratorium yang ditunjuk untuk pelatihan yang dipimpin instruktur. 
 
 > Catatan: Instruktur dapat memilih meminta siswa untuk menyelesaikan satu atau lebih lab di waktu luang mereka menggunakan latihan di jalur pembelajaran Learn terkait (https://docs.microsoft.com/users/23110622/collections/0kjyh8rn5gdrjj). 
 
-## <a name="dp-900-module-mapping-to-labs"></a>Pemetaan modul DP-900 ke lab
+## Pemetaan modul DP-900 ke lab
 
 | Modul | Laboratorium | File Markdown |
 | --- | --- | --- |

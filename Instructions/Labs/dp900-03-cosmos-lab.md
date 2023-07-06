@@ -3,17 +3,17 @@ lab:
   title: Jelajahi Azure Cosmos DB
   module: Explore fundamentals of Azure Cosmos DB
 ---
-# <a name="explore-azure-cosmos-db"></a>Jelajahi Azure Cosmos DB
+# Jelajahi Azure Cosmos DB
 
 Dalam latihan ini Anda akan memprovisikan database Azure Cosmos DB di langganan Azure Anda, dan menjelajahi berbagai cara Anda dapat menggunakannya untuk menyimpan data non-relasional.
 
 Membutuhkan waktu sekitar **15** menit untuk menyelesaikan lab ini.
 
-## <a name="before-you-start"></a>Sebelum Anda memulai
+## Sebelum Anda memulai
 
 Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses tingkat administratif.
 
-## <a name="create-a-cosmos-db-account"></a>Membuat akun Cosmos DB
+## Membuat akun Cosmos DB
 
 Untuk menggunakan Cosmos DB, Anda harus menyediakan akun Cosmos DB di langganan Azure Anda. Dalam latihan ini, Anda akan menyediakan akun Cosmos DB yang menggunakan Azure Cosmos DB untuk NoSQL.
 
@@ -30,7 +30,7 @@ Untuk menggunakan Cosmos DB, Anda harus menyediakan akun Cosmos DB di langganan 
 1. Ketika konfigurasi telah divalidasi, pilih **Buat**.
 1. Tunggu hingga penerapan selesai. Lalu pergi ke sumber daya yang disebarkan.
 
-## <a name="create-a-sample-database"></a>Membuat database sampel
+## Membuat database sampel
 
 *Sepanjang prosedur ini, tutup semua tips yang ditampilkan di portal*.
 
@@ -39,23 +39,27 @@ Untuk menggunakan Cosmos DB, Anda harus menyediakan akun Cosmos DB di langganan 
 1. Di tab **Kontainer baru**, tinjau pengaturan yang telah diisi sebelumnya untuk database sampel, lalu pilih **OK**.
 1. Amati status di panel di bagian bawah layar hingga database **SampleDB** dan kontainer **SampleContainer** telah dibuat (yang mungkin memerlukan waktu sekitar satu menit).
 
-## <a name="view-and-create-items"></a>Melihat dan membuat item
+## Melihat dan membuat item
 
-1. Di halaman Data Explorer, luaskan database **SampleDB** dan kontainer **SampleContainer**, lalu pilih **Item** untuk melihat daftar item dalam kontainer. Item mewakili alamat, masing-masing dengan id unik dan properti lainnya.
+1. Di halaman Data Explorer, luaskan database **SampleDB** dan kontainer **SampleContainer**, lalu pilih **Item** untuk melihat daftar item dalam kontainer. Item mewakili data produk, masing-masing dengan id unik dan properti lainnya.
 1. Pilih salah satu item dalam daftar untuk melihat representasi JSON dari data item.
 1. Di bagian atas halaman, pilih **Item Baru** untuk membuat item kosong baru.
 1. Ubah JSON untuk item baru sebagai berikut, lalu pilih **Simpan**.
 
     ```json
     {
-        "address": "1 Any St.",
-        "id": "123456789"
+        "name": "Road Helmet,45",
+        "id": "123456789",
+        "categoryID": "123456789",
+        "SKU": "AB-1234-56",
+        "description": "The product called \"Road Helmet,45\" ",
+        "price": 48.74
     }
     ```
 
 1. Setelah menyimpan item baru, perhatikan bahwa properti metadata tambahan ditambahkan secara otomatis.
 
-## <a name="query-the-database"></a>Mengkueri database
+## Mengkueri database
 
 1. Di halaman **Data Explorer**, pilih ikon **Kueri SQL Baru**.
 1. Di editor Kueri SQL, tinjau kueri default (`SELECT * FROM c`) dan gunakan tombol `SELECT * FROM c` untuk menjalankannya.
@@ -63,12 +67,12 @@ Untuk menggunakan Cosmos DB, Anda harus menyediakan akun Cosmos DB di langganan 
 1. Ubah kueri sebagai berikut:
 
     ```sql
-    SELECT c.id, c.address
+    SELECT *
     FROM c
-    WHERE CONTAINS(c.address, "Any St.")
+    WHERE CONTAINS(c.name,"Helmet")
     ```
 
-1. Gunakan tombol **Jalankan Kueri** untuk menjalankan kueri yang direvisi dan tinjau hasilnya, yang mencakup entitas JSON untuk item apa pun dengan bidang **alamat** yang berisi teks "Any St.".
+1. Gunakan tombol **Jalankan Kueri** untuk menjalankan kueri yang direvisi dan meninjau hasilnya, yang menyertakan entitas JSON untuk item apa pun dengan bidang **nama** yang berisi teks "Helmet".
 1. Tutup editor Kueri SQL, buang perubahan Anda.
 
     Anda telah melihat cara membuat dan mengkueri entitas JSON dalam database Cosmos DB menggunakan antarmuka penjelajah data di portal Microsoft Azure. Di kehidupan nyata, pengembang aplikasi akan menggunakan salah satu dari banyak kit pengembangan perangkat lunak (SDK) khusus bahasa pemrograman untuk memanggil NoSQL API dan bekerja dengan data dalam database.

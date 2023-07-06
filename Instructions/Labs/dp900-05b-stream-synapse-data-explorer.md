@@ -4,17 +4,19 @@ lab:
   module: Explore fundamentals of real-time analytics
 ---
 
-# <a name="explore-azure-synapse-data-explorer"></a>Menjelajahi Azure Synapse Data Explorer
+# Menjelajahi Azure Synapse Data Explorer
+
+> **Catatan**: Karena perubahan produk, ada beberapa masalah yang diketahui dengan bagian **Membuat database dan menyerap data** di lab ini. Kami berupaya mengatasi masalah ini.
 
 Dalam latihan ini, Anda akan menggunakan Azure Synapse Data Explorer untuk menganalisis data deret waktu.
 
 Membutuhkan waktu sekitar **25** menit untuk menyelesaikan lab ini.
 
-## <a name="before-you-start"></a>Sebelum Anda memulai
+## Sebelum Anda memulai
 
 Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses tingkat administratif.
 
-## <a name="provision-a-synapse-analytics-workspace"></a>Memprovisikn ruang kerja Azure Synapse Analytics
+## Memprovisikn ruang kerja Azure Synapse Analytics
 
 > **Tips**: Jika sudah memiliki Ruang Kerja Azure Synapse dari latihan sebelumnya, lewati bagian ini dan langsung buka **[Buat kumpulan Data Explorer](#create-a-data-explorer-pool)** .
 
@@ -39,9 +41,9 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 1. Tunggu hingga ruang kerja selesai dibuat - mungkin memerlukan waktu lima menit atau lebih.
 1. Saat penyebaran selesai, buka grup sumber daya yang dibuat dan perhatikan bahwa grup tersebut berisi ruang kerja Synapse Analytics Anda dan akun penyimpanan Data Lake.
 1. Pilih ruang kerja Synapse Anda, dan di halaman **Gambaran umum**, di kartu **Buka Synapse Studio**, pilih **Buka** untuk membuka Synapse Studio di tab browser baru. Synapse Studio adalah antarmuka berbasis web yang dapat digunakan untuk bekerja dengan ruang kerja Synapse Analytics Anda.
-1. Di sisi kiri Synapse Studio, gunakan ikon **&rsaquo;&rsaquo;** untuk meluaskan menu - tindakan ini akan menampilkan berbagai halaman dalam Synapse Studio yang akan digunakan untuk mengelola sumber daya dan melakukan tugas analitik data
+1. Di sisi kiri Synapse Studio, gunakan **&rsaquo;&rsaquo;** ikon untuk memperluas menu - ini mengungkapkan berbagai halaman dalam Synapse Studio yang akan Anda gunakan untuk mengelola sumber daya dan melakukan tugas analitik data.
 
-## <a name="create-a-data-explorer-pool"></a>Membuat kumpulan Data Explorer
+## Membuat kumpulan Data Explorer
 
 1. Di Synapse Studio, pilih halaman **Kelola**.
 1. Pilih tab **kumpulan Data Explorer**, lalu gunakan tab **&#65291; Ikon** baru untuk membuat kumpulan baru dengan pengaturan berikut:
@@ -51,7 +53,7 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 1. Pilih **Berikutnya: Pengaturan Tambahan >** dan aktifkan pengaturan **Penyerapan streaming** - pengaturan ini memungkinkan Data Explorer menyerap data baru dari sumber streaming, seperti Azure Event Hubs.
 1. Pilih **Tinjau dan buat** untuk membuat kumpulan Data Explorer, lalu tunggu hingga kumpulan tersebut disebarkan (yang mungkin memerlukan waktu 15 menit atau lebih lama - statusnya akan berubah dari *Membuat* menjadi *Online*).
 
-## <a name="create-a-database-and-ingest-data"></a>Membuat database dan menyerap data
+## Membuat database dan menyerap data
 
 1. Di Synapse Studio, pilih halaman **Data**.
 1. Pastikan tab **Ruang Kerja** dipilih, dan jika perlu, pilih **&#8635;** di kiri atas halaman untuk merefresh tampilan sehingga **database Data Explorer**  terdaftar.
@@ -92,7 +94,7 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 
     >                 **Tips**: Dalam contoh ini, Anda mengimpor sejumlah kecil data batch dari satu file, yang dapat dilakukan untuk tujuan latihan ini. Pada kenyataannya, Anda dapat menggunakan Data Explorer untuk menganalisis volume data yang jauh lebih besar; dan karena Anda mengaktifkan penyerapan streaming, Anda juga dapat mengonfigurasi Data Explorer untuk menyerap data ke dalam tabel dari sumber streaming seperti Azure Event Hubs.
 
-## <a name="use-kusto-query-language-to-query-the-table-in-synapse-studio"></a>Gunakan bahasa kueri Kusto untuk membuat kueri tabel di Synapse Studio
+## Gunakan bahasa kueri Kusto untuk membuat kueri tabel di Synapse Studio
 
 1. Tutup tab browser Azure Data Explorer dan kembali ke tab yang berisi Synapse Studio.
 1. Pada halaman **Data**, luaskan database **iot-data** dan folder **Tabel**-nya. Kemudian di menu **...** untuk tabel **perangkat**, pilih **Skrip KQL Baru** > **Ambil 1000 baris**.
@@ -137,7 +139,7 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 
 1. Tutup tab kueri KQL, buang perubahan Anda.
 
-## <a name="delete-azure-resources"></a>Menghapus sumber daya Azure
+## Menghapus sumber daya Azure
 
 Setelah selesai menjelajahi Azure Synapse Analytics, Anda harus menghapus sumber daya yang dibuat untuk menghindari biaya Azure yang tidak perlu.
 

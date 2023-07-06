@@ -4,17 +4,17 @@ lab:
   module: Explore relational data in Azure
 ---
 
-# <a name="explore-azure-database-for-postgresql"></a>Jelajahi Azure Database for PostgreSQL
+# Jelajahi Azure Database for PostgreSQL
 
 Dalam latihan ini, Anda akan menyediakan sumber daya Azure Database for PostgreSQL di langganan Azure Anda.
 
 Membutuhkan waktu sekitar **5** menit untuk menyelesaikan lab ini.
 
-## <a name="before-you-start"></a>Sebelum Anda memulai
+## Sebelum Anda memulai
 
 Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses tingkat administratif.
 
-## <a name="provision-an-azure-database-for-postgresql-resource"></a>Memprovisikan sumber daya Azure Database for PostgreSQL
+## Memprovisikan sumber daya Azure Database for PostgreSQL
 
 Dalam latihan ini, Anda akan memprovisikan sumber daya Azure Database for PostgreSQL.
 

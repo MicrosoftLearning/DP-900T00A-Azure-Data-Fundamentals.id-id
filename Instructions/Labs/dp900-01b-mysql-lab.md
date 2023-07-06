@@ -4,17 +4,17 @@ lab:
   module: Explore relational data in Azure
 ---
 
-# <a name="explore-azure-database-for-mysql"></a>Jelajahi Azure Database for MySQL
+# Jelajahi Azure Database for MySQL
 
 Dalam latihan ini Anda akan menyediakan sumber daya Azure Database for MySQL di langganan Azure Anda.
 
 Membutuhkan waktu sekitar **5** menit untuk menyelesaikan lab ini.
 
-## <a name="before-you-start"></a>Sebelum Anda memulai
+## Sebelum Anda memulai
 
 Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses tingkat administratif.
 
-## <a name="provision-an-azure-database-for-mysql-resource"></a>Memprovisikan sumber daya Azure Database for MySQL
+## Memprovisikan sumber daya Azure Database for MySQL
 
 Dalam latihan ini, Anda akan memprovisikan sumber daya Azure Database for MySQL.
 
