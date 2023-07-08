@@ -4,17 +4,17 @@ lab:
   module: Explore Azure Storage for non-relational data
 ---
 
-# <a name="explore-azure-storage"></a>Menjelajahi Azure Storage
+# Menjelajahi Azure Storage
 
 Dalam latihan ini Anda akan memprovisikan akun Azure Storage di langganan Azure, dan menjelajahi berbagai cara agar dapat menggunakannya untuk menyimpan data.
 
 Membutuhkan waktu sekitar **15** menit untuk menyelesaikan lab ini.
 
-## <a name="before-you-start"></a>Sebelum Anda memulai
+## Sebelum Anda memulai
 
 Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses tingkat administratif.
 
-## <a name="provision-an-azure-storage-account"></a>Memprovisikan akun Azure Storage
+## Memprovisikan akun Azure Storage
 
 Langkah pertama dalam menggunakan Azure Storage adalah memprovisikan akun Azure Storage di langganan Azure Anda.
 
@@ -30,10 +30,10 @@ Langkah pertama dalam menggunakan Azure Storage adalah memprovisikan akun Azure 
 
 1. Pilih **Berikutnya: Tingkat Lanjut >** dan lihat opsi konfigurasi tingkat lanjut. Secara khusus, perhatikan bahwa ini adalah tempat Anda dapat mengaktifkan namespace layanan hierarkis untuk mendukung Azure Data Lake Storage Gen2. Biarkan opsi ini tetap **<u>tidak dipilih</u>** (Anda dapat mengaktifkannya nanti), lalu pilih **Berikutnya: Jaringan >** guna menampilkan opsi jaringan untuk akun penyimpanan.
 1. Pilih **Berikutnya: Perlindungan data >** , lalu di bagian **Pemulihan**, <u>batalkan</u> pilihan semua opsi **Aktifkan penghapusan sementara...** . Opsi ini mempertahankan file yang dihapus untuk pemulihan berikutnya, tetapi dapat menyebabkan masalah nanti saat Anda mengaktifkan namespace layanan hierarkis.
-1. Lanjutkan melalui halaman **Berikutnya >** yang ada tanpa mengubah pengaturan default apa pun, lalu pada halaman **Tinjau + Buat**, tunggu hingga pilihan Anda divalidasi dan pilih **Buat** untuk membuat akun Azure Storage.
+1. Lanjutkan melalui halaman **Berikutnya >** yang tersisa tanpa mengubah salah satu pengaturan default, lalu di halaman  **Tinjau** , tunggu hingga pilihan Anda divalidasi dan pilih **Buat** untuk membuat akun Azure Storage Anda.
 1. Tunggu hingga penerapan selesai. Lalu buka sumber daya yang disebarkan.
 
-## <a name="explore-blob-storage"></a>Menjelajahi penyimpanan blob
+## Menjelajahi penyimpanan blob
 
 Sekarang setelah memiliki akun Azure Storage, Anda dapat membuat kontainer untuk data blob.
 
@@ -62,7 +62,7 @@ Sekarang setelah memiliki akun Azure Storage, Anda dapat membuat kontainer untuk
 1. Pilih ikon **&#x2027;&#x2027;&#x2027;** di ujung kanan folder, dan perhatikan bahwa ikon tersebut tidak menampilkan opsi sama sekali. Folder dalam kontainer blob namespace datar bersifat virtual, serta tidak dapat dikelola.
 1. Gunakan ikon **X** di kanan atas halaman **data** untuk menutup halaman dan kembali ke halaman **Kontainer**.
 
-## <a name="explore-azure-data-lake-storage-gen2"></a>Menjelajahi Azure Data Lake Storage Gen2
+## Menjelajahi Azure Data Lake Storage Gen2
 
 Dukungan Azure Data Lake Store Gen2 memungkinkan Anda menggunakan folder hierarkis untuk mengatur dan mengelola akses ke blob. Ini juga memungkinkan Anda menggunakan penyimpanan blob Azure untuk menghosting sistem file terdistribusi untuk platform analitik big data yang umum.
 
@@ -79,7 +79,7 @@ Dukungan Azure Data Lake Store Gen2 memungkinkan Anda menggunakan folder hierark
 1. Pilih ikon **&#x2027;&#x2027;&#x2027;** di ujung kanan folder, dan perhatikan bahwa saat namespace hierarkis diaktifkan, Anda dapat mengerjakan tugas konfigurasi di tingkat folder; termasuk mengganti nama folder dan mengatur izin.
 1. Gunakan ikon **X** di kanan atas halaman **data** untuk menutup halaman dan kembali ke halaman **Kontainer**.
 
-## <a name="explore-azure-files"></a>Menjelajahi Azure Files
+## Menjelajahi Azure Files
 
 Azure Files menyediakan cara untuk membuat berbagi berbasis cloud.
 
@@ -89,7 +89,7 @@ Azure Files menyediakan cara untuk membuat berbagi berbasis cloud.
 1. Di bagian atas halaman, pilih **Hubungkan**. Kemudian di panel **Hubungkan**, perhatikan bahwa ada tab untuk sistem operasi umum (Windows, Linux, dan macOS) yang berisi skrip yang dapat Anda jalankan untuk menghubungkan ke folder bersama dari komputer klien.
 1. Tutup panel **Hubungkan** lalu tutup halaman **file** guna kembali ke halaman **Berbagi** untuk akun penyimpanan Azure Anda.
 
-## <a name="explore-azure-tables"></a>Menjelajahi Azure Table
+## Menjelajahi Azure Table
 
 Azure Table menyediakan penyimpanan kunci/nilai untuk aplikasi yang perlu menyimpan nilai data, tetapi tidak memerlukan fungsionalitas dan struktur penuh dari database hubungan.
 

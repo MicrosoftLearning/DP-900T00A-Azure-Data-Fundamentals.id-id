@@ -4,17 +4,17 @@ lab:
   module: Explore fundamentals of large-scale data warehousing
 ---
 
-# <a name="explore-data-analytics-in-azure-with-azure-synapse-analytics"></a>Menjelajahi analitik data di Azure dengan Azure Synapse Analytics
+# Menjelajahi analitik data di Azure dengan Azure Synapse Analytics
 
 Dalam latihan ini, Anda akan memprovisikan ruang kerja Azure Synapse Analytics di langganan Azure Anda, dan menggunakannya untuk menyerap dan membuat kueri data.
 
 Membutuhkan waktu sekitar **30** menit untuk menyelesaikan lab ini.
 
-## <a name="before-you-start"></a>Sebelum Anda memulai
+## Sebelum Anda memulai
 
 Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses tingkat administratif.
 
-## <a name="provision-an-azure-synapse-analytics-workspace"></a>Menentukan ruang kerja Azure Synapse Analytics
+## Menentukan ruang kerja Azure Synapse Analytics
 
 Untuk menggunakan Azure Synapse Analytics, Anda harus menyediakan sumber daya Ruang Kerja Azure Synapse Analytics di langganan Azure Anda.
 
@@ -33,7 +33,7 @@ Untuk menggunakan Azure Synapse Analytics, Anda harus menyediakan sumber daya Ru
         - US Tengah
         - US Timur 2
         - Eropa Utara
-        - AS Tengah Bagian Selatan
+        - US Tengah Selatan
         - Asia Tenggara
         - UK Selatan
         - Eropa Barat
@@ -53,7 +53,7 @@ Untuk menggunakan Azure Synapse Analytics, Anda harus menyediakan sumber daya Ru
 
     ![Gambar memperlihatkan menu Synapse Studio yang diperluas untuk mengelola sumber daya dan melakukan tugas analisis data](images/synapse-studio.png)
 
-## <a name="ingest-data"></a>Serap data
+## Serap data
 
 Salah satu tugas utama yang dapat Anda lakukan dengan Azure Synapse Analytics adalah menentukan *alur* yang mentransfer (dan jika perlu, mentransformasi) data dari berbagai sumber ke ruang kerja Anda untuk dianalisis.
 
@@ -61,7 +61,7 @@ Salah satu tugas utama yang dapat Anda lakukan dengan Azure Synapse Analytics ad
 2. Di alat Salin Data, pada langkah **Properti**, pastikan **Tugas salin bawaan** dan **Jalankan sekali sekarang** dipilih, dan klik **Berikutnya >**.
 3. Pada langkah **Sumber**, dalam substep **Himpunan data**, pilih pengaturan berikut:
     - **Jenis sumber**: Semua
-    - **Koneksi**: *Buat koneksi baru, dan di panel **Koneksi tertaut** yang muncul, pada tab **File**, pilih **HTTP**. Kemudian lanjutkan dan buat koneksi ke file data menggunakan pengaturan berikut:*
+    - **Koneksi**: *Buat koneksi baru, dan di panel **Koneksi baru** yang muncul, pada tab **Protokol generik** , pilih **HTTP**. Kemudian lanjutkan dan buat koneksi ke file data menggunakan pengaturan berikut:*
         - **Nama**: Produk AdventureWorks
         - **Deskripsi**: Daftar produk melalui HTTP
         - **Sambungkan melalui runtime integrasi**: AutoResolveIntegrationRuntime
@@ -112,7 +112,7 @@ Salah satu tugas utama yang dapat Anda lakukan dengan Azure Synapse Analytics ad
 
     ![Gambar yang menunjukkan Synapse Studio memperluas hierarki Azure Data Lake Storage Gen 2 dengan penyimpanan file untuk ruang kerja Synapse Anda](images/synapse-storage.png)
 
-## <a name="use-a-sql-pool-to-analyze-data"></a>Menggunakan kumpulan SQL untuk menganalisis data
+## Menggunakan kumpulan SQL untuk menganalisis data
 
 Setelah menyerap data ke ruang kerja, Anda dapat menggunakan Synapse Analytics untuk mengkueri dan menganalisisnya. Salah satu cara paling umum untuk mengkueri data adalah dengan menggunakan SQL, dan di Synapse Analytics Anda dapat menggunakan *kumpulan SQL* untuk menjalankan kode SQL.
 
@@ -210,7 +210,7 @@ Setelah menyerap data ke ruang kerja, Anda dapat menggunakan Synapse Analytics u
 
     ![Gambar yang menunjukkan tampilan bagan jumlah produk](images/column-chart.png)
 
-## <a name="use-a-spark-pool-to-analyze-data"></a>Gunakan kumpulan Spark untuk menganalisis data
+## Gunakan kumpulan Spark untuk menganalisis data
 
 Sementara SQL adalah bahasa umum untuk mengkueri himpunan data terstruktur, banyak analis data menemukan bahasa seperti Python yang berguna untuk mengeksplorasi dan mempersiapkan data untuk analisis. Di Azure Synapse Analytics, Anda dapat menjalankan kode Python (dan lainnya) di *Kumpulan Spark*; yang menggunakan mesin pemrosesan data terdistribusi berdasarkan Apache Spark.
 
@@ -291,7 +291,7 @@ Sementara SQL adalah bahasa umum untuk mengkueri himpunan data terstruktur, bany
 
 15. Tutup panel **Buku catatan 1** dan buang perubahan Anda.
 
-## <a name="delete-azure-resources"></a>Menghapus sumber daya Azure
+## Menghapus sumber daya Azure
 
 Setelah selesai menjelajahi Azure Synapse Analytics, Anda harus menghapus sumber daya yang telah Anda buat untuk menghindari biaya Azure yang tidak perlu.
 

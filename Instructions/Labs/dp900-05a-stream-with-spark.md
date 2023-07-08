@@ -4,17 +4,17 @@ lab:
   module: Explore fundamentals of real-time analytics
 ---
 
-# <a name="explore-spark-streaming-in-azure-synapse-analytics"></a>Menjelajahi Spark Streaming di Azure Synapse Analytics
+# Menjelajahi Spark Streaming di Azure Synapse Analytics
 
 Dalam latihan ini, Anda akan menggunakan *Aliran Terstruktur Spark* dan *tabel delta* di Azure Synapse Analytics untuk memproses data aliran.
 
 Membutuhkan waktu sekitar **15** menit untuk menyelesaikan lab ini.
 
-## <a name="before-you-start"></a>Sebelum Anda memulai
+## Sebelum Anda memulai
 
 Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses tingkat administratif.
 
-## <a name="provision-a-synapse-analytics-workspace"></a>Memprovisikn ruang kerja Azure Synapse Analytics
+## Memprovisikn ruang kerja Azure Synapse Analytics
 
 Untuk menggunakan Synapse Analytics, Anda harus memprovisikan sumber daya Ruang Kerja Synapse Analytics di langganan Azure Anda.
 
@@ -43,7 +43,7 @@ Untuk menggunakan Synapse Analytics, Anda harus memprovisikan sumber daya Ruang 
 
     ![Synapse Studio](images/synapse-studio.png)
 
-## <a name="create-a-spark-pool"></a>Membuat kumpulan Spark
+## Membuat kumpulan Spark
 
 Untuk menggunakan Spark guna memproses data aliran, Anda perlu menambahkan kumpulan Spark ke ruang kerja Azure Synapse Anda.
 
@@ -56,7 +56,7 @@ Untuk menggunakan Spark guna memproses data aliran, Anda perlu menambahkan kumpu
     - **Jumlah node** 3----3
 3. Tinjau dan buat kumpulan Spark, lalu tunggu sampai digunakan (yang mungkin memakan waktu beberapa menit).
 
-## <a name="explore-stream-processing"></a>Mempelajari pemrosesan aliran
+## Mempelajari pemrosesan aliran
 
 Untuk mempelajari pemrosesan aliran dengan Spark, Anda akan menggunakan notebook yang berisi kode Python dan catatan untuk membantu Anda melakukan beberapa pemrosesan aliran dasar dengan Aliran Terstruktur Spark dan tabel delta.
 
@@ -65,7 +65,7 @@ Untuk mempelajari pemrosesan aliran dengan Spark, Anda akan menggunakan notebook
 3. Pada menu **&#65291;**, pilih **&#8612; Impor**, dan pilih file **Structured Streaming and Delta Tables.ipynb** di komputer lokal Anda.
 4. Ikuti petunjuk di buku catatan untuk melampirkannya ke kumpulan Spark Anda dan menjalankan sel kode didalamnya guna mempelajari berbagai cara menggunakan Spark untuk pemrosesan aliran.
 
-## <a name="delete-azure-resources"></a>Menghapus sumber daya Azure
+## Menghapus sumber daya Azure
 
 >                 **Catatan**: Jika Anda ingin menyelesaikan latihan lain yang menggunakan Azure Synapse Analytics, Anda dapat melewati bagian ini. Jika tidak, ikuti langkah-langkah di bawah ini untuk menghindari biaya Azure yang tidak perlu.
 
