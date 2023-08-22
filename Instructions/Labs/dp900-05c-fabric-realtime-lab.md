@@ -21,7 +21,7 @@ Sebelum bekerja dengan data di Fabric, buat ruang kerja dengan uji coba Fabric d
 3. Buat ruang kerja baru dengan nama pilihan Anda, memilih mode lisensi di bagian **Tingkat Lanjut** yang mencakup kapasitas Fabric (*Uji Coba*, *Premium*, atau *Fabric*).
 4. Saat ruang kerja baru Anda terbuka, ruang kerja harus kosong.
 
-    ![Cuplikan layar ruang kerja kosong di Power BI.](./Images/new-workspace.png)
+    ![Cuplikan layar ruang kerja kosong di Power BI.](./images/new-workspace.png)
 
 ## Membuat database KQL
 
@@ -37,7 +37,7 @@ Sekarang setelah Anda memiliki ruang kerja, Anda dapat membuat database KQL untu
 
     Setelah satu menit atau lebih, database KQL baru akan dibuat:
 
-    ![Cuplikan layar database KQL baru.](./Images/kql-database.png)
+    ![Cuplikan layar database KQL baru.](./images/kql-database.png)
 
     Saat ini, tidak ada tabel dalam database.
 
@@ -50,14 +50,14 @@ Eventstreams menyediakan cara yang dapat diskalakan dan fleksibel untuk menyerap
 
     Setelah beberapa saat, desainer visual untuk eventstream Anda ditampilkan.
 
-    ![Cuplikan layar perancang Eventstream.](./Images/eventstream-designer.png)
+    ![Cuplikan layar perancang Eventstream.](./images/eventstream-designer.png)
 
     Kanvas desainer visual menunjukkan sumber yang terhubung ke eventstream Anda, yang pada gilirannya tersambung ke tujuan.
 
 1. Pada kanvas desainer, di daftar **Sumber baru** untuk sumber Anda, pilih **Sampel data**. Kemudian di panel **Data sampel** , tentukan **nama taksi** dan pilih data sampel **Taksi Kuning** (yang mewakili data yang dikumpulkan dari perjalanan taksi). Kemudian pilih **Tambahkan**.
 1. Di bawah kanvas perancang, pilih tab **Pratinjau** data untuk mempratinjau data yang dialirkan dari sumber:
 
-    ![Cuplikan layar pratinjau data Eventstream.](./Images/eventstream-preview.png)
+    ![Cuplikan layar pratinjau data Eventstream.](./images/eventstream-preview.png)
 
 1. Pada kanvas perancang, di daftar **Tujuan baru** untuk tujuan Anda, pilih **database KQL**. Kemudian di panel **database KQL** , tentukan nama tujuan **taxi-data** dan pilih ruang kerja dan database KQL Anda. Lalu pilih **Buat dan konfigurasikan**.
 1. Di wizard **Serap data** , pada halaman **Tujuan** , pilih **Tabel baru** dan masukkan nama tabel **taxi-data**. Lalu pilih **Berikutnya: Sumber**.
@@ -66,7 +66,7 @@ Eventstreams menyediakan cara yang dapat diskalakan dan fleksibel untuk menyerap
 1. Pada halaman **Ringkasan** , tunggu hingga penyerapan berkelanjutan dibuat, lalu pilih **Tutup**.
 1. Verifikasi bahwa eventstream Anda yang telah selesai terlihat seperti ini:
 
-    ![Cuplikan layar Eventstream yang telah selesai.](./Images/complete-eventstream.png)
+    ![Cuplikan layar Eventstream yang telah selesai.](./images/complete-eventstream.png)
 
 ## Mengkueri data real-time dalam database KQL
 
@@ -75,7 +75,7 @@ Eventstream Anda terus mengisi tabel di database KQL Anda, memungkinkan Anda unt
 1. Di hub menu di sebelah kiri, pilih database KQL Anda (atau pilih ruang kerja Anda dan temukan database KQL Anda di sana).
 1. Di menu **...** untuk tabel **data taksi** (yang telah dibuat oleh eventstream Anda), pilih **Tabel kueri > Rekaman yang diserap dalam 24 jam terakhir**.
 
-    ![Cuplikan layar menu Tabel kueri dalam database KQL.](./Images/kql-query.png)
+    ![Cuplikan layar menu Tabel kueri dalam database KQL.](./images/kql-query.png)
 
 1. Tampilkan hasil kueri, yang seharusnya menjadi kueri KQL seperti ini:
 
@@ -95,7 +95,7 @@ Eventstream Anda terus mengisi tabel di database KQL Anda, memungkinkan Anda unt
     ```
 
 1. Gunakan tombol **&#9655; Jalankan** untuk menjalankan kueri dan meninjau hasilnya, yang menunjukkan jumlah pengambilan taksi untuk setiap jam.
- 
+
 ## Membersihkan sumber daya
 
 Jika Anda telah selesai menjelajahi analitik real-time di Microsoft Fabric, Anda dapat menghapus ruang kerja yang Anda buat untuk latihan ini.
