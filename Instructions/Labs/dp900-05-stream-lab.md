@@ -4,17 +4,17 @@ lab:
   module: Explore fundamentals of real-time analytics
 ---
 
-# <a name="explore-azure-stream-analytics"></a>Mempelajari Azure Stream Analytics
+# Mempelajari Azure Stream Analytics
 
 Dalam latihan ini, Anda akan memprovisikan pekerjaan Azure Stream Analytics di langganan Azure Anda, dan menggunakannya untuk memproses aliran data real-time.
 
 Membutuhkan waktu sekitar **15** menit untuk menyelesaikan lab ini.
 
-## <a name="before-you-start"></a>Sebelum Anda memulai
+## Sebelum Anda memulai
 
 Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses tingkat administratif.
 
-## <a name="create-azure-resources"></a>Membuat sumber daya Azure
+## Membuat sumber daya Azure
 
 1. Masuk ke langganan Azure di [portal Microsoft Azure](https://portal.azure.com), menggunakan kredensial langganan Azure Anda.
 
@@ -40,6 +40,8 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
     bash setup.sh
     ```
 
+    > Abaikan pesan peringatan apa pun tentang perubahan di masa mendatang dan fitur eksperimental.
+
     Tunggu selagi skrip berjalan dan lakukan tindakan berikut:
 
     1. Menginstal ekstensi Azure CLI yang diperlukan untuk membuat sumber daya (*Anda dapat mengabaikan peringatan apa pun tentang ekstensi eksperimental*)
@@ -48,7 +50,7 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
     1. Membuat *Akun Azure Storage*, yang akan digunakan untuk menyimpan data yang diproses.
     1. Membuat pekerjaan *Azure Stream Analytics*, yang akan memproses data perangkat yang masuk secara real time, dan menulis hasilnya ke akun penyimpanan.
 
-## <a name="explore-the-azure-resources"></a>Mempelajari sumber daya Azure
+## Mempelajari sumber daya Azure
 
 1. Di [portal Microsoft Azure](https://portal.azure.com?azure-portal=true), di beranda, pilih **Grup sumber daya** untuk melihat grup sumber daya dalam langganan Anda. Grup ini harus menyertakan **learn*xxxxxxxxxxxxxxxxxx...** * grup sumber daya yang diidentifikasi oleh skrip penyiapan.
 2. Pilih **learn*xxxxxxxxxxxxxxxxxx...** * grup sumber daya, dan tinjau sumber daya di dalamnya, yang harus menyertakan:
@@ -58,11 +60,11 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 
     Jika ketiga sumber ini tidak tercantum, klik tombol **&#8635; Refresh** hingga sumber muncul.
 
- 3. Pilih pekerjaan Azure Stream Analytics **stream*xxxxxxxxxxxxx*** dan lihat informasinya di halaman **Ringkasan**, dengan memperhatikan detail berikut:
+3. Pilih pekerjaan Azure Stream Analytics **stream*xxxxxxxxxxxxx*** dan lihat informasinya di halaman **Ringkasan**, dengan memperhatikan detail berikut:
     - Pekerjaan memiliki satu *input* bernama **iotinput**, dan satu *output* bernama **bloboutput**. Ini merujuk pada IoT Hub dan akun Penyimpanan yang dibuat oleh skrip penyiapan.
     - Pekerjaan memiliki *kueri*, yang membaca data dari input **iotinput**, dan menggabungkannya dengan menghitung jumlah pesan yang diproses setiap 10 detik; menulis hasilnya ke output **bloboutput**.
 
-## <a name="use-the-resources-to-analyze-streaming-data"></a>Gunakan sumber daya untuk menganalisis data aliran
+## Gunakan sumber daya untuk menganalisis data aliran
 
 1. Di bagian atas halaman **Ringkasan** untuk pekerjaan Azure Stream Analytics, pilih opsi **&#9655; Mulai**, lalu di panel **Mulai pekerjaan**, pilih **Mulai** untuk memulai pekerjaan.
 2. Tunggu pemberitahuan bahwa pekerjaan aliran berhasil dimulai.
