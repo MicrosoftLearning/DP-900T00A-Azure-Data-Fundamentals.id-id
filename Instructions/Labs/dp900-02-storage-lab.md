@@ -10,7 +10,7 @@ Dalam latihan ini Anda akan memprovisikan akun Azure Storage di langganan Azure,
 
 Membutuhkan waktu sekitar **15** menit untuk menyelesaikan lab ini.
 
-## Sebelum Anda memulai
+## Sebelum memulai
 
 Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses tingkat administratif.
 
@@ -29,8 +29,8 @@ Langkah pertama dalam menggunakan Azure Storage adalah memprovisikan akun Azure 
     - **Redundansi**: *Penyimpanan yang redundan secara lokal (LRS)*
 
 1. Pilih **Berikutnya: Tingkat Lanjut >** dan lihat opsi konfigurasi tingkat lanjut. Secara khusus, perhatikan bahwa ini adalah tempat Anda dapat mengaktifkan namespace layanan hierarkis untuk mendukung Azure Data Lake Storage Gen2. Biarkan opsi ini tetap **<u>tidak dipilih</u>** (Anda dapat mengaktifkannya nanti), lalu pilih **Berikutnya: Jaringan >** guna menampilkan opsi jaringan untuk akun penyimpanan.
-1. Pilih **Berikutnya: Perlindungan data >** , lalu di bagian **Pemulihan**, <u>batalkan</u> pilihan semua opsi **Aktifkan penghapusan sementara...** . Opsi ini mempertahankan file yang dihapus untuk pemulihan berikutnya, tetapi dapat menyebabkan masalah nanti saat Anda mengaktifkan namespace layanan hierarkis.
-1. Lanjutkan melalui halaman **Berikutnya >** yang tersisa tanpa mengubah salah satu pengaturan default, lalu di halaman  **Tinjau** , tunggu hingga pilihan Anda divalidasi dan pilih **Buat** untuk membuat akun Azure Storage Anda.
+1. Pilih **Berikutnya: Perlindungan data >**, lalu di bagian **Pemulihan**, <u>batalkan</u> pilihan semua opsi **Aktifkan penghapusan sementara...**. Opsi ini mempertahankan file yang dihapus untuk pemulihan berikutnya, tetapi dapat menyebabkan masalah nanti saat Anda mengaktifkan namespace layanan hierarkis.
+1. Lanjutkan melalui halaman **Berikutnya >** yang ada tanpa mengubah pengaturan default apa pun, lalu pada halaman **Tinjau**, tunggu hingga pilihan Anda divalidasi dan pilih **Buat** untuk membuat akun Azure Storage.
 1. Tunggu hingga penerapan selesai. Lalu buka sumber daya yang disebarkan.
 
 ## Menjelajahi penyimpanan blob
@@ -42,7 +42,7 @@ Sekarang setelah memiliki akun Azure Storage, Anda dapat membuat kontainer untuk
     *Jika file JSON ditampilkan di browser Anda, simpan halaman sebagai **product1.json**.*
 
 1. Di halaman portal Azure untuk kontainer penyimpanan Anda, di sisi kiri, pada bagian **Penyimpanan data**, pilih **Kontainer**.
-1. Di halaman **Kontainer**, pilih **&#65291; Kontainer** dan tambahkan kontainer baru bernama **data** dengan tingkat akses publik **Privat (tanpa akses anonim)** .
+1. Di halaman **Kontainer**, pilih **&#65291; Kontainer** dan tambahkan kontainer baru bernama **data** dengan tingkat akses publik **Privat (tanpa akses anonim)**.
 1. Setelah kontainer **data** dibuat, verifikasi bahwa kontainer tersebut tercantum di halaman **Kontainer**.
 1. Di panel sebelah kiri, di bagian atas, pilih **Browser penyimpana**. Halaman ini menyediakan antarmuka berbasis browser yang dapat Anda gunakan untuk bekerja dengan data di akun penyimpanan.
 1. Di halaman browser penyimpanan, pilih **Kontainer blob** dan verifikasi bahwa kontainer **data** Anda dicantumkan.
@@ -112,7 +112,7 @@ Azure Table menyediakan penyimpanan kunci/nilai untuk aplikasi yang perlu menyim
 
     |Nama properti | Jenis | Nilai |
     | ------------ | ---- | ----- |
-    | Harga | Ganda | 2,99 |
+    | Harga | Laju | 2,99 |
 
 1. Pilih **Sisipkan** untuk menyisipkan baris entitas baru ke dalam tabel.
 1. Di browser penyimpanan, verifikasi bahwa baris telah ditambahkan ke tabel **produk**, dan kolom **Stempel waktu** telah dibuat untuk menunjukkan kapan baris terakhir diubah.
@@ -120,11 +120,11 @@ Azure Table menyediakan penyimpanan kunci/nilai untuk aplikasi yang perlu menyim
 
     |Nama properti | Jenis | Nilai |
     | ------------ | ---- | ----- |
-    | PartitionKey | Untai (karakter) | 1 |
-    | RowKey | Untai | 2 |
+    | PartitionKey | String | 1 |
+    | RowKey | String | 2 |
     | Nama | String | Kniknak |
-    | Harga | Ganda | 1,99 |
-    | Dihentikan | Boolean | TRUE |
+    | Harga | Laju | 1,99 |
+    | Dihentikan | Boolean | benar |
 
 1. Setelah menyisipkan entitas baru, verifikasi bahwa baris yang berisi produk yang dihentikan ditampilkan dalam tabel.
 
