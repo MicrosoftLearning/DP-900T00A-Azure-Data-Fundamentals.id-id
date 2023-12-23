@@ -1,16 +1,16 @@
 ---
 lab:
-  title: Mempelajari Azure Stream Analytics
+  title: Menjelajahi Azure Stream Analytics
   module: Explore fundamentals of real-time analytics
 ---
 
-# Mempelajari Azure Stream Analytics
+# Menjelajahi Azure Stream Analytics
 
 Dalam latihan ini, Anda akan memprovisikan pekerjaan Azure Stream Analytics di langganan Azure Anda, dan menggunakannya untuk memproses aliran data real-time.
 
 Membutuhkan waktu sekitar **15** menit untuk menyelesaikan lab ini.
 
-## Sebelum Anda memulai
+## Sebelum memulai
 
 Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses tingkat administratif.
 
@@ -52,8 +52,8 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 
 ## Mempelajari sumber daya Azure
 
-1. Di [portal Microsoft Azure](https://portal.azure.com?azure-portal=true), di beranda, pilih **Grup sumber daya** untuk melihat grup sumber daya dalam langganan Anda. Grup ini harus menyertakan **learn*xxxxxxxxxxxxxxxxxx...** * grup sumber daya yang diidentifikasi oleh skrip penyiapan.
-2. Pilih **learn*xxxxxxxxxxxxxxxxxx...** * grup sumber daya, dan tinjau sumber daya di dalamnya, yang harus menyertakan:
+1. Di [portal Microsoft Azure](https://portal.azure.com?azure-portal=true), di beranda, pilih **Grup sumber daya** untuk melihat grup sumber daya dalam langganan Anda. Grup ini harus menyertakan **learn*xxxxxxxxxxxxxxxxxx...*** grup sumber daya yang diidentifikasi oleh skrip penyiapan.
+2. Pilih **learn*xxxxxxxxxxxxxxxxxx...*** grup sumber daya, dan tinjau sumber daya di dalamnya, yang harus menyertakan:
     - *IoT Hub* bernama **iothub*xxxxxxxxxxxxx***, yang digunakan untuk menerima data perangkat yang masuk.
     - *Akun penyimpanan* bernama **store*xxxxxxxxxxxx***, tempat hasil pemrosesan data akan ditulis.
     - *Pekerjaan Azure Stream Analytics* bernama **stream*xxxxxxxxxxxxx***, yang akan digunakan untuk memproses data aliran.
@@ -80,7 +80,7 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
     Device simulation in progress: 6%|#    | 7/120 [00:08<02:21, 1.26s/it]
     ```
 
-5. Saat simulasi sedang berjalan, kembali ke portal Microsoft Azure, dan kembali ke halaman untuk grup sumber daya **learn*xxxxxxxxxxxxxxxxxx...** *, dan pilih akun penyimpanan **store*xxxxxxxxxxxx***.
+5. Saat simulasi sedang berjalan, kembali ke portal Microsoft Azure, dan kembali ke halaman untuk grup sumber daya **learn*xxxxxxxxxxxxxxxxxx...***, dan pilih akun penyimpanan **store*xxxxxxxxxxxx***.
 6. Di panel di sebelah kiri panel akun penyimpanan, pilih tab **Kontainer**.
 7. Buka kontainer **data**.
 8. Dalam kontainer **data**, navigasikan melalui hierarki folder, yang mencakup folder untuk tahun ini, dengan subfolder untuk bulan, hari, dan jam.
@@ -97,7 +97,7 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 11. Gunakan **&#8635; Refresh** untuk merefresh file, dengan mencatat bahwa hasil tambahan ditulis ke file saat pekerjaan Azure Stream Analytics memproses data perangkat secara real time saat dialirkan dari perangkat ke IoT Hub.
 12. Kembali ke Azure Cloud Shell dan tunggu simulasi perangkat selesai (harus berjalan sekitar 3 menit).
 13. Kembali ke portal Microsoft Azure, refresh file sekali lagi untuk melihat hasil lengkap yang dihasilkan selama simulasi.
-14. Kembali ke grup sumber daya **learn*xxxxxxxxxxxxxxxxxx...** *, dan buka kembali pekerjaan Azure Stream Analytics **stream*xxxxxxxxxxxxx***.
+14. Kembali ke grup sumber daya **learn*xxxxxxxxxxxxxxxxxx...***, dan buka kembali pekerjaan Azure Stream Analytics **stream*xxxxxxxxxxxxx***.
 15. Di bagian atas halaman pekerjaan Azure Stream Analytics, gunakan **&#11036; Tombol Berhenti** untuk menghentikan pekerjaan, mengonfirmasi saat diminta.
 
 > **Catatan**: Jika Anda telah selesai menjelajahi solusi streaming, hapus grup sumber daya yang dibuat dalam latihan ini.
