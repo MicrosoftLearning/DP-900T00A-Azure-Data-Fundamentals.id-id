@@ -10,7 +10,7 @@ Dalam latihan ini, Anda akan menggunakan *Aliran Terstruktur Spark* dan *tabel d
 
 Membutuhkan waktu sekitar **15** menit untuk menyelesaikan lab ini.
 
-## Sebelum Anda memulai
+## Sebelum memulai
 
 Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses tingkat administratif.
 
@@ -20,7 +20,7 @@ Untuk menggunakan Synapse Analytics, Anda harus memprovisikan sumber daya Ruang 
 
 1. Buka portal Azure di [portal Azure](https://portal.azure.com?azure-portal=true), dan masuk menggunakan info masuk yang terkait dengan langganan Azure Anda.
 
-    >                 **Catatan**: Pastikan untuk menggunakan direktori yang berisi langganan Anda sendiri - terletak di kanan atas di bawah ID pengguna. Jika tidak, pilih ikon pengguna dan ubah direktori.
+    > **Catatan**: Pastikan untuk menggunakan direktori yang berisi langganan Anda sendiri - terletak di kanan atas di bawah ID pengguna. Jika tidak, pilih ikon pengguna dan ubah direktori.
 
 2. Di portal Microsoft Azure, di halaman **Beranda**, gunakan **&#65291; Buat ikon sumber daya** untuk membuat sumber daya baru.
 3. Cari *Azure Synapse Analytics*, dan buat sumber daya **Azure Synapse Analytics** yang baru dengan pengaturan berikut:
@@ -33,7 +33,7 @@ Untuk menggunakan Synapse Analytics, Anda harus memprovisikan sumber daya Ruang 
         - **Nama akun**: *Buat akun baru dengan nama unik, misalnya "datalake<your_name>"*.
         - **Nama sistem file**: *Buat sistem file baru dengan nama yang unik, misalnya "fs<your_name>"*.
 
-    >                 **Catatan**: Ruang kerja Synapse Analytics memerlukan dua grup sumber daya dalam langganan Azure; satu untuk sumber daya yang dibuat secara eksplisit, dan satu lagi untuk sumber daya terkelola yang digunakan oleh layanan. Hal ini juga memerlukan akun penyimpanan Data Lake untuk menyimpan data, skrip, dan artefak lainnya.
+    > **Catatan**: Ruang kerja Synapse Analytics memerlukan dua grup sumber daya dalam langganan Azure; satu untuk sumber daya yang dibuat secara eksplisit, dan satu lagi untuk sumber daya terkelola yang digunakan oleh layanan. Hal ini juga memerlukan akun penyimpanan Data Lake untuk menyimpan data, skrip, dan artefak lainnya.
 
 4. Saat Anda memasukkan detail ini, pilih **Tinjau + buat**, lalu pilih **Buat** untuk membuat ruang kerja.
 5. Tunggu hingga ruang kerja selesai dibuat - mungkin memerlukan waktu lima menit atau lebih.
@@ -67,7 +67,7 @@ Untuk mempelajari pemrosesan aliran dengan Spark, Anda akan menggunakan notebook
 
 ## Menghapus sumber daya Azure
 
->                 **Catatan**: Jika Anda ingin menyelesaikan latihan lain yang menggunakan Azure Synapse Analytics, Anda dapat melewati bagian ini. Jika tidak, ikuti langkah-langkah di bawah ini untuk menghindari biaya Azure yang tidak perlu.
+> **Catatan**: Jika Anda ingin menyelesaikan latihan lain yang menggunakan Azure Synapse Analytics, Anda dapat melewati bagian ini. Jika tidak, ikuti langkah-langkah di bawah ini untuk menghindari biaya Azure yang tidak perlu.
 
 1. Tutup tab browser Synapse Studio, tanpa menyimpan perubahan apa pun, dan kembali ke portal Microsoft Azure.
 1. Di portal Microsoft Azure, pada halaman **Beranda**, pilih **Grup sumber daya**.

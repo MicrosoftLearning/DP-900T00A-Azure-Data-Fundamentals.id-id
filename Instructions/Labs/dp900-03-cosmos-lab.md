@@ -1,15 +1,15 @@
 ---
 lab:
-  title: Jelajahi Azure Cosmos DB
+  title: Menjelajahi Azure Cosmos DB
   module: Explore fundamentals of Azure Cosmos DB
 ---
-# Jelajahi Azure Cosmos DB
+# Menjelajahi Azure Cosmos DB
 
 Dalam latihan ini Anda akan memprovisikan database Azure Cosmos DB di langganan Azure Anda, dan menjelajahi berbagai cara Anda dapat menggunakannya untuk menyimpan data non-relasional.
 
 Membutuhkan waktu sekitar **15** menit untuk menyelesaikan lab ini.
 
-## Sebelum Anda memulai
+## Sebelum memulai
 
 Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses tingkat administratif.
 
@@ -21,7 +21,7 @@ Untuk menggunakan Cosmos DB, Anda harus menyediakan akun Cosmos DB di langganan 
 1. Di petak **Azure Cosmos DB untuk NoSQL**, pilih **Buat**.
 1. Masukkan detail berikut, lalu pilih **Tinjau + Buat**:
     - **Langganan**: Jika Anda menggunakan kotak pasir, pilih *Langganan Concierge*. Atau, pilih langganan Azure.
-    - **Grup sumber daya**: Jika Anda menggunakan kotak pasir, pilih grup sumber daya yang ada (yang akan diberi nama seperti *learn-xxxx...* ). Jika tidak, buat grup sumber daya baru dengan nama pilihan Anda.
+    - **Grup sumber daya**: Jika Anda menggunakan kotak pasir, pilih grup sumber daya yang ada (yang akan diberi nama seperti *learn-xxxx...*). Jika tidak, buat grup sumber daya baru dengan nama pilihan Anda.
     - **Nama Akun**: Masukkan nama unik
     - **Lokasi**: Pilih lokasi yang disarankan
     - **Mode kapasitas**: Throughput yang disediakan
@@ -62,7 +62,7 @@ Untuk menggunakan Cosmos DB, Anda harus menyediakan akun Cosmos DB di langganan 
 ## Mengkueri database
 
 1. Di halaman **Data Explorer**, pilih ikon **Kueri SQL Baru**.
-1. Di editor Kueri SQL, tinjau kueri default (`SELECT * FROM c`) dan gunakan tombol `SELECT * FROM c` untuk menjalankannya.
+1. Di editor Kueri SQL, tinjau kueri default (`SELECT * FROM c`) dan gunakan tombol **Jalankan Kueri** untuk menjalankannya.
 1. Tinjau hasilnya, yang mencakup representasi JSON lengkap dari semua item.
 1. Ubah kueri sebagai berikut:
 
@@ -72,7 +72,7 @@ Untuk menggunakan Cosmos DB, Anda harus menyediakan akun Cosmos DB di langganan 
     WHERE CONTAINS(c.name,"Helmet")
     ```
 
-1. Gunakan tombol **Jalankan Kueri** untuk menjalankan kueri yang direvisi dan meninjau hasilnya, yang menyertakan entitas JSON untuk item apa pun dengan bidang **nama** yang berisi teks "Helmet".
+1. Gunakan tombol **Jalankan Kueri** untuk menjalankan kueri yang direvisi dan tinjau hasilnya, yang mencakup entitas JSON untuk item apa pun dengan bidang **nama** yang berisi teks "Helm.".
 1. Tutup editor Kueri SQL, buang perubahan Anda.
 
     Anda telah melihat cara membuat dan mengkueri entitas JSON dalam database Cosmos DB menggunakan antarmuka penjelajah data di portal Microsoft Azure. Di kehidupan nyata, pengembang aplikasi akan menggunakan salah satu dari banyak kit pengembangan perangkat lunak (SDK) khusus bahasa pemrograman untuk memanggil NoSQL API dan bekerja dengan data dalam database.

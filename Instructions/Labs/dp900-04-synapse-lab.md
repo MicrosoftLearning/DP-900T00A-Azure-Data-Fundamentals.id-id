@@ -10,7 +10,7 @@ Dalam latihan ini, Anda akan memprovisikan ruang kerja Azure Synapse Analytics d
 
 Membutuhkan waktu sekitar **30** menit untuk menyelesaikan lab ini.
 
-## Sebelum Anda memulai
+## Sebelum memulai
 
 Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses tingkat administratif.
 
@@ -20,30 +20,30 @@ Untuk menggunakan Azure Synapse Analytics, Anda harus menyediakan sumber daya Ru
 
 1. Buka portal Microsoft Azure di [https://portal.azure.com](https://portal.azure.com?azure-portal=true), dan masuk menggunakan info masuk yang terkait dengan langganan Azure Anda.
 
-    >                 **Tips**: Pastikan untuk menggunakan direktori yang berisi langganan Anda - terletak di kanan atas di bawah ID pengguna. Jika tidak, pilih ikon pengguna dan ubah direktori.
+    > **Tips**: Pastikan untuk menggunakan direktori yang berisi langganan Anda - terletak di kanan atas di bawah ID pengguna. Jika tidak, pilih ikon pengguna dan ubah direktori.
 
 2. Di portal Microsoft Azure, di halaman **Beranda**, gunakan **&#65291; Buat ikon sumber daya** untuk membuat sumber daya baru.
 3. Cari *Azure Synapse Analytics*, dan buat sumber daya **Azure Synapse Analytics** yang baru dengan pengaturan berikut:
     - **Langganan**: *Langganan Azure Anda*
         - **Grup sumber daya**: *Buat grup sumber daya baru dengan nama yang sesuai, seperti "synapse-rg"*
         - **Kelompok sumber daya terkelola**: *Masukkan nama yang sesuai, misalnya "synapse-managed-rg"*.
-    - **Nama ruang kerja**: *Masukkan nama ruang kerja yang unik, misalnya "synapse-ws-<your_name>"* .
+    - **Nama ruang kerja**: *Masukkan nama ruang kerja yang unik, misalnya "synapse-ws-<your_name>"*.
     - **Wilayah**: *Pilih salah satu wilayah berikut*:
         - Australia Timur
-        - US Tengah
-        - US Timur 2
+        - AS Tengah
+        - AS Timur 2
         - Eropa Utara
         - US Tengah Selatan
         - Asia Tenggara
         - UK Selatan
         - Eropa Barat
-        - AS Barat
+        - US Barat
         - WestUS 2
     - **Pilih Data Lake Storage Gen 2**: Dari langganan
         - **Nama akun**: *Buat akun baru dengan nama unik, misalnya "datalake<your_name>"*.
         - **Nama sistem file**: *Buat sistem file baru dengan nama yang unik, misalnya "fs<your_name>"*.
 
-    >                 **Catatan**: Ruang kerja Synapse Analytics memerlukan dua grup sumber daya dalam langganan Azure; satu untuk sumber daya yang dibuat secara eksplisit, dan satu lagi untuk sumber daya terkelola yang digunakan oleh layanan. Hal ini juga memerlukan akun penyimpanan Data Lake untuk menyimpan data, skrip, dan artefak lainnya.
+    > **Catatan**: Ruang kerja Synapse Analytics memerlukan dua grup sumber daya dalam langganan Azure; satu untuk sumber daya yang dibuat secara eksplisit, dan satu lagi untuk sumber daya terkelola yang digunakan oleh layanan. Hal ini juga memerlukan akun penyimpanan Data Lake untuk menyimpan data, skrip, dan artefak lainnya.
 
 4. Saat Anda memasukkan detail ini, pilih **Tinjau + buat**, lalu pilih **Buat** untuk membuat ruang kerja.
 5. Tunggu hingga ruang kerja selesai dibuat - mungkin memerlukan waktu lima menit atau lebih.
@@ -51,9 +51,9 @@ Untuk menggunakan Azure Synapse Analytics, Anda harus menyediakan sumber daya Ru
 7. Pilih ruang kerja Synapse Anda, dan di halaman **Gambaran umum**, di kartu **Buka Synapse Studio**, pilih **Buka** untuk membuka Synapse Studio di tab browser baru. Synapse Studio adalah antarmuka berbasis web yang dapat digunakan untuk bekerja dengan ruang kerja Synapse Analytics Anda.
 8. Di sisi kiri Synapse Studio, gunakan ikon **&rsaquo;&rsaquo;** untuk memperluas menu - menu ini mengungkapkan halaman yang berbeda dalam Synapse Studio yang akan Anda gunakan untuk mengelola sumber daya dan melakukan tugas analisis data, seperti yang ditampilkan di sini:
 
-    ![Gambar memperlihatkan menu Synapse Studio yang diperluas untuk mengelola sumber daya dan melakukan tugas analisis data](images/synapse-studio.png)
+    ![Gambar yang menampilkan menu Synapse Studio yang diperluas untuk mengelola sumber daya dan melakukan tugas analisis data](images/synapse-studio.png)
 
-## Serap data
+## Menyerap data
 
 Salah satu tugas utama yang dapat Anda lakukan dengan Azure Synapse Analytics adalah menentukan *alur* yang mentransfer (dan jika perlu, mentransformasi) data dari berbagai sumber ke ruang kerja Anda untuk dianalisis.
 
@@ -61,7 +61,7 @@ Salah satu tugas utama yang dapat Anda lakukan dengan Azure Synapse Analytics ad
 2. Di alat Salin Data, pada langkah **Properti**, pastikan **Tugas salin bawaan** dan **Jalankan sekali sekarang** dipilih, dan klik **Berikutnya >**.
 3. Pada langkah **Sumber**, dalam substep **Himpunan data**, pilih pengaturan berikut:
     - **Jenis sumber**: Semua
-    - **Koneksi**: *Buat koneksi baru, dan di panel **Koneksi baru** yang muncul, pada tab **Protokol generik** , pilih **HTTP**. Kemudian lanjutkan dan buat koneksi ke file data menggunakan pengaturan berikut:*
+    - **Koneksi**: *Buat koneksi baru, dan di panel **Koneksi baru** yang muncul, pada tab **Protokol generik**, pilih **HTTP**. Kemudian lanjutkan dan buat koneksi ke file data menggunakan pengaturan berikut:*
         - **Nama**: Produk AdventureWorks
         - **Deskripsi**: Daftar produk melalui HTTP
         - **Sambungkan melalui runtime integrasi**: AutoResolveIntegrationRuntime
@@ -85,7 +85,7 @@ Salah satu tugas utama yang dapat Anda lakukan dengan Azure Synapse Analytics ad
 7. Pada langkah **Target**, dalam sub langkah **Himpunan data**, harap pilih pengaturan berikut:
     - **Jenis target**: Azure Data Lake Storage Gen 2
     - **Koneksi**: *Pilih koneksi yang ada ke penyimpanan data lake Anda (ini dibuat untuk Anda saat Anda membuat ruang kerja).*
-8. Setelah memilih koneksi, pada langkah **Target/Himpunan data**, pastikan pengaturan berikut dipilih, kemudian pilih **Berikutnya >** :
+8. Setelah memilih koneksi, pada langkah **Target/Himpunan data**, pastikan pengaturan berikut dipilih, kemudian pilih **Berikutnya >**:
     - **Jalur folder**: *Telusuri ke folder sistem file Anda*
     - **Nama file**: products.csv
     - **Perilaku salin**: Tidak ada
@@ -138,7 +138,7 @@ Setelah menyerap data ke ruang kerja, Anda dapat menggunakan Synapse Analytics u
 
     | C1 | c2 | c3 | c4 |
     | -- | -- | -- | -- |
-    | ProductID | ProductName | Kategori | ListPrice |
+    | ProductID | ProductName | Golongan | ListPrice |
     | 771 | Mountain-100 Perak, 38 | Sepeda Gunung | 3399,9900 |
     | 772 | Mountain-100 Perak, 42 | Sepeda Gunung | 3399,9900 |
     | ... | ... | ... | ... |
@@ -159,7 +159,7 @@ Setelah menyerap data ke ruang kerja, Anda dapat menggunakan Synapse Analytics u
 
     Sekarang hasilnya akan terlihat seperti ini:
 
-    | ProductID | ProductName | Kategori | ListPrice |
+    | ProductID | ProductName | Golongan | ListPrice |
     | -- | -- | -- | -- |
     | 771 | Mountain-100 Perak, 38 | Sepeda Gunung | 3399,9900 |
     | 772 | Mountain-100 Perak, 42 | Sepeda Gunung | 3399,9900 |
@@ -182,9 +182,10 @@ Setelah menyerap data ke ruang kerja, Anda dapat menggunakan Synapse Analytics u
 
 7. Jalankan kueri yang sudah diubah, yang akan menampilkan hasil yang berisi produk angka di setiap kategori, seperti ini:
 
-    | Kategori | ProductCount |
+    | Golongan | ProductCount |
     | -- | -- |
-    | Bib Shorts | 3 |
+    | Bib Shorts | 3
+           |
     | Rak Sepeda | 1 |
     | ... | ... |
 
@@ -243,7 +244,7 @@ Sementara SQL adalah bahasa umum untuk mengkueri himpunan data terstruktur, bany
 
     | _c0_ | _c1_ | _c2_ | _c3_ |
     | -- | -- | -- | -- |
-    | ProductID | ProductName | Kategori | ListPrice |
+    | ProductID | ProductName | Golongan | ListPrice |
     | 771 | Mountain-100 Perak, 38 | Sepeda Gunung | 3399,9900 |
     | 772 | Mountain-100 Perak, 42 | Sepeda Gunung | 3399,9900 |
     | ... | ... | ... | ... |
@@ -261,7 +262,7 @@ Sementara SQL adalah bahasa umum untuk mengkueri himpunan data terstruktur, bany
 
 10. Jalankan kembali sel tersebut dan pastikan hasilnya terlihat seperti ini:
 
-    | ProductID | ProductName | Kategori | ListPrice |
+    | ProductID | ProductName | Golongan | ListPrice |
     | -- | -- | -- | -- |
     | 771 | Mountain-100 Perak, 38 | Sepeda Gunung | 3399,9900 |
     | 772 | Mountain-100 Perak, 42 | Sepeda Gunung | 3399,9900 |
@@ -279,9 +280,10 @@ Sementara SQL adalah bahasa umum untuk mengkueri himpunan data terstruktur, bany
 
 13. Pilih **&#9655; Jalankan** ke kiri untuk menjalankan sel kode baru, dan tinjau hasilnya, yang akan terlihat seperti ini:
 
-    | Kategori | hitung |
+    | Golongan | jumlah |
     | -- | -- |
-    | Headset | 3 |
+    | Headset | 3
+           |
     | Roda | 14 |
     | ... | ... |
 

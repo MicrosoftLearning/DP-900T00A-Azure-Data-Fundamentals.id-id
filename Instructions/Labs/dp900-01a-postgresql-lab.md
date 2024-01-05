@@ -10,7 +10,7 @@ Dalam latihan ini, Anda akan menyediakan sumber daya Azure Database for PostgreS
 
 Membutuhkan waktu sekitar **5** menit untuk menyelesaikan lab ini.
 
-## Sebelum Anda memulai
+## Sebelum memulai
 
 Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses tingkat administratif.
 
@@ -20,7 +20,7 @@ Dalam latihan ini, Anda akan memprovisikan sumber daya Azure Database for Postgr
 
 1. Di portal Microsoft Azure, pilih **&#65291; Buat sumber daya** dari sudut kiri atas dan cari *Azure Database for PostgreSQL*. Di halaman **Azure Database for PostgreSQL** yang dihasilkan, pilih **Buat**.
 
-1. Tinjau opsi Azure Database for PostgreSQL yang tersedia, lalu di petak peta **Azure Database for PostgreSQL**, pilih **Server fleksibel (Disarankan)** , lalu **Buat**.
+1. Tinjau opsi Azure Database for PostgreSQL yang tersedia, lalu di petak peta **Azure Database for PostgreSQL**, pilih **Server fleksibel (Disarankan)**, lalu **Buat**.
 
     ![Cuplikan layar opsi penyebaran Azure Database for PostgreSQL](images/postgresql-options.png)
 
@@ -34,10 +34,10 @@ Dalam latihan ini, Anda akan memprovisikan sumber daya Azure Database for Postgr
     - **Komputasi + penyimpanan**: Biarkan tidak berubah.
     - **Zona ketersediaan**: Biarkan tidak berubah.
     - **Aktifkan ketersediaan tinggi**: Biarkan tidak berubah.
-    - **Nama pengguna admin** : Nama Anda.
+    - **Nama pengguna admin **: Nama Anda.
     - **Kata Sandi** dan **Konfirmasi kata sandi**: Kata sandi kompleks yang sesuai.
 
-1. Pilih **Berikutnya: Jaringan**.
+1. Pilih **Next: Networking**.
 
 1. Di bagian **Aturan firewall**, pilih **&#65291; Tambahkan alamat IP klien saat ini**.
 
