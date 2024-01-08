@@ -35,9 +35,20 @@ Sekarang karena Anda memiliki ruang kerja, Anda dapat membuat database KQL untuk
 
 2. Di beranda analitik real time, buat **Database KQL ** baru dengan nama pilihan Anda.
 
-    Setelah satu menit atau lebih, database KQL baru akan dibuat:
+    ![Cuplikan layar Editor RTA dengan Buat KQL DB Disorot.](./images/create-kql-db.png)
+
+   Anda akan melihat layar dasbor lalu memilih tombol KQL Database di bagian atas.
 
     ![Cuplikan layar database KQL baru.](./images/kql-database.png)
+
+    Setelah dipilih, Anda akan diberi ***kotak dialog Database*** KQL Baru tempat Anda akan memberi nama KQL Database Anda.
+
+    ![Cuplikan layar dialog nama database KQL baru.](./images/name-kql-db.png)
+
+   - beri nama database, dalam skenario ini, yaitu: `my_kql_db`
+   - klik, ***Buat***
+  
+    Setelah satu menit atau lebih, database KQL baru akan dibuat:
 
     Saat ini, tidak ada tabel dalam database.
 
@@ -91,7 +102,7 @@ Eventstream Anda terus mengisi tabel di database KQL Anda, memungkinkan Anda unt
     ```kql
     // This query returns the number of taxi pickups per hour
     ['taxi-data']
-    | summarize PickupCount = count() by bin(tpep_pickup_datetime, 1h)
+    | summarize PickupCount = count() by bin(todatetime(tpep_pickup_datetime), 1h)
     ```
 
 1. Gunakan tombol **▷ Jalankan** untuk menjalankan kueri dan meninjau hasilnya, yang menunjukkan jumlah penjemputan taksi untuk setiap jam.
