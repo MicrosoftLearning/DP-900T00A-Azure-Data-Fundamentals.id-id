@@ -10,7 +10,7 @@ Dalam latihan ini Anda akan menyediakan sumber daya Azure Database for MySQL di 
 
 Membutuhkan waktu sekitar **5** menit untuk menyelesaikan lab ini.
 
-## Sebelum Anda memulai
+## Sebelum memulai
 
 Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses tingkat administratif.
 
@@ -37,7 +37,7 @@ Dalam latihan ini, Anda akan memprovisikan sumber daya Azure Database for MySQL.
     - **Nama pengguna admin**: Nama Anda
     - **Kata sandi** dan **Konfirmasi kata sandi**: Kata sandi yang cukup rumit
 
-1. Pilih **Berikutnya: Jaringan**.
+1. Pilih **Next: Networking**.
 
 1. Di bagian **Aturan firewall**, pilih **&#65291; Tambahkan alamat IP klien saat ini**.
 

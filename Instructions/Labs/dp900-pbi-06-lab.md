@@ -10,7 +10,7 @@ Dalam latihan ini Anda akan menggunakan Microsoft Power BI Desktop untuk membuat
 
 Membutuhkan waktu sekitar **20** menit untuk menyelesaikan lab ini.
 
-## Sebelum Anda memulai
+## Sebelum memulai
 
 Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses tingkat administratif.
 
@@ -67,7 +67,7 @@ Jika Microsoft Power BI Desktop belum terinstal di komputer Windows, Anda dapat 
 
 Tiga tabel data yang telah Anda impor telah dimuat ke dalam model data, yang sekarang akan Anda jelajahi dan perbaiki.
 
-1. Di Power BI Desktop, di tepi kiri, pilih tab **Model**, lalu susun tabel dalam model sehingga Anda dapat melihat tabel tersebut. Anda dapat menyembunyikan panel di sisi kanan menggunakan ikon **>>** :
+1. Di Power BI Desktop, di tepi kiri, pilih tab **Model**, lalu susun tabel dalam model sehingga Anda dapat melihat tabel tersebut. Anda dapat menyembunyikan panel di sisi kanan menggunakan ikon **>>**:
 
     ![Cuplikan layar yang menunjukkan tab Model di Power BI.](images/model-tab.png)
 
@@ -77,16 +77,16 @@ Tiga tabel data yang telah Anda impor telah dimuat ke dalam model data, yang sek
 
     Langkah ini dapat memastikan bahwa nilai pendapatan ditampilkan sebagai mata uang dalam visualisasi laporan.
 
-1. Di tabel produk, klik kanan bidang **Kategori** (atau buka menu **&vellip;** ) dan pilih **Buat hierarki**. Langkah ini membuat hierarki bernama **Hierarki Kategori**. Anda mungkin perlu memperluas atau menggulir di tabel **produk** untuk melihat ini - Anda juga dapat melihatnya di panel **Bidang**:
+1. Di tabel produk, klik kanan bidang **Kategori** (atau buka menu **&vellip;**) dan pilih **Buat hierarki**. Langkah ini membuat hierarki bernama **Hierarki Kategori**. Anda mungkin perlu memperluas atau menggulir di tabel **produk** untuk melihat ini - Anda juga dapat melihatnya di panel **Bidang**:
 
     ![Cuplikan layar yang menunjukkan cara menambahkan Hierarki Kategori di Power BI.](images/category-hierarchy.png)
 
-1. Di tabel produk, klik kanan bidang **ProductName** (atau buka menu **&vellip;** ) dan pilih **Tambahkan ke hierarki** > **Hierarki Kategori**. Tindakan ini menambahkan bidang **ProductName** ke hierarki yang Anda buat sebelumnya.
+1. Di tabel produk, klik kanan bidang **ProductName** (atau buka menu **&vellip;**) dan pilih **Tambahkan ke hierarki** > **Hierarki Kategori**. Tindakan ini menambahkan bidang **ProductName** ke hierarki yang Anda buat sebelumnya.
 1. Di panel **Bidang**, klik kanan **Hierarki Kategori** (atau buka menu **...**) dan pilih **Ganti Nama**. Kemudian ganti nama hierarki menjadi **Produk yang Dikategorikan**.
 
     ![Cuplikan layar yang menunjukkan cara mengganti nama hierarki di Power BI.](images/rename-hierarchy.png)
 
-1. Di tepi sisi kiri, pilih tab **Tampilan data** , lalu di panel **Data** , pilih tabel **pelanggan** .
+1. Di tepi kiri, pilih tab **Tampilan data**, lalu di panel **Data**, pilih tabel **pelanggan**.
 1. Pilih header kolom **Kota**, lalu atur properti **Kategori Data** ke **Kota**:
 
     ![Cuplikan layar yang menunjukkan cara mengatur kategori data di Power BI.](images/data-category.png)
@@ -103,7 +103,7 @@ Sekarang Anda hampir siap untuk membuat laporan. Pertama, Anda perlu memeriksa b
 
     Pengaturan ini memastikan bahwa Anda dapat menyertakan visualisasi peta dalam laporan.
 
-1. Di tepi sisi kiri, pilih tab **Tampilan laporan** dan lihat antarmuka desain laporan.
+1. Di tepi kiri, pilih tab **Tampilan laporan** dan lihat antarmuka desain laporan.
 
     ![Cuplikan layar yang menunjukkan tab laporan di Power BI.](images/report-tab.png)
 
@@ -111,11 +111,11 @@ Sekarang Anda hampir siap untuk membuat laporan. Pertama, Anda perlu memeriksa b
 
     ![Cuplikan layar yang menunjukkan cara menambahkan kotak teks di Power BI.](images/text-box.png)
 
-1. Pilih area kosong pada laporan untuk membatalkan pilihan kotak teks. Kemudian di panel **Data** , perluas **Produk** dan pilih bidang **Produk Yang Dikategorikan** . Langkah ini menambahkan tabel ke laporan.
+1. Pilih area kosong pada laporan untuk membatalkan pilihan kotak teks. Kemudian di panel **Data**, luaskan **Produk** dan pilih bidang **Produk yang Dikategorikan**. Langkah ini menambahkan tabel ke laporan.
 
     ![Cuplikan layar yang menunjukkan cara menambahkan tabel produk yang dikategorikan ke laporan di Power BI.](images/categorized-products-table.png)
 
-1. Dengan tabel masih dipilih, di panel **Data** , perluas **Pesanan** dan pilih **Pendapatan**. Kolom Pendapatan ditambahkan ke dalam tabel. Anda mungkin perlu memperluas ukuran tabel untuk melihat kolom Pendapatan.
+1. Dengan tabel masih dipilih, di panel **Data**, luaskan **Pesanan** dan pilih **Pendapatan**. Kolom Pendapatan ditambahkan ke dalam tabel. Anda mungkin perlu memperluas ukuran tabel untuk melihat kolom Pendapatan.
 
     Pendapatan diformat sebagai mata uang, seperti yang Anda tentukan dalam model. Namun, Anda tidak menentukan jumlah tempat desimal, jadi nilainya menyertakan jumlah pecahan. Anda dapat kembali ke tab **Model** atau **Data** dan mengubah nilai desimalnya jika perlu, meskipun tidak ada masalah dengan visualisasi yang akan dibuat.
 
@@ -125,17 +125,17 @@ Sekarang Anda hampir siap untuk membuat laporan. Pertama, Anda perlu memeriksa b
 
     ![Cuplikan layar yang menunjukkan bagan kolom bertumpuk dari produk yang dikategorikan dengan pendapatan dalam laporan.](images/stacked-column-chart.png)
 
-1. Di bagan kolom yang dipilih, pilih ikon **&#8595;** untuk mengaktifkan penelusuran mendetail. Kemudian di bagan, pilih kolom kedua untuk menelusuri paling detail dan melihat pendapatan untuk masing-masing produk dalam kategori ini. Kemampuan ini dapat digunakan karena Anda mendefinisikan hierarki kategori dan produk.
+1. Di bagan kolom yang dipilih, pilih ikon **&#8595;** untuk mengaktifkan penelusuran mendetail. Kemudian pada bagan, pilih kolom kedua untuk menelusuri dan melihat pendapatan masing-masing produk dalam kategori ini. Kemampuan ini dapat digunakan karena Anda mendefinisikan hierarki kategori dan produk.
 
     ![Cuplikan layar yang menunjukkan bagan kolom penelusuran mendetail untuk melihat produk dalam kategori.](images/drill-down.png)
 
-1. Gunakan ikon **&#x2191;** untuk menelusuri cadangan pada tingkat kategori. Kemudian pilih ikon **(** &#8595; **)** untuk menonaktifkan fitur penelusuran mendetail.
-1. Pilih area kosong laporan, lalu di panel **Data** , pilih bidang **Kuantitas** dalam tabel **pesanan** dan bidang **Kategori** dalam tabel **produk** . Langkah ini menghasilkan bagan kolom lain yang menunjukkan kuantitas penjualan berdasarkan kategori produk.
+1. Gunakan ikon **&#x2191;** untuk menelusuri cadangan pada tingkat kategori. Kemudian pilih ikon **(**&#8595;**)** untuk menonaktifkan fitur penelusuran mendetail.
+1. Pilih area kosong pada laporan, lalu di panel **Data**, pilih bidang **Kuantitas** di tabel **pesanan** dan bidang **Kategori** dalam tabel **produk**. Langkah ini menghasilkan bagan kolom lain yang menunjukkan kuantitas penjualan berdasarkan kategori produk.
 1. Dengan bagan kolom baru yang dipilih, di panel **Visualisasi**, pilih **Bagan pai** lalu ubah ukuran bagan dan posisikan di sebelah bagan kolom pendapatan berdasarkan kategori.
 
     ![Cuplikan layar yang menampilkan diagram lingkaran yang menunjukkan kuantitas penjualan berdasarkan kategori.](images/category-pie-chart.png)
 
-1. Pilih area kosong laporan, lalu di panel **Data** , pilih bidang **Kota** di tabel **pelanggan** lalu pilih bidang **Pendapatan** dalam tabel **pesanan** . Diagram lingkaran ini menghasilkan peta yang menunjukkan pendapatan penjualan berdasarkan kota. Atur ulang dan ubah ukuran visualisasi sesuai kebutuhan:
+1. Pilih area kosong laporan, lalu di panel **Data**, pilih bidang **Kota** di tabel **pelanggan**, lalu pilih **Pendapatan** di tabel **pesanan**. Diagram lingkaran ini menghasilkan peta yang menunjukkan pendapatan penjualan berdasarkan kota. Atur ulang dan ubah ukuran visualisasi sesuai kebutuhan:
 
     ![Cuplikan layar peta yang menunjukkan pendapatan berdasarkan kota.](images/revenue-map.png)
 

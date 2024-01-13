@@ -12,17 +12,17 @@ Dalam latihan ini, Anda akan menggunakan Azure Synapse Data Explorer untuk menga
 
 Membutuhkan waktu sekitar **25** menit untuk menyelesaikan lab ini.
 
-## Sebelum Anda memulai
+## Sebelum memulai
 
 Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses tingkat administratif.
 
 ## Memprovisikn ruang kerja Azure Synapse Analytics
 
-> **Tips**: Jika sudah memiliki Ruang Kerja Azure Synapse dari latihan sebelumnya, lewati bagian ini dan langsung buka **[Buat kumpulan Data Explorer](#create-a-data-explorer-pool)** .
+> **Tips**: Jika sudah memiliki Ruang Kerja Azure Synapse dari latihan sebelumnya, lewati bagian ini dan langsung buka **[Buat kumpulan Data Explorer](#create-a-data-explorer-pool)**.
 
 1. Buka portal Microsoft Azure di [https://portal.azure/com](https://portal.azure.com?azure-portal=true), dan masuk menggunakan info masuk yang terkait dengan langganan Azure Anda.
 
-    >                 **Catatan**: Pastikan untuk menggunakan direktori yang berisi langganan Anda - terletak di kanan atas di bawah ID pengguna. Jika tidak, pilih ikon pengguna dan ubah direktori.
+    > **Catatan**: Pastikan untuk menggunakan direktori yang berisi langganan Anda - terletak di kanan atas di bawah ID pengguna. Jika tidak, pilih ikon pengguna dan ubah direktori.
 
 1. Di portal Microsoft Azure, di halaman **Beranda**, gunakan **&#65291; Buat ikon sumber daya** untuk membuat sumber daya baru.
 1. Cari *Azure Synapse Analytics*, dan buat sumber daya **Azure Synapse Analytics** yang baru dengan pengaturan berikut:
@@ -35,13 +35,13 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
         - **Nama akun**: *Buat akun baru dengan nama unik, misalnya "datalake<your_name>"*.
         - **Nama sistem file**: *Buat sistem file baru dengan nama yang unik, misalnya "fs<your_name>"*.
 
-    >                 **Catatan**: Ruang kerja Synapse Analytics memerlukan dua grup sumber daya dalam langganan Azure; satu untuk sumber daya yang dibuat secara eksplisit, dan satu lagi untuk sumber daya terkelola yang digunakan oleh layanan. Hal ini juga memerlukan akun penyimpanan Data Lake untuk menyimpan data, skrip, dan artefak lainnya.
+    > **Catatan**: Ruang kerja Synapse Analytics memerlukan dua grup sumber daya dalam langganan Azure; satu untuk sumber daya yang dibuat secara eksplisit, dan satu lagi untuk sumber daya terkelola yang digunakan oleh layanan. Hal ini juga memerlukan akun penyimpanan Data Lake untuk menyimpan data, skrip, dan artefak lainnya.
 
 1. Saat Anda memasukkan detail ini, pilih **Tinjau + buat**, lalu pilih **Buat** untuk membuat ruang kerja.
 1. Tunggu hingga ruang kerja selesai dibuat - mungkin memerlukan waktu lima menit atau lebih.
 1. Saat penyebaran selesai, buka grup sumber daya yang dibuat dan perhatikan bahwa grup tersebut berisi ruang kerja Synapse Analytics Anda dan akun penyimpanan Data Lake.
 1. Pilih ruang kerja Synapse Anda, dan di halaman **Gambaran umum**, di kartu **Buka Synapse Studio**, pilih **Buka** untuk membuka Synapse Studio di tab browser baru. Synapse Studio adalah antarmuka berbasis web yang dapat digunakan untuk bekerja dengan ruang kerja Synapse Analytics Anda.
-1. Di sisi kiri Synapse Studio, gunakan **&rsaquo;&rsaquo;** ikon untuk memperluas menu - ini mengungkapkan berbagai halaman dalam Synapse Studio yang akan Anda gunakan untuk mengelola sumber daya dan melakukan tugas analitik data.
+1. Di sisi kiri Synapse Studio, gunakan ikon **&rsaquo;&rsaquo;** untuk meluaskan menu - tindakan ini akan menampilkan berbagai halaman dalam Synapse Studio yang akan digunakan untuk mengelola sumber daya dan melakukan tugas analitik data
 
 ## Membuat kumpulan Data Explorer
 
@@ -56,7 +56,7 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 ## Membuat database dan menyerap data
 
 1. Di Synapse Studio, pilih halaman **Data**.
-1. Pastikan tab **Ruang Kerja** dipilih, dan jika perlu, pilih **&#8635;** di kiri atas halaman untuk merefresh tampilan sehingga **database Data Explorer**  terdaftar.
+1. Pastikan tab **Ruang Kerja** dipilih, dan jika perlu, pilih **&#8635;** di kiri atas halaman untuk merefresh tampilan sehingga **database Data Explorer ** terdaftar.
 1. Perluas **Database Data Explorer** dan verifikasi bahwa **dxpool** dicantumkan.
 1. Di panel **Data**, gunakan **&#65291;** untuk membuat **database Data Explorer** baru di kumpulan **dxpool** dengan nama **iot-data**.
 1. Sambil menunggu database dibuat, unduh **devices.csv** dari [https://github.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/raw/master/streaming/data/devices.csv](https://github.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/raw/master/streaming/data/devices.csv?azure-portal=true), simpan di folder mana pun di komputer lokal Anda.
@@ -84,7 +84,7 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 
 1. Pada bilah alat, pilih **&#9655; Jalankan** untuk menjalankan kueri, dan tinjau hasilnya, yang akan terlihat seperti ini:
 
-    | Waktu | Perangkat | Nilai |
+    | Waktu | Perangkat | Value |
     | --- | --- | --- |
     | 2022-01-01T00:00:00Z | Dev1 | 7 |
     | 2022-01-01T00:00:01Z | Dev2 | 4 |
@@ -92,7 +92,7 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 
     Jika hasil cocok dengan ini, Anda telah berhasil membuat tabel **perangkat** dari data dalam file.
 
-    >                 **Tips**: Dalam contoh ini, Anda mengimpor sejumlah kecil data batch dari satu file, yang dapat dilakukan untuk tujuan latihan ini. Pada kenyataannya, Anda dapat menggunakan Data Explorer untuk menganalisis volume data yang jauh lebih besar; dan karena Anda mengaktifkan penyerapan streaming, Anda juga dapat mengonfigurasi Data Explorer untuk menyerap data ke dalam tabel dari sumber streaming seperti Azure Event Hubs.
+    > **Tips**: Dalam contoh ini, Anda mengimpor sejumlah kecil data batch dari satu file, yang dapat dilakukan untuk tujuan latihan ini. Pada kenyataannya, Anda dapat menggunakan Data Explorer untuk menganalisis volume data yang jauh lebih besar; dan karena Anda mengaktifkan penyerapan streaming, Anda juga dapat mengonfigurasi Data Explorer untuk menyerap data ke dalam tabel dari sumber streaming seperti Azure Event Hubs.
 
 ## Gunakan bahasa kueri Kusto untuk membuat kueri tabel di Synapse Studio
 
