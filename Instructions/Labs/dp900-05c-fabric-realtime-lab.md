@@ -27,36 +27,23 @@ Sebelum mengerjakan data di Fabric, buat ruang kerja dengan uji coba Fabric diak
 
 Sekarang karena Anda memiliki ruang kerja, Anda dapat membuat database KQL untuk menyimpan data real-time.
 
-1. Di kiri bawah portal, beralihlah ke pengalaman **Analitik Real Time**.
+1. Di kiri bawah portal, beralihlah ke **pengalaman Kecerdasan** Real Time.
 
     ![Cuplikan layar menu pengalih pengalaman.](./images/fabric-real-time.png)
 
-    Beranda analitik real time mencakup petak-petak untuk membuat aset yang umum digunakan untuk analisis data real time
+    Beranda Real-Time Intelligence menyertakan petak peta untuk membuat aset yang umum digunakan untuk analisis data real time.
 
-2. Di beranda analitik real time, buat **Database KQL ** baru dengan nama pilihan Anda.
+2. Di beranda Inteligensi Real Time, buat Eventhouse** baru **dengan nama pilihan Anda.
 
     ![Cuplikan layar Editor RTA dengan Buat KQL DB Disorot.](./images/create-kql-db.png)
 
-   Anda akan melihat layar dasbor lalu memilih tombol KQL Database di bagian atas.
-
-    ![Cuplikan layar database KQL baru.](./images/kql-database.png)
-
-    Setelah dipilih, Anda akan diberi ***kotak dialog Database*** KQL Baru tempat Anda akan memberi nama KQL Database Anda.
-
-    ![Cuplikan layar dialog nama database KQL baru.](./images/name-kql-db.png)
-
-   - beri nama database, dalam skenario ini, yaitu: `my_kql_db`
-   - klik, ***Buat***
-  
-    Setelah satu menit atau lebih, database KQL baru akan dibuat:
-
-    Saat ini, tidak ada tabel dalam database.
+    Eventhouse digunakan untuk mengelompokkan dan mengelola database Anda di seluruh proyek. Database KQL kosong secara otomatis dibuat dengan nama eventhouse dan kami akan menambahkan data ke dalamnya nanti dalam latihan ini.
 
 ## Membuat eventstream
 
 Eventstreams menyediakan cara yang dapat diskalakan dan fleksibel untuk menyerap data real time dari sumber streaming.
 
-1. Di bilah menu di sebelah kiri, pilih halaman **Beranda** untuk pengalaman analitik real time.
+1. Di bilah menu di sebelah kiri, pilih **halaman Beranda** untuk pengalaman Kecerdasan Real Time.
 1. Pada halaman Beranda, pilih petak-petak untuk membuat **Eventstream** baru dengan nama pilihan Anda.
 
     Setelah beberapa saat, perancang visual untuk eventstream Anda ditampilkan.
@@ -70,11 +57,7 @@ Eventstreams menyediakan cara yang dapat diskalakan dan fleksibel untuk menyerap
 
     ![Cuplikan layar pratinjau data Eventstream.](./images/eventstream-preview.png)
 
-1. Pada kanvas perancang, di daftar **Tujuan baru**untuk tujuan Anda, pilih **database KQL**. Kemudian di panel **database KQL**, tentukan nama tujuan **taxi-data** dan pilih ruang kerja Anda dan database KQL. Lalu pilih **Buat dan konfigurasikan**.
-1. Di wizard ** Serap data**, pada halaman **Tujuan**, pilih **Tabel barul** dan masukkan nama tabel **taxi-data**. Lalu pilih **Berikutnya: Sumber Daya**.
-1. Pada halaman **Sumber** , tinjau nama koneksi data default, lalu pilih **Berikutnya: Skema**.
-1. Pada halaman **Skema** , ubah **Format data**dari TXT ke **JSON**, dan lihat pratinjau untuk memverifikasi bahwa format ini menghasilkan beberapa kolom data. Pilih **Berikutnya: Ringkasan**.
-1. Pada halaman **Ringkasan** , tunggu hingga penyerapan berkelanjutan dibuat, lalu pilih **Tutup**.
+1. Pada kanvas perancang, di daftar **Tujuan baru**untuk tujuan Anda, pilih **database KQL**. Kemudian di panel **database KQL**, tentukan nama tujuan **taxi-data** dan pilih ruang kerja Anda dan database KQL. Pilih **Buat baru** di bawah Tabel tujuan dan masukkan nama **tabel taxi-data**. Kemudian pilih **Tambahkan**.
 1. Verifikasi bahwa eventstream Anda yang telah selesai terlihat seperti ini:
 
     ![Cuplikan layar Eventstream yang telah selesai.](./images/complete-eventstream.png)
