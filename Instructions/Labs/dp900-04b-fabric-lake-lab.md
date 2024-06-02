@@ -84,7 +84,7 @@ Cara sederhana untuk menyerap data adalah dengan menggunakan aktivitas **Salin D
 
 Sekarang setelah Anda menyerap data ke dalam tabel di lakehouse, Anda dapat menggunakan SQL untuk melakukan kueri.
 
-1. Di kanan atas halaman Lakehouse, beralihlah ke **titik** akhir analitik SQL untuk lakehouse Anda.
+1. Di kanan atas halaman Lakehouse, beralihlah ke **titik akhir analitik SQL** untuk lakehouse Anda.
 
     ![Cuplikan layar menu titik akhir analitik SQL.](./images/endpoint-switcher.png)
 
@@ -102,7 +102,7 @@ Sekarang setelah Anda menyerap data ke dalam tabel di lakehouse, Anda dapat meng
 
 ## Memvisualisasikan data di lakehouse
 
-Microsoft Fabric lakehouses mengatur semua tabel dalam model data semantik, yang dapat Anda gunakan untuk membuat visualisasi dan laporan.
+Lakehouse Microsoft Fabric mengatur semua tabel dalam model data semantik, yang dapat Anda gunakan untuk membuat visualisasi dan laporan.
 
 1. Di kiri bawah halaman, di bawah panel **Explorer** , pilih tab **Model** untuk melihat model data untuk tabel di lakehouse (dalam hal ini hanya ada satu tabel).
 
