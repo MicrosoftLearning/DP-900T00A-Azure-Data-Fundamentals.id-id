@@ -1,10 +1,10 @@
 ---
-title: Petunjuk Host Online
+title: Instruksi yang Tersedia Online
 permalink: index.html
 layout: home
 ---
 
-# <a name="azure-data-fundamentals-exercises"></a>Latihan Dasar-Dasar Data Azure
+# Latihan Dasar-Dasar Data Azure
 
 Latihan langsung ini dirancang untuk mendukung konten pelatihan di [Microsoft Learn](https://docs.microsoft.com/training/).
 
@@ -13,5 +13,5 @@ Untuk menyelesaikan latihan ini, Anda harus berlangganan Microsoft Azure dengan 
 {% assign labs = site.pages | where_exp:"page", "page.url contains '/Instructions/Labs'" %}
 | Latihan |
 | --- |
-{% for activity in labs  %}| [{{ activity.lab.title }}{% if activity.lab.type %} - {{ activity.lab.type }}{% endif %}]({{ site.github.url }}{{ activity.url }}) |
+{% untuk aktivitas di lab %}| [{{ activity.lab.title }}{% if activity.lab.type %} - {{ activity.lab.type }}{% endif %}]({{ site.github.url }}{{ activity.url }}) |
 {% endfor %}

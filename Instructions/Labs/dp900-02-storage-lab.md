@@ -104,13 +104,13 @@ Azure Table menyediakan penyimpanan kunci/nilai untuk aplikasi yang perlu menyim
     - **RowKey**: 1
 1. Pilih **Tambahkan properti**, dan buat properti baru dengan nilai berikut:
 
-    |Nama properti | Jenis | Nilai |
+    |Nama properti | Tipe | Nilai |
     | ------------ | ---- | ----- |
     | Nama | String | Widget |
 
 1. Tambahkan properti kedua dengan nilai berikut:
 
-    |Nama properti | Jenis | Nilai |
+    |Nama properti | Tipe | Nilai |
     | ------------ | ---- | ----- |
     | Harga | Laju | 2,99 |
 
@@ -118,7 +118,7 @@ Azure Table menyediakan penyimpanan kunci/nilai untuk aplikasi yang perlu menyim
 1. Di browser penyimpanan, verifikasi bahwa baris telah ditambahkan ke tabel **produk**, dan kolom **Stempel waktu** telah dibuat untuk menunjukkan kapan baris terakhir diubah.
 1. Tambahkan entitas lain ke tabel **produk** dengan properti berikut:
 
-    |Nama properti | Jenis | Nilai |
+    |Nama properti | Tipe | Nilai |
     | ------------ | ---- | ----- |
     | PartitionKey | String | 1 |
     | RowKey | String | 2 |
