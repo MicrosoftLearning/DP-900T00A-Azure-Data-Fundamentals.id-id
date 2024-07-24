@@ -138,7 +138,7 @@ Setelah menyerap data ke ruang kerja, Anda dapat menggunakan Synapse Analytics u
 
     | C1 | c2 | c3 | c4 |
     | -- | -- | -- | -- |
-    | ProductID | ProductName | Golongan | ListPrice |
+    | ProductID | ProductName | Kategori | ListPrice |
     | 771 | Mountain-100 Perak, 38 | Sepeda Gunung | 3399,9900 |
     | 772 | Mountain-100 Perak, 42 | Sepeda Gunung | 3399,9900 |
     | ... | ... | ... | ... |
@@ -159,7 +159,7 @@ Setelah menyerap data ke ruang kerja, Anda dapat menggunakan Synapse Analytics u
 
     Sekarang hasilnya akan terlihat seperti ini:
 
-    | ProductID | ProductName | Golongan | ListPrice |
+    | ProductID | ProductName | Kategori | ListPrice |
     | -- | -- | -- | -- |
     | 771 | Mountain-100 Perak, 38 | Sepeda Gunung | 3399,9900 |
     | 772 | Mountain-100 Perak, 42 | Sepeda Gunung | 3399,9900 |
@@ -182,7 +182,7 @@ Setelah menyerap data ke ruang kerja, Anda dapat menggunakan Synapse Analytics u
 
 7. Jalankan kueri yang sudah diubah, yang akan menampilkan hasil yang berisi produk angka di setiap kategori, seperti ini:
 
-    | Golongan | ProductCount |
+    | Kategori | ProductCount |
     | -- | -- |
     | Bib Shorts | 3
            |
@@ -244,7 +244,7 @@ Sementara SQL adalah bahasa umum untuk mengkueri himpunan data terstruktur, bany
 
     | _c0_ | _c1_ | _c2_ | _c3_ |
     | -- | -- | -- | -- |
-    | ProductID | ProductName | Golongan | ListPrice |
+    | ProductID | ProductName | Kategori | ListPrice |
     | 771 | Mountain-100 Perak, 38 | Sepeda Gunung | 3399,9900 |
     | 772 | Mountain-100 Perak, 42 | Sepeda Gunung | 3399,9900 |
     | ... | ... | ... | ... |
@@ -262,7 +262,7 @@ Sementara SQL adalah bahasa umum untuk mengkueri himpunan data terstruktur, bany
 
 10. Jalankan kembali sel tersebut dan pastikan hasilnya terlihat seperti ini:
 
-    | ProductID | ProductName | Golongan | ListPrice |
+    | ProductID | ProductName | Kategori | ListPrice |
     | -- | -- | -- | -- |
     | 771 | Mountain-100 Perak, 38 | Sepeda Gunung | 3399,9900 |
     | 772 | Mountain-100 Perak, 42 | Sepeda Gunung | 3399,9900 |
@@ -280,7 +280,7 @@ Sementara SQL adalah bahasa umum untuk mengkueri himpunan data terstruktur, bany
 
 13. Pilih **&#9655; Jalankan** ke kiri untuk menjalankan sel kode baru, dan tinjau hasilnya, yang akan terlihat seperti ini:
 
-    | Golongan | jumlah |
+    | Kategori | jumlah |
     | -- | -- |
     | Headset | 3
            |

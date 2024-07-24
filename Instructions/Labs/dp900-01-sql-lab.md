@@ -1,20 +1,20 @@
 ---
 lab:
-  title: Jelajahi Azure SQL Database
+  title: Menjelajahi Azure SQL Database
   module: Explore relational data in Azure
 ---
 
-# <a name="explore-azure-sql-database"></a>Jelajahi Azure SQL Database
+# Menjelajahi Azure SQL Database
 
 Dalam latihan ini, Anda akan memprovisikan sumber daya Azure SQL Database di langganan Azure, lalu menggunakan SQL untuk membuat kueri tabel dalam database hubungan.
 
 Membutuhkan waktu sekitar **15** menit untuk menyelesaikan lab ini.
 
-## <a name="before-you-start"></a>Sebelum Anda memulai
+## Sebelum memulai
 
 Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses tingkat administratif.
 
-## <a name="provision-an-azure-sql-database-resource"></a>Memprovisikan sumber daya Azure SQL Database
+## Memprovisikan sumber daya Azure SQL Database
 
 1. Di [portal Microsoft Azure](https://portal.azure.com?azure-portal=true), pilih **&#65291; Buat sumber daya** dari sudut kiri atas dan cari *Azure SQL*. Lalu, di halaman **Azure SQL** yang dihasilkan, pilih **Buat**.
 
@@ -26,13 +26,13 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
     - **Langganan**: Pilih langganan Azure Anda.
     - **Grup sumber daya**: Buat grup sumber daya baru dengan nama pilihan Anda.
     - **Nama database**: *AdventureWorks*
-    -                 **Server**: Pilih **Buat baru** dan buat server baru dengan nama unik di lokasi yang tersedia. Gunakan **Autentikasi SQL** dan tentukan nama Anda sebagai proses masuk admin server dan kata sandi yang cukup rumit (ingat kata sandi - Anda akan membutuhkannya nanti!)
+    - **Server**: Pilih **Buat baru** dan buat server baru dengan nama unik di lokasi yang tersedia. Gunakan **Autentikasi SQL** dan tentukan nama Anda sebagai proses masuk admin server dan kata sandi yang cukup rumit (ingat kata sandi - Anda akan membutuhkannya nanti!)
     - **Ingin menggunakan kumpulan elastis SQL?**: *Tidak*
     - **Lingkungan beban kerja**: Pengembangan
     - **Komputasi + penyimpanan**: Jangan ubah
     - **Redundansi penyimpanan cadangan**: *Penyimpanan cadangan redundan lokal*
 
-1. Pada halaman **Buat SQL Database**, pilih **Berikutnya :Jaringan >** , dan pada halaman **Jaringan**, di bagian **Konektivitas jaringan**, pilih **Titik akhir publik**. Lalu, pilih **Ya** untuk kedua opsi di bagian **Aturan firewall** untuk mengizinkan akses ke server database Anda dari layanan Azure dan alamat IP klien Anda saat ini.
+1. Pada halaman **Buat SQL Database**, pilih **Berikutnya :Jaringan >**, dan pada halaman **Jaringan**, di bagian **Konektivitas jaringan**, pilih **Titik akhir publik**. Lalu, pilih **Ya** untuk kedua opsi di bagian **Aturan firewall** untuk mengizinkan akses ke server database Anda dari layanan Azure dan alamat IP klien Anda saat ini.
 
 1. Pilih **Berikutnya: Keamanan >** dan atur opsi **Aktifkan Microsoft Defender untuk SQL** ke **Tidak sekarang**.
 
