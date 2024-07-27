@@ -114,7 +114,7 @@ Lakehouse Microsoft Fabric mengatur semua tabel dalam model data semantik, yang 
 
 1. Pada menu **File** , pilih **Simpan** untuk menyimpan laporan sebagai **Laporan** Naik Taksi di ruang kerja Fabric Anda.
 
-    Anda sekarang dapat menutup tab browser yang berisi laporan untuk kembali ke lakehouse Anda. Anda dapat menemukan laporan di halaman untuk ruang kerja Anda di portal Microsoft Fabric.
+    Anda dapat menemukan laporan di halaman untuk ruang kerja Anda di portal Microsoft Fabric.
 
 ## Membersihkan sumber daya
 
