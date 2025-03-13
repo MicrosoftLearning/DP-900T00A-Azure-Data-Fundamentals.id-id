@@ -10,16 +10,12 @@ Dalam latihan ini Anda akan menggunakan Microsoft Power BI Desktop untuk membuat
 
 Membutuhkan waktu sekitar **20** menit untuk menyelesaikan lab ini.
 
-## Sebelum memulai
-
-Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses tingkat administratif.
-
-### Menginstal Power BI Desktop
+## Menginstal Power BI Desktop
 
 Jika Microsoft Power BI Desktop belum terinstal di komputer Windows, Anda dapat mengunduh dan menginstalnya secara gratis.
 
 1. Unduh penginstal Power BI Desktop dari [https://aka.ms/power-bi-desktop](https://aka.ms/power-bi-desktop?azure-portal=true).
-1. Ketika file telah diunduh, buka, dan gunakan wizard penyiapan untuk menginstal Power BI Desktop di komputer Anda. Penginstalan ini mungkin membutuhkan waktu beberapa menit.
+1. Ketika file telah diunduh, buka, dan gunakan wizard penyiapan untuk menginstal Power BI Desktop di komputer Anda. Penginstalan ini mungkin memakan waktu beberapa menit.
 
 ## Impor data
 
@@ -86,7 +82,7 @@ Tiga tabel data yang telah Anda impor telah dimuat ke dalam model data, yang sek
 
     ![Cuplikan layar yang menunjukkan cara mengganti nama hierarki di Power BI.](images/rename-hierarchy.png)
 
-1. Di tepi kiri, pilih tab **Tampilan data**, lalu di panel **Data**, pilih tabel **pelanggan**.
+1. Di tepi sisi kiri, pilih tab **Tampilan** tabel, lalu di panel **Data** , pilih **tabel pelanggan** .
 1. Pilih header kolom **Kota**, lalu atur properti **Kategori Data** ke **Kota**:
 
     ![Cuplikan layar yang menunjukkan cara mengatur kategori data di Power BI.](images/data-category.png)

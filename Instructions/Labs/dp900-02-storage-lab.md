@@ -42,7 +42,7 @@ Sekarang setelah memiliki akun Azure Storage, Anda dapat membuat kontainer untuk
     *Jika file JSON ditampilkan di browser Anda, simpan halaman sebagai **product1.json**.*
 
 1. Di halaman portal Azure untuk kontainer penyimpanan Anda, di sisi kiri, pada bagian **Penyimpanan data**, pilih **Kontainer**.
-1. Di halaman **Kontainer**, pilih **&#65291; Kontainer** dan tambahkan kontainer baru bernama **data** dengan tingkat akses publik **Privat (tanpa akses anonim)**.
+1. Di halaman **Kontainer** , pilih **&#65291; Kontainer** dan tambahkan kontainer baru bernama **data** dengan tingkat **akses anonim Privat (tanpa akses anonim)**.
 1. Setelah kontainer **data** dibuat, verifikasi bahwa kontainer tersebut tercantum di halaman **Kontainer**.
 1. Di panel sebelah kiri, di bagian atas, pilih **Browser penyimpana**. Halaman ini menyediakan antarmuka berbasis browser yang dapat Anda gunakan untuk bekerja dengan data di akun penyimpanan.
 1. Di halaman browser penyimpanan, pilih **Kontainer blob** dan verifikasi bahwa kontainer **data** Anda dicantumkan.
@@ -66,7 +66,7 @@ Sekarang setelah memiliki akun Azure Storage, Anda dapat membuat kontainer untuk
 
 Dukungan Azure Data Lake Store Gen2 memungkinkan Anda menggunakan folder hierarkis untuk mengatur dan mengelola akses ke blob. Ini juga memungkinkan Anda menggunakan penyimpanan blob Azure untuk menghosting sistem file terdistribusi untuk platform analitik big data yang umum.
 
-1. Unduh file JSON [product2.json](https://aka.ms/product2.json?azure-portal=true) dari `https://aka.ms/product2.json` dan simpan di komputer Anda di folder yang sama tempat Anda mengunduh **product1.json** sebelumnya - Anda akan mengunggahnya ke penyimpanan blob nanti ).
+1. [Unduh file JSON product2.json](https://aka.ms/product2.json?azure-portal=true) dari `https://aka.ms/product2.json` dan simpan di komputer Anda di folder yang sama tempat Anda mengunduh **product1.json** sebelumnya - Anda akan mengunggahnya ke penyimpanan blob nanti.
 1. Di halaman portal Microsoft Azure untuk akun penyimpanan Anda, di sisi kiri, gulir ke bawah ke bagian **Pengaturan**, dan pilih **Peningkatan Azure Data Lake Gen2**.
 1. Di halaman **upgrade Data Lake Gen2**, perluas dan selesaikan setiap langkah untuk meningkatkan akun penyimpanan Anda guna mengaktifkan namespace hierarkis dan mendukung Azure Data Lake Storage Gen 2. Ini mungkin memakan waktu.
 1. Setelah peningkatan selesai, pada panel sisi kiri, di bagian atas, pilih **Browser penyimpanan** dan navigasikan kembali ke akar kontainer blob **data** Anda, yang masih berisi folder **product_data**.
@@ -85,6 +85,7 @@ Azure Files menyediakan cara untuk membuat berbagi berbasis cloud.
 
 1. Di halaman portal Azure untuk kontainer penyimpanan Anda, di sisi kiri, di bagian **Penyimpanan data**, pilih **Berbagi**.
 1. Di halaman Berbagi file, pilih **&#65291; Berbagi file** dan tambahkan berbagi file baru bernama **file** menggunakan tingkat **Transaksi yang dioptimalkan**.
+2. Pilih **Berikutnya: Pencadangan >** dan nonaktifkan pencadangan. Pilih **Tinjau + buat**.
 1. Di **Berbagi**, buka **berbagi** baru Anda.
 1. Di bagian atas halaman, pilih **Hubungkan**. Kemudian di panel **Hubungkan**, perhatikan bahwa ada tab untuk sistem operasi umum (Windows, Linux, dan macOS) yang berisi skrip yang dapat Anda jalankan untuk menghubungkan ke folder bersama dari komputer klien.
 1. Tutup panel **Hubungkan** lalu tutup halaman **file** guna kembali ke halaman **Berbagi** untuk akun penyimpanan Azure Anda.
