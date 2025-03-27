@@ -81,7 +81,7 @@ Eventstream menyerap data stok real-time, tetapi saat ini tidak melakukan apa pu
 
     > **Tips**: Pilih tujuan pada kanvas desain, dan jika tidak ada pratinjau data yang ditampilkan di bawahnya, pilih **Refresh**.
 
-    Dalam latihan ini, Anda telah membuat eventstream yang sangat sederhana yang menangkap data real-time dan memuatnya ke dalam tabel. Dalam soltuion nyata, Anda biasanya akan menambahkan transformasi untuk mengagregasi data melalui jendela temporal (misalnya, untuk menangkap harga rata-rata setiap saham selama periode lima menit).
+    Dalam latihan ini, Anda telah membuat eventstream yang sangat sederhana yang menangkap data real-time dan memuatnya ke dalam tabel. Dalam solusi nyata, Anda biasanya akan menambahkan transformasi untuk mengagregasi data melalui jendela temporal (misalnya, untuk menangkap harga rata-rata setiap saham selama periode lima menit).
 
     Sekarang mari kita jelajahi bagaimana Anda bisa mengkueri dan menganalisis data yang diambil.
 
