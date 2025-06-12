@@ -18,7 +18,7 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 
 Dalam latihan ini, Anda akan memprovisikan sumber daya Azure Database for PostgreSQL.
 
-1. Di portal Microsoft Azure, pilih **&#65291; Buat sumber daya** dari sudut kiri atas dan cari *Azure Database for PostgreSQL*. Di halaman **Azure Database for PostgreSQL** yang dihasilkan, pilih **Buat**.
+1. Di portal Azure, pilih **&#65291; Buat sumber daya** dari sudut kiri atas dan cari `Azure Database for PostgreSQL`. Di halaman **Azure Database for PostgreSQL** yang dihasilkan, pilih **Buat**.
 
 1. Tinjau opsi Azure Database for PostgreSQL yang tersedia, lalu di petak peta **Azure Database for PostgreSQL**, pilih **Server fleksibel (Disarankan)**, lalu **Buat**.
 
