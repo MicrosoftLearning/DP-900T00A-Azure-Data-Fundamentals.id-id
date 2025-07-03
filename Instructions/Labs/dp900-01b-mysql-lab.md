@@ -18,7 +18,7 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 
 Dalam latihan ini, Anda akan memprovisikan sumber daya Azure Database for MySQL.
 
-1. Di portal Microsoft Azure, pilih **&#65291; Buat sumber daya** dari sudut kiri atas dan cari *Azure Database for MySQL*. Di halaman **Azure Database for MySQL** yang dihasilkan, pilih **Buat**.
+1. Di portal Azure, pilih **&#65291; Buat sumber daya** dari sudut kiri atas dan cari `Azure Database for MySQL`. Di halaman **Azure Database for MySQL** yang dihasilkan, pilih **Buat**.
 
 1. Tinjau opsi Azure Database for MySQL yang tersedia. Kemudian, untuk **Jenis sumber daya**, pilih **Server Fleksibel** dan pilih **Buat**.
 

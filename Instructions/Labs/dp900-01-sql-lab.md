@@ -16,7 +16,7 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 
 ## Memprovisikan sumber daya Azure SQL Database
 
-1. Di [portal Microsoft Azure](https://portal.azure.com?azure-portal=true), pilih **&#65291; Buat sumber daya** dari sudut kiri atas dan cari *Azure SQL*. Lalu, di halaman **Azure SQL** yang dihasilkan, pilih **Buat**.
+1. [Di portal Azure](https://portal.azure.com?azure-portal=true), pilih **&#65291; Buat sumber daya** dari sudut kiri atas dan cari `Azure SQL`. Lalu, di halaman **Azure SQL** yang dihasilkan, pilih **Buat**.
 
 1. Tinjau opsi Azure SQL yang tersedia, lalu di petak peta **Database SQL**, pastikan **Database tunggal** di pilih, lalu pilih **Buat**.
 
@@ -25,7 +25,7 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 1. Masukkan nilai berikut ini di halaman **Buat SQL Database**, dan biarkan semua properti lain dengan pengaturan default:
     - **Langganan**: Pilih langganan Azure Anda.
     - **Grup sumber daya**: Buat grup sumber daya baru dengan nama pilihan Anda.
-    - **Nama database**: *AdventureWorks*
+    - **Nama database**: `AdventureWorks`
     - **Server**: Pilih **Buat baru** dan buat server baru dengan nama unik di lokasi yang tersedia. Gunakan **Autentikasi SQL** dan tentukan nama Anda sebagai proses masuk admin server dan kata sandi yang cukup rumit (ingat kata sandi - Anda akan membutuhkannya nanti!)
     - **Ingin menggunakan kumpulan elastis SQL?**: *Tidak*
     - **Lingkungan beban kerja**: Pengembangan
@@ -46,7 +46,7 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 
 1. Pada panel di sisi kiri laman, pilih **Editor kueri (pratinjau)**, lalu masuk menggunakan info masuk dan sandi administrator yang Anda tentukan untuk server Anda.
     
-    *Jika pesan kesalahan yang menyatakan bahwa alamat IP klien tidak diizinkan muncul, pilih tautan **Izinkan IP ...** di akhir pesan untuk mengizinkan akses dan mencoba masuk lagi (Anda sebelumnya menambahkan alamat IP klien komputer Anda sendiri ke aturan firewall, tetapi editor kueri dapat terhubung dari alamat yang berbeda tergantung pada konfigurasi jaringan Anda.)*
+    >**Catatan**: Jika pesan kesalahan yang menyatakan bahwa alamat IP klien tidak diizinkan ditampilkan, pilih **tautan Allowlist IP ...** di akhir pesan untuk mengizinkan akses dan mencoba masuk lagi (sebelumnya Anda menambahkan alamat IP klien komputer Anda sendiri ke aturan firewall, tetapi editor kueri dapat terhubung dari alamat yang berbeda tergantung pada konfigurasi jaringan Anda.)
     
     Editor kueri terlihat seperti ini:
     
@@ -57,7 +57,7 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 1. Di panel **Kueri 1**, masukkan kode SQL berikut:
 
     ```sql
-    SELECT * FROM SalesLT.Product;
+   SELECT * FROM SalesLT.Product;
     ```
 
 1. Pilih **&#9655; Jalankan** di atas kueri untuk menjalankannya dan melihat hasilnya, yang harus menyertakan semua kolom untuk semua baris dalam tabel **SalesLT.Product** seperti yang ditunjukkan di sini:
@@ -67,18 +67,18 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 1. Ganti pernyataan SELECT dengan kode berikut, lalu pilih **&#9655; Jalankan** untuk menjalankan kueri baru dan tinjau hasilnya (yang hanya menyertakan kolom **ProductID**, **Name**, **ListPrice**, **ProductCategoryID**):
 
     ```sql
-    SELECT ProductID, Name, ListPrice, ProductCategoryID
-    FROM SalesLT.Product;
+   SELECT ProductID, Name, ListPrice, ProductCategoryID
+   FROM SalesLT.Product;
     ```
 
 1. Sekarang coba kueri berikut, yang menggunakan JOIN untuk mendapatkan nama kategori dari tabel **SalesLT.ProductCategory**:
 
     ```sql
-    SELECT p.ProductID, p.Name AS ProductName,
-            c.Name AS Category, p.ListPrice
-    FROM SalesLT.Product AS p
-    JOIN [SalesLT].[ProductCategory] AS c
-        ON p.ProductCategoryID = c.ProductCategoryID;
+   SELECT p.ProductID, p.Name AS ProductName,
+           c.Name AS Category, p.ListPrice
+   FROM SalesLT.Product AS p
+   JOIN [SalesLT].[ProductCategory] AS c
+       ON p.ProductCategoryID = c.ProductCategoryID;
     ```
 
 1. Tutup panel editor kueri, dengan membuang hasil editan Anda.

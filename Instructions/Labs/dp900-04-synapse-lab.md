@@ -23,7 +23,7 @@ Untuk menggunakan Azure Synapse Analytics, Anda harus menyediakan sumber daya Ru
     > **Tips**: Pastikan untuk menggunakan direktori yang berisi langganan Anda - terletak di kanan atas di bawah ID pengguna. Jika tidak, pilih ikon pengguna dan ubah direktori.
 
 2. Di portal Microsoft Azure, di halaman **Beranda**, gunakan **&#65291; Buat ikon sumber daya** untuk membuat sumber daya baru.
-3. Cari *Azure Synapse Analytics*, dan buat sumber daya **Azure Synapse Analytics** yang baru dengan pengaturan berikut:
+3. Cari `Azure Synapse Analytics`, dan buat sumber daya Azure Synapse Analytics** baru **dengan pengaturan berikut:
     - **Langganan**: *Langganan Azure Anda*
         - **Grup sumber daya**: *Buat grup sumber daya baru dengan nama yang sesuai, seperti "synapse-rg"*
         - **Kelompok sumber daya terkelola**: *Masukkan nama yang sesuai, misalnya "synapse-managed-rg"*.
@@ -62,8 +62,8 @@ Salah satu tugas utama yang dapat Anda lakukan dengan Azure Synapse Analytics ad
 3. Pada langkah **Sumber**, dalam substep **Himpunan data**, pilih pengaturan berikut:
     - **Jenis sumber**: Semua
     - **Koneksi**: *Buat koneksi baru, dan di panel **Koneksi baru** yang muncul, pada tab **Protokol generik**, pilih **HTTP**. Kemudian lanjutkan dan buat koneksi ke file data menggunakan pengaturan berikut:*
-        - **Nama**: Produk AdventureWorks
-        - **Deskripsi**: Daftar produk melalui HTTP
+        - **Nama**: `AdventureWorks Products`
+        - **Deskripsi**: `Product list via HTTP`
         - **Sambungkan melalui runtime integrasi**: AutoResolveIntegrationRuntime
         - **URL dasar**: `https://raw.githubusercontent.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/master/Azure-Synapse/products.csv`
         - **Validasi Sertifikat Server**: Aktifkan
@@ -120,15 +120,15 @@ Setelah menyerap data ke ruang kerja, Anda dapat menggunakan Synapse Analytics u
 2. Di panel **Skrip SQL 1** yang terbuka, tinjau kode SQL yang sudah dibuat, yang seharusnya mirip dengan ini:
 
     ```SQL
-    -- This is auto-generated code
-    SELECT
-        TOP 100 *
-    FROM
-        OPENROWSET(
-            BULK 'https://datalakexx.dfs.core.windows.net/fsxx/products.csv',
-            FORMAT = 'CSV',
-            PARSER_VERSION='2.0'
-        ) AS [result]
+   -- This is auto-generated code
+   SELECT
+       TOP 100 *
+   FROM
+       OPENROWSET(
+           BULK 'https://datalakexx.dfs.core.windows.net/fsxx/products.csv',
+           FORMAT = 'CSV',
+           PARSER_VERSION='2.0'
+       ) AS [result]
     ```
 
     Kode ini membuka set baris dari file teks yang Anda impor dan mengambil 100 baris data pertama.
@@ -146,15 +146,15 @@ Setelah menyerap data ke ruang kerja, Anda dapat menggunakan Synapse Analytics u
 5. Perhatikan hasilnya terdiri dari empat kolom bernama C1, C2, C3, dan C4; dan baris pertama dalam hasil berisi nama bidang data. Untuk memperbaiki masalah ini, tambahkan parameter HEADER_ROW = TRUE ke fungsi OPENROWSET seperti yang ditunjukkan di sini (mengganti *datalakexx* dan *fsxx* dengan nama akun penyimpanan data lake dan sistem file Anda), lalu jalankan kembali kueri:
 
     ```SQL
-    SELECT
-        TOP 100 *
-    FROM
-        OPENROWSET(
-            BULK 'https://datalakexx.dfs.core.windows.net/fsxx/products.csv',
-            FORMAT = 'CSV',
-            PARSER_VERSION='2.0',
-            HEADER_ROW = TRUE
-        ) AS [result]
+   SELECT
+       TOP 100 *
+   FROM
+       OPENROWSET(
+           BULK 'https://datalakexx.dfs.core.windows.net/fsxx/products.csv',
+           FORMAT = 'CSV',
+           PARSER_VERSION='2.0',
+           HEADER_ROW = TRUE
+       ) AS [result]
     ```
 
     Sekarang hasilnya akan terlihat seperti ini:
@@ -168,16 +168,16 @@ Setelah menyerap data ke ruang kerja, Anda dapat menggunakan Synapse Analytics u
 6. Memodifikasi kueri sebagai berikut (mengganti *datalakexx* dan *fsxx* dengan nama akun penyimpanan dan sistem file data lake Anda):
 
     ```SQL
-    SELECT
-        Category, COUNT(*) AS ProductCount
-    FROM
-        OPENROWSET(
-            BULK 'https://datalakexx.dfs.core.windows.net/fsxx/products.csv',
-            FORMAT = 'CSV',
-            PARSER_VERSION='2.0',
-            HEADER_ROW = TRUE
-        ) AS [result]
-    GROUP BY Category;
+   SELECT
+       Category, COUNT(*) AS ProductCount
+   FROM
+       OPENROWSET(
+           BULK 'https://datalakexx.dfs.core.windows.net/fsxx/products.csv',
+           FORMAT = 'CSV',
+           PARSER_VERSION='2.0',
+           HEADER_ROW = TRUE
+       ) AS [result]
+   GROUP BY Category;
     ```
 
 7. Jalankan kueri yang sudah diubah, yang akan menampilkan hasil yang berisi produk angka di setiap kategori, seperti ini:
@@ -189,7 +189,7 @@ Setelah menyerap data ke ruang kerja, Anda dapat menggunakan Synapse Analytics u
     | Rak Sepeda | 1 |
     | ... | ... |
 
-8. Di panel **Properti** untuk **Skrip SQL 1**, ubah **Nama** menjadi **Hitung Produk berdasarkan Kategori**. Lalu di toolbar, pilih **Terbitkan** untuk menyimpan skrip.
+8. Di panel **Properti** untuk **Skrip SQL 1**, ubah **Nama** menjadi `Count Products by Category`. Lalu di toolbar, pilih **Terbitkan** untuk menyimpan skrip.
 
 9. Tutup panel skrip **Hitung Produk berdasarkan Kategori**.
 
@@ -228,15 +228,15 @@ Sementara SQL adalah bahasa umum untuk mengkueri himpunan data terstruktur, bany
 6. Tinjau kode di sel pertama (dan satu-satunya) di buku catatan, yang akan terlihat seperti ini:
 
     ```Python
-    %%pyspark
-    df = spark.read.load('abfss://fsxx@datalakexx.dfs.core.windows.net/products.csv', format='csv'
-    ## If header exists uncomment line below
-    ##, header=True
-    )
-    display(df.limit(10))
+   %%pyspark
+   df = spark.read.load('abfss://fsxx@datalakexx.dfs.core.windows.net/products.csv', format='csv'
+   ## If header exists uncomment line below
+   ##, header=True
+   )
+   display(df.limit(10))
     ```
 
-7.  Pilih **&#9655; Jalankan** di sebelah kiri sel kode untuk menjalankannya, dan tunggu hasilnya. Pertama kali Anda menjalankan sel di buku catatan, kumpulan Spark dimulai - jadi mungkin perlu waktu satu menit atau lebih untuk menampilkan hasil.
+7. Pilih **&#9655; Jalankan** di sebelah kiri sel kode untuk menjalankannya, dan tunggu hasilnya. Pertama kali Anda menjalankan sel di buku catatan, kumpulan Spark dimulai - jadi mungkin perlu waktu satu menit atau lebih untuk menampilkan hasil.
 
     > **Catatan**: Jika terjadi kesalahan karena Kernel Python belum tersedia, jalankan kembali sel.
 
@@ -252,12 +252,12 @@ Sementara SQL adalah bahasa umum untuk mengkueri himpunan data terstruktur, bany
 9. Hapus komentar pada baris *,header = True* (karena file products.csv memiliki header kolom di baris pertama), sehingga kode Anda terlihat seperti ini:
 
     ```Python
-    %%pyspark
-    df = spark.read.load('abfss://fsxx@datalakexx.dfs.core.windows.net/products.csv', format='csv'
-    ## If header exists uncomment line below
-    , header=True
-    )
-    display(df.limit(10))
+   %%pyspark
+   df = spark.read.load('abfss://fsxx@datalakexx.dfs.core.windows.net/products.csv', format='csv'
+   ## If header exists uncomment line below
+   , header=True
+   )
+   display(df.limit(10))
     ```
 
 10. Jalankan kembali sel tersebut dan pastikan hasilnya terlihat seperti ini:

@@ -17,9 +17,10 @@ Anda memerlukan [langganan Azure](https://azure.microsoft.com/free) dengan akses
 
 Untuk menggunakan Cosmos DB, Anda harus menyediakan akun Cosmos DB di langganan Azure Anda. Dalam latihan ini, Anda akan menyediakan akun Cosmos DB yang menggunakan Azure Cosmos DB untuk NoSQL.
 
-1. Di portal Microsoft Azure, pilih **+ Buat sumber daya** di kiri atas, dan cari *Azure Cosmos DB*.  Di hasil, pilih **Azure Cosmos DB** dan pilih **Buat**.
+1. Di portal Azure, pilih **+ Buat sumber daya** di kiri atas, dan cari `Azure Cosmos DB`.  Di hasil, pilih **Azure Cosmos DB** dan pilih **Buat**.
 1. Di petak **Azure Cosmos DB untuk NoSQL**, pilih **Buat**.
 1. Masukkan detail berikut, lalu pilih **Tinjau + Buat**:
+    - **Jenis** Beban Kerja: Pembelajaran
     - **Langganan**: Jika Anda menggunakan kotak pasir, pilih *Langganan Concierge*. Atau, pilih langganan Azure.
     - **Grup sumber daya**: Jika Anda menggunakan kotak pasir, pilih grup sumber daya yang ada (yang akan diberi nama seperti *learn-xxxx...*). Jika tidak, buat grup sumber daya baru dengan nama pilihan Anda.
     - **Nama Akun**: Masukkan nama unik
@@ -47,14 +48,14 @@ Untuk menggunakan Cosmos DB, Anda harus menyediakan akun Cosmos DB di langganan 
 1. Ubah JSON untuk item baru sebagai berikut, lalu pilih **Simpan**.
 
     ```json
-    {
-        "name": "Road Helmet,45",
-        "id": "123456789",
-        "categoryID": "123456789",
-        "SKU": "AB-1234-56",
-        "description": "The product called \"Road Helmet,45\" ",
-        "price": 48.74
-    }
+   {
+       "name": "Road Helmet,45",
+       "id": "123456789",
+       "categoryID": "123456789",
+       "SKU": "AB-1234-56",
+       "description": "The product called \"Road Helmet,45\" ",
+       "price": 48.74
+   }
     ```
 
 1. Setelah menyimpan item baru, perhatikan bahwa properti metadata tambahan ditambahkan secara otomatis.
@@ -67,9 +68,9 @@ Untuk menggunakan Cosmos DB, Anda harus menyediakan akun Cosmos DB di langganan 
 1. Ubah kueri sebagai berikut:
 
     ```sql
-    SELECT *
-    FROM c
-    WHERE CONTAINS(c.name,"Helmet")
+   SELECT *
+   FROM c
+   WHERE CONTAINS(c.name,"Helmet")
     ```
 
 1. Gunakan tombol **Jalankan Kueri** untuk menjalankan kueri yang direvisi dan tinjau hasilnya, yang mencakup entitas JSON untuk item apa pun dengan bidang **nama** yang berisi teks "Helm.".
