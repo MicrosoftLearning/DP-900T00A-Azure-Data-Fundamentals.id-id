@@ -41,7 +41,7 @@ Langkah pertama dalam menggunakan Azure Storage adalah memprovisikan akun Azure 
 
     > _**Tips**: Grup sumber daya baru memudahkan pembersihan. Standar + LRS adalah garis besar berbiaya terendah, baik untuk belajar. LRS menyimpan tiga salinan sinkron di satu wilayah, memadai untuk data demo non-kritis tanpa membayar replikasi geografis._
 
-1. Pilih **Berikutnya: Tingkat Lanjut >** dan lihat opsi konfigurasi tingkat lanjut. Secara khusus, perhatikan bahwa ini adalah tempat Anda dapat mengaktifkan namespace layanan hierarkis untuk mendukung Azure Data Lake Storage Gen2. Biarkan opsi ini tetap **<u>tidak dipilih</u>** (Anda dapat mengaktifkannya nanti), lalu pilih **Berikutnya: Jaringan >** guna menampilkan opsi jaringan untuk akun penyimpanan.
+1. Pilih **Berikutnya: Tingkat Lanjut >** dan lihat opsi konfigurasi tingkat lanjut. Secara khusus, perhatikan bahwa ini adalah tempat Anda dapat mengaktifkan namespace layanan hierarkis untuk mendukung Azure Data Lake Storage Gen2. Biarkan opsi **<u>ini dikosongkan**</u> (Anda akan mengaktifkannya nanti), lalu pilih **Berikutnya: Jaringan >** untuk melihat opsi jaringan untuk akun penyimpanan Anda.
    
    ![Cuplikan layar Portal Microsoft Azure memperlihatkan halaman kedua untuk membuat akun penyimpanan](images/storage-page2.png)
 
@@ -61,63 +61,63 @@ Sekarang setelah memiliki akun Azure Storage, Anda dapat membuat kontainer untuk
 
 1. Unduh file JSON [product1.json](https://aka.ms/product1.json?azure-portal=true) dari `https://aka.ms/product1.json` dan simpan di komputer (Anda dapat menyimpannya di folder mana pun - Anda akan mengunggahnya ke penyimpanan blob nanti).
 
-    *Jika file JSON ditampilkan di browser Anda, simpan halaman sebagai **product1.json**.*
+    *Jika file JSON ditampilkan di browser Anda, klik kanan halaman, dan pilih **Simpan Sebagai**. Beri nama file  **product1.json** dan simpan di folder unduhan Anda.* 
 
-1. Di halaman portal Azure untuk kontainer penyimpanan Anda, di sisi kiri, pada bagian **Penyimpanan data**, pilih **Kontainer**.
+2. Di halaman portal Azure untuk kontainer penyimpanan Anda, di sisi kiri, pada bagian **Penyimpanan data**, pilih **Kontainer**.
    
     ![Cuplikan layar Portal Microsoft Azure memperlihatkan opsi menu untuk akun penyimpanan](images/storage-menu-containers.png)
 
-1. Di halaman **Kontainer** , pilih **&#65291; Tambahkan kontainer** dan tambahkan kontainer baru bernama `data` dengan tingkat **akses anonim Privat (tanpa akses anonim)**.
+3. Di halaman **Kontainer** , pilih **&#65291; Tambahkan kontainer** dan tambahkan kontainer baru bernama `data` dengan tingkat **akses anonim Privat (tanpa akses anonim)**.
 
     ![Cuplikan layar Portal Microsoft Azure memperlihatkan kontainer baru untuk akun penyimpanan](images/storage-new-container.png)
 
     > _**Tips**: Privat menjaga data sampel Anda tetap aman. Akses publik jarang diperlukan kecuali untuk situs web statis atau skenario data terbuka. Penamaannya `data` membuat contoh ini sederhana dan dapat dibaca._
 
-1. Setelah kontainer **data** dibuat, verifikasi bahwa kontainer tersebut tercantum di halaman **Kontainer**.
+4. Setelah kontainer **data** dibuat, verifikasi bahwa kontainer tersebut tercantum di halaman **Kontainer**.
 
-1. Di panel sebelah kiri, di bagian atas, pilih **Browser penyimpana**. Halaman ini menyediakan antarmuka berbasis browser yang dapat Anda gunakan untuk bekerja dengan data di akun penyimpanan.
+5. Di panel sebelah kiri, di bagian atas, pilih **Browser penyimpana**. Halaman ini menyediakan antarmuka berbasis browser yang dapat Anda gunakan untuk bekerja dengan data di akun penyimpanan.
 
-1. Di halaman browser penyimpanan, pilih **Kontainer blob** dan verifikasi bahwa kontainer **data** Anda dicantumkan.
+6. Di halaman browser penyimpanan, pilih **Kontainer blob** dan verifikasi bahwa kontainer **data** Anda dicantumkan.
 
-1. Pilih kontainer **data**, dan perhatikan bahwa kontainer tersebut kosong.
+7. Pilih kontainer **data**, dan perhatikan bahwa kontainer tersebut kosong.
 
     ![Cuplikan layar Portal Microsoft Azure memperlihatkan browser penyimpanan](images/storage-browser-empty.png)
 
-1. Pilih **&#65291; Tambahkan Direktori** dan baca informasi tentang folder sebelum membuat direktori baru bernama `products`.
+8. Pilih **&#65291; Tambahkan Direktori** dan baca informasi tentang folder sebelum membuat direktori baru bernama `products`.
 
-1. Di browser penyimpanan, verifikasi bahwa tampilan saat ini menunjukkan konten folder **produk** yang baru saja dibuat - perhatikan bahwa "breadcrumbs" di bagian atas halaman menampilkan jalur **Kontainer blob > data > produk**.
+9. Di browser penyimpanan, verifikasi bahwa tampilan saat ini menunjukkan konten folder **produk** yang baru saja dibuat - perhatikan bahwa "breadcrumbs" di bagian atas halaman menampilkan jalur **Kontainer blob > data > produk**.
 
     ![Cuplikan layar Portal Microsoft Azure memperlihatkan remah roti browser penyimpanan](images/storage-breadcrumb.png)
 
-1. Di breadcrumb, pilih **data** untuk beralih ke kontainer **data**, dan perhatikan bahwa kontainer tersebut <u>tidak</u> berisi folder bernama **produk**.
+10. Di breadcrumb, pilih **data** untuk beralih ke kontainer **data**, dan perhatikan bahwa kontainer tersebut <u>tidak</u> berisi folder bernama **produk**.
 
     Folder dalam penyimpanan blob adalah virtual, dan hanya ada sebagai bagian dari jalur blob. Karena folder **produk** tidak berisi blob, itu tidak benar-benar ada!
 
     > _**Tips**: Namespace datar berarti direktori hanyalah awalan nama (produk/file.json). Desain ini memungkinkan skala besar karena layanan mengindeks nama blob alih-alih mempertahankan struktur pohon yang sebenarnya._
 
-1. Gunakan tombol **&#10514; Unggah** untuk membuka panel **Unggah blob**.
+11. Gunakan tombol **&#10514; Unggah** untuk membuka panel **Unggah blob**.
 
-1. Di panel **Unggah blob**, pilih file **product1.json** yang sebelumnya Anda simpan di komputer lokal. Kemudian di bagian **Tingkat Lanjut** , dalam kotak **Unggah ke folder** , masukkan `product_data` dan pilih tombol **Unggah** .
+12. Di panel **Unggah blob**, pilih file **product1.json** yang sebelumnya Anda simpan di komputer lokal. Kemudian di bagian **Tingkat Lanjut** , dalam kotak **Unggah ke folder** , masukkan `product_data` dan pilih tombol **Unggah** .
 
     ![Cuplikan layar Portal Microsoft Azure memperlihatkan opsi unggah blob](images/storage-upload-blob.png)
 
     > _**Tips**: Menyediakan nama folder saat mengunggah secara otomatis membuat jalur virtual, yang menggambarkan bahwa kehadiran blob membuat "folder" muncul._
 
-1. Tutup panel **Unggah blob** jika masih terbuka, dan verifikasi bahwa folder virtual **product_data** telah dibuat di kontainer **data**.
+13. Tutup panel **Unggah blob** jika masih terbuka, dan verifikasi bahwa folder virtual **product_data** telah dibuat di kontainer **data**.
 
-1. Pilih folder **product_data** dan verifikasi bahwa folder tersebut berisi blob **product1.json** yang Anda unggah.
+14. Pilih folder **product_data** dan verifikasi bahwa folder tersebut berisi blob **product1.json** yang Anda unggah.
 
-1. Di sisi kiri, di bagian **Penyimpanan data**, pilih **Kontainer**.
+15. Di sisi kiri, di bagian **Penyimpanan data**, pilih **Kontainer**.
 
-1. Buka kontainer **data**, dan verifikasi bahwa folder **product_data** yang Anda buat dicantumkan.
+16. Buka kontainer **data**, dan verifikasi bahwa folder **product_data** yang Anda buat dicantumkan.
 
-1. Pilih ikon **&#x2027;&#x2027;&#x2027;** di ujung kanan folder, dan perhatikan bahwa ikon tersebut tidak menampilkan opsi sama sekali. Folder dalam kontainer blob namespace datar bersifat virtual, serta tidak dapat dikelola.
+17. **Pilih &#x2027; &#x2027; &#x2027;** ikon di ujung kanan folder, dan perhatikan bahwa menu tidak menampilkan opsi apa pun. Folder dalam kontainer blob namespace datar bersifat virtual, serta tidak dapat dikelola.
 
     ![Cuplikan layar Portal Microsoft Azure memperlihatkan opsi untuk folder virtual](images/storage-virtual-folder.png)
 
     > _**Tips**: Tidak ada objek direktori nyata, sehingga tidak ada operasi penggantian nama/izin — yang memerlukan namespace hierarkis._
 
-1. Gunakan ikon **X** di kanan atas halaman **data** untuk menutup halaman dan kembali ke halaman **Kontainer**.
+18. Gunakan ikon **X** di kanan atas halaman **data** untuk menutup halaman dan kembali ke halaman **Kontainer**.
 
 ## Menjelajahi Azure Data Lake Storage Gen2
 
